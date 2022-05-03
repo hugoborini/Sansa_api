@@ -1,0 +1,1944 @@
+[
+    {
+        "alimentation": [
+            {
+                "title": " PAJ (Permanence Accueil Jeunes) ",
+                "description": "La PAJ est un accueil de jour qui s’adresse à des jeunes hommes et jeunes femmes en situation d’errance sur le territoire parisien   Ce lieu d’écoute a pour objectif d’aider les jeunes à renouer les liens sociaux et de leur permettre d’accéder aux dispositifs de droit commun   Les équipes de la PAJ proposent un temps de pause et d’écoute afin   - de permettre à chaque jeune de reconnaître ses ressources personnelles   - de ralentir le processus d’errance, d’offrir la possibilité de « rebondir »   - de rendre alors possible l’accès aux structures d’aide et au dispositif de droit commun   Permanences infirmières le Mardi et le Vendredi.",
+                "prefential": " Accueil exclusif :  De 12 à 25 ans. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://anrs.asso.fr/etablissements-services/insertion/permanence-accueil-ecoute-jeunes-paej/",
+                "lastUpdate": " Dernière mise à jour : 21/12/2021 ",
+                "address": "24 Rue Ramponeau, 75020 Paris, France",
+                "phone": " 01 48 05 01 01",
+                "horaires": {
+                    "Lundi": "9h30 à 16h00",
+                    "Mardi": "9h30 à 16h00",
+                    "Mercredi": "9h30 à 13h30",
+                    "Jeudi": "9h30 à 12h30",
+                    "Vendredi": "9h30 à 16h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Laverie",
+                    "Douche",
+                    "Bagagerie",
+                    "Restauration assise",
+                    "Accueil de jour",
+                    "Prise",
+                    "Toilettes",
+                    "Infirmerie"
+                ]
+            },
+            {
+                "title": " Antenne Etudiant.e.s Bayet - Secours Populaire Français  ",
+                "description": "Accueil destiné aux étudiant.e.s inscrit.e.s en faculté ou école parisienne ou domicilié.e.s à Paris. Accompagnement global proposé aux étudiant.e.s (accès à une aide alimentaire et/ou vestimentaire; accès aux loisirs; aide administrative). Les étudiant.e.s doivent prendre rendez-vous par email à etudiants@secourspopparis.org",
+                "prefential": " Accueil exclusif :  Étudiant / étudiante. ",
+                "langage": "Langue(s) parlée(s) : Français, Anglais, Espagnol",
+                "by_appointement": true,
+                "link": "https://www.secourspopparis.org/",
+                "lastUpdate": " Dernière mise à jour : 15/12/2021 ",
+                "address": "6 Rue Albert Bayet, 75013 Paris",
+                "phone": " 09 83 30 99 28",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "12h00 à 16h00",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "Fermé",
+                    "Vendredi": "11h00 à 14h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accompagnement social",
+                    "Épicerie Sociale et Solidaire",
+                    "Activités diverses"
+                ]
+            },
+            {
+                "title": " Entraide et partage avec les sans-logis (EPALSL) ",
+                "description": "La Mission Evangélique Parmi Les Sans-logis est une association cultuelle (1905). Elle a pour vocation de diffuser le pain et la Parole de Dieu aux plus démunis, de proclamer l'Evangile parmi les sans-logis, œuvrer au développement de la foi et de la vie chrétienne. L'association apporte aide et assistance aux personnes en situation délicate, de précarité, par la distribution de nourriture, vêtements, soins médicaux, douche, domiciliation   Les jours fériés, les déjeuners sont servis à 13h.",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://mission-evangelique-parmi-les-sans-logis.fr/",
+                "lastUpdate": " Dernière mise à jour : 23/12/2021 ",
+                "address": "22 rue Sainte-Marthe, 75010 Paris",
+                "phone": " 09 54 17 62 30",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "9h30 à 12h30  17h00 à 18h00",
+                    "Mercredi": "9h30 à 12h30  17h00 à 18h00",
+                    "Jeudi": "9h30 à 12h30  17h00 à 18h00",
+                    "Vendredi": "9h30 à 12h30  17h00 à 18h00",
+                    "Samedi": "12h00 à 13h00",
+                    "Dimanche": "10h00 à 11h00"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Douche",
+                    "Domiciliation",
+                    "Médecin généraliste",
+                    "Vêtements",
+                    "Restauration assise",
+                    "Restauration assise",
+                    "Restauration assise",
+                    "Toilettes",
+                    "Wifi",
+                    "Prise"
+                ]
+            },
+            {
+                "title": " ESI Bichat ",
+                "description": "L'Espace Solidarité Insertion (ESI) Bichat accueille, oriente et accompagne de manière inconditionnelle les personnes majeures en situation d'exclusion, de précarité et de vulnérabilité.   Accompagnement social et juridique, selon les disponibilités.Collation: de l'ouverture jusqu'à 10h30Douches et laveries : sur rendez-vous, selon les disponibilités ",
+                "prefential": " Accueil exclusif :  Adultes uniquement, personne isolée. ",
+                "langage": "Langue(s) parlée(s) : Français, Anglais",
+                "by_appointement": true,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 07/03/2022 ",
+                "address": "35 rue Bichat, 75010 Paris",
+                "phone": " 01 40 18 04 41",
+                "horaires": {
+                    "Lundi": "7h15 à 11h45  13h00 à 18h00",
+                    "Mardi": "7h15 à 11h45  13h00 à 18h00",
+                    "Mercredi": "7h15 à 11h45",
+                    "Jeudi": "7h15 à 11h45  13h00 à 18h00",
+                    "Vendredi": "7h15 à 11h45  13h00 à 17h00",
+                    "Samedi": "9h15 à 11h45  13h00 à 17h00",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Laverie",
+                    "Permanence juridique",
+                    "Douche",
+                    "Activités diverses",
+                    "Restauration assise",
+                    "Accompagnement social"
+                ]
+            },
+            {
+                "title": " Itinérances ",
+                "description": "Itinérances est un accueil de Jour pour Jeunes en errance (18-30 ans).   Sur rendez-vous le matin, entre 10h et 13h, les lundi, mardi, mercredi, jeudi et vendredi   Attention : fermée les jours fériés",
+                "prefential": " Accueil exclusif :  De 18 à 30 ans. ",
+                "langage": "Langue(s) parlée(s) : Français, Anglais, Espagnol, Wolof, Bambara, Russe, Polonais",
+                "by_appointement": true,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 08/03/2022 ",
+                "address": "61 Bd de Magenta, 75010 Paris",
+                "phone": " 01 40 05 54 87",
+                "horaires": {
+                    "Lundi": "10h00 à 13h00  14h00 à 17h30",
+                    "Mardi": "10h00 à 13h00  14h00 à 17h30",
+                    "Mercredi": "10h00 à 13h00",
+                    "Jeudi": "10h00 à 13h00  14h00 à 17h30",
+                    "Vendredi": "10h00 à 13h00  14h00 à 17h30",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accompagnement social",
+                    "Douche",
+                    "Laverie",
+                    "Accueil de jour",
+                    "Dépistage",
+                    "Ordinateur",
+                    "Restauration assise",
+                    "Toilettes"
+                ]
+            },
+            {
+                "title": " Cœur du cinq ",
+                "description": "Les bénévoles de Coeur du cinq accueillent, rencontrent et accompagnent les personnes sans domicile fixe et isolées du quartier.  Elles sont orientées vers les services et les structures dont elles ont besoin.  Coeur du cinq domicilie en priorité les personnes orientées par ses partenaires associatifs et institutionnels. L'association ouvre également ses portes le samedi de 10h à 12h pour prendre un café. ",
+                "prefential": " Accueil préférentiel :  Personne isolée, couple, femme enceinte. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://coeurducinq.fr/",
+                "lastUpdate": " Dernière mise à jour : 03/12/2021 ",
+                "address": "24 Rue Daubenton, 75005 Paris, France",
+                "phone": " 01 43 36 48 30",
+                "horaires": {
+                    "Lundi": "9h30 à 12h00  14h00 à 16h30",
+                    "Mardi": "9h30 à 12h00  14h00 à 16h30",
+                    "Mercredi": "9h30 à 12h00  14h00 à 16h30",
+                    "Jeudi": "Fermé",
+                    "Vendredi": "Fermé",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Domiciliation",
+                    "Conseil administratif",
+                    "Restauration assise",
+                    "Activités diverses",
+                    "Restauration assise",
+                    "Accompagnement social"
+                ]
+            },
+            {
+                "title": " ESI familles Bonne Nouvelle ",
+                "description": "Cet ESI, est spéciﬁquement dédié aux familles en grande précarité et majoritairement sans domicile. Elles peuvent y bénéﬁcier d’un accompagnement personnalisé, dans un espace de convivialité doté d’infrastructures adaptées aux enfants. Une attention particulière est portée aux questions relatives à la parentalité et aux aspects sociaux de ce public en situation d’errance sur le territoire parisien Accueil du public le mardi, mercredi et vendredi : 09h40-13h et 14h-17h et le samedi de 10h à 17Le lundi et jeudi : ouverture uniquement sur rendez-vous dans les horaires 09H40-13H et 14H-17H",
+                "prefential": " Accueil préférentiel :  Situation régulière. ",
+                "langage": "Langue(s) parlée(s) : Français, Anglais, Espagnol, Italien, Arabe, Roumain",
+                "by_appointement": true,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 13/12/2021 ",
+                "address": "75002, Paris",
+                "phone": " 01 43 38 80 60",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "9h40 à 13h00  14h00 à 17h00",
+                    "Mercredi": "9h40 à 13h00  14h00 à 17h00",
+                    "Jeudi": "Fermé",
+                    "Vendredi": "9h40 à 13h00  14h00 à 17h00",
+                    "Samedi": "10h00 à 17h00",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Accompagnement social",
+                    "Douche",
+                    "Laverie",
+                    "Médecin généraliste",
+                    "Psychologie",
+                    "Infirmerie",
+                    "Soins enfants",
+                    "Suivi grossesse",
+                    "Cours de français",
+                    "Activités diverses",
+                    "Permanence juridique",
+                    "Restauration assise"
+                ]
+            },
+            {
+                "title": " ESI Halte Femmes ",
+                "description": "Ce lieu d'accueil dédié aux femmes en très grande exclusion a pour vocation de subvenir à leurs besoins vitaux en proposant douche, laverie, espace de repos, collations, SIAO U  Initier et/ou effectuer un suivi socio-éducatif, travail en réseau pour orientation adaptée aux besoins des personnes, permanence psychologique et médical  Initier le processus de reconstruction personnelle au travers d’ateliers, actions culturelles etc   Sur rdv l'après-midi. Ouvert les jours fériés de 9h à 16h (horaires du dimanche).",
+                "prefential": " Accueil exclusif :  Femmes, adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "http://www.aurore.asso.fr/hauts-de-seine-paris-sud-est-iml/esi-halte-femmes",
+                "lastUpdate": " Dernière mise à jour : 14/12/2021 ",
+                "address": "16-18 passage Raguinot, 75012 Paris",
+                "phone": " 01 43 44 55 00",
+                "horaires": {
+                    "Lundi": "9h00 à 16h00",
+                    "Mardi": "9h00 à 16h00",
+                    "Mercredi": "9h00 à 16h00",
+                    "Jeudi": "9h00 à 12h30",
+                    "Vendredi": "9h00 à 16h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "9h00 à 16h00"
+                },
+                "services": [
+                    "Douche",
+                    "Permanence juridique",
+                    "Psychologie",
+                    "Médecin généraliste",
+                    "Accueil de jour",
+                    "Domiciliation",
+                    "Accompagnement social",
+                    "Accompagnement à l'emploi",
+                    "Bien-être",
+                    "Psychologie",
+                    "Laverie",
+                    "Cours de français",
+                    "Restauration assise",
+                    "Coffre-fort numérique"
+                ]
+            },
+            {
+                "title": " Halte Jeunes 18-25 ",
+                "description": "- Besoins de première urgence : repas (petit déjeuner et déjeuner), douche, laverie sur rendez-vous  - Repas du midi : participation 0.50   - Prise en charge socio-éducative globale et non déterminée dans le temps (sauf limite d’âge) : possibilité de rencontrer un travailleur social sur libre adhésion le matin lors des permanences sociales et l'après-midi sur RDV  - Sortie sportive, musée..  - Consultation psychologique , le vendredi matin uniquemen   Démarches : CMU, AME, accompagnement hébergement, papiers d'identité.   Jeunes hommes et femmes en errance, âgés de 18 à 25 ans   - Accueil inconditionne  - Pas de prise en charge de personnes avec enfant  - Animaux non admis dans les locaux (possibilité de les attacher devant la structure)",
+                "prefential": " Accueil exclusif :  De 18 à 25 ans. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://www.aurore.asso.fr/pole-urgence-sociale-et-hebergement/la-halte-jeunes",
+                "lastUpdate": " Dernière mise à jour : 16/12/2021 ",
+                "address": "9-11 rue Henri-Desgrandes, 75012 Paris",
+                "phone": " 01 53 02 94 94",
+                "horaires": {
+                    "Lundi": "9h00 à 13h00",
+                    "Mardi": "9h00 à 13h00  14h30 à 17h30",
+                    "Mercredi": "9h00 à 13h00",
+                    "Jeudi": "9h00 à 13h00  14h30 à 17h30",
+                    "Vendredi": "9h00 à 13h00  14h30 à 17h30",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Restauration assise",
+                    "Restauration assise",
+                    "Douche",
+                    "Domiciliation",
+                    "Permanence juridique",
+                    "Conseil logement",
+                    "Psychologie",
+                    "Conseil administratif",
+                    "Laverie",
+                    "Fontaine à eau",
+                    "Prise",
+                    "Accompagnement social",
+                    "Activités diverses",
+                    "Accompagnement à l'emploi",
+                    "Coffre-fort numérique"
+                ]
+            },
+            {
+                "title": " APASO Croix Rouge ",
+                "description": "L’APASO (Antenne de premier accueil social et d'orientation) accueille et accompagne des adultes isolés en grande souﬀrance car isolées, sans emploi, sans ressource ni soutien. Au sein de l’APASO, ces personnes peuvent bénéﬁcier d’une aide de première nécessité (nourriture, vêtements, premiers soins…) et d’un accompagnement social. Les personnes accueillies à l’APASO sont orientées par le 115 ou le SIAO Urgence de Paris.",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "http://paris.croix-rouge.fr/item/antenne-de-premier-accueil-social-et-dorientation-apaso/",
+                "lastUpdate": " Dernière mise à jour : 20/12/2021 ",
+                "address": "75014, Paris",
+                "phone": " 01 56 88 01 83",
+                "horaires": {
+                    "Lundi": "9h30 à 16h00",
+                    "Mardi": "9h30 à 16h00",
+                    "Mercredi": "9h30 à 16h00",
+                    "Jeudi": "9h30 à 16h00",
+                    "Vendredi": "Fermé",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Douche",
+                    "Accueil de jour",
+                    "Conseil administratif",
+                    "Accompagnement social",
+                    "Colis Alimentaire",
+                    "Domiciliation"
+                ]
+            },
+            {
+                "title": " Croix-Rouge - Unité Locale Paris 15 ",
+                "description": "L'unité locale de la Croix Rouge du 15ème arrondissement propose un accueil ouvert pour de l'orientation sociale et de l'aide aux démarches, mais aussi une activité d'écrivain public. Elle propose également, sur RDV, des activités de rétablissement des liens familiaux, d'aide aux devoirs et de réinsertion professionnelle , mais aussi des cours de français et une formation au numérique   Les locaux de la Croix rouge se situent à l'intérieur de la cour, bâtiment droite, à gauche de l'escalier 14.",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://paris.croix-rouge.fr/paris-15e",
+                "lastUpdate": " Dernière mise à jour : 22/12/2021 ",
+                "address": "112 Rue Brancion, 75015 Paris, France",
+                "phone": " 01 48 28 03 15",
+                "horaires": {
+                    "Lundi": "9h30 à 12h30",
+                    "Mardi": "15h00 à 17h00",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "10h00 à 12h00",
+                    "Vendredi": "Fermé",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accompagnement social",
+                    "Atelier numérique",
+                    "Cours de français",
+                    "Soutien scolaire",
+                    "Accompagnement à l'emploi",
+                    "Épicerie Sociale et Solidaire",
+                    "Activités diverses",
+                    "Écrivain public"
+                ]
+            },
+            {
+                "title": " ESI Familles Georges Pitard Emmaüs Solidarité ",
+                "description": "L'ESI Familles Georges PITARDAccueil  inconditionnel des familles en situation de rue et/ou en hébergement d'urgence non stabilisé (hôtel, CHU …)  .L'accueil se déroule en 2 temps :Matin - 10h00 à 13h00 : accueil inconditionnel accès aux prestations suivantes :  petit déjeuner, douches, laverie, espace jeux (0 à 18 ans), espace numérique, salle de repos, rdv sage femme, puéricultrice, massage, vestiaires bébés et enfants (…)Après-midi - 14h00 à 17h00 : uniquement sur RDV avec un travailleur social (ouvertures de droits, orientations, fiche SISIAO (…))Les rendez vous sont pris le matins à l'ouverture de l'ESI pour des raisons d'organisation nous ne donnons pas de RDV par téléphone.L'ESI Familles PITARD est un espace d'accueil de jour sans orientation. Toutes les familles en grandes précarités sans hébergement ou en hébergements précaires sont accueillies accompagnées et orientées.Des permanences CPAM, Droit d'urgence et PMI sont accessibles sur rendez-vous",
+                "prefential": " Accueil exclusif :  Famille, couple, femme enceinte. ",
+                "langage": "Langue(s) parlée(s) : Français, Anglais",
+                "by_appointement": false,
+                "link": "https://www.emmaus-solidarite.org/wp-content/uploads/pdfCentres/Espace-Solidarite-Insertion-Familles.pdf",
+                "lastUpdate": " Dernière mise à jour : 13/12/2021 ",
+                "address": "4 Rue Georges Pitard, 75015 Paris, France",
+                "phone": " 01 44 19 83 12",
+                "horaires": {
+                    "Lundi": "10h00 à 13h00  14h00 à 17h00",
+                    "Mardi": "10h00 à 13h00",
+                    "Mercredi": "10h00 à 13h00  14h00 à 17h00",
+                    "Jeudi": "10h00 à 13h00  14h00 à 17h00",
+                    "Vendredi": "10h00 à 13h00  14h00 à 16h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Restauration assise",
+                    "Douche",
+                    "Bien-être",
+                    "Atelier numérique",
+                    "Laverie",
+                    "Accompagnement social",
+                    "Psychologie",
+                    "Vêtements",
+                    "Fontaine à eau",
+                    "Colis Alimentaire",
+                    "Permanence juridique",
+                    "Accompagnement à l'emploi"
+                ]
+            },
+            {
+                "title": " Accueil 15 ",
+                "description": "Accueil 15 est un lieu paisible où viennent passer la journée des hommes de 25 à 60 ans, en situation précaire, pour la plupart sans domicile fixe. Bénéficiaire du RSA ou pouvant y prétendre, ou demandeurs d'emploi de longue durée.",
+                "prefential": " Accueil exclusif :  Hommes, de 25 à 60 ans, situation régulière. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 16/12/2021 ",
+                "address": "20 Allée des Frères Voisin, Paris, France",
+                "phone": " 01 42 73 68 37",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "10h00 à 16h00",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "10h00 à 16h00",
+                    "Vendredi": "Fermé",
+                    "Samedi": "10h00 à 16h00",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Douche",
+                    "Laverie",
+                    "Restauration assise",
+                    "Ordinateur"
+                ]
+            },
+            {
+                "title": " Accueil de jour des Apennins (Secours Catholique) ",
+                "description": "L'accueil de jour des Apennins est dédié aux personnes sans domicile. On y retrouve un accueil de jour chaleureux, avec une participation active des accueillis. Accueils inconditionnels: Activités collectives (jeux, accès informatique, ateliers d'expression) entre 10 et 11h30.Service de petit déjeuner entre 8h45 et 9h45.Autres informations :Un dimanche sur deux, affichage à la porte d'entrée, horaire : 8h30 -11h.  ",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 10/12/2021 ",
+                "address": "38 rue des Apennins, 75017 Paris",
+                "phone": " 01 53 31 00 10",
+                "horaires": {
+                    "Lundi": "8h30 à 11h00",
+                    "Mardi": "8h30 à 11h00",
+                    "Mercredi": "8h30 à 11h00",
+                    "Jeudi": "8h30 à 11h00",
+                    "Vendredi": "Fermé",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Restauration assise",
+                    "Activités diverses",
+                    "Psychologie",
+                    "Conseil administratif",
+                    "Bien-être",
+                    "Bien-être",
+                    "Accompagnement social",
+                    "Ordinateur",
+                    "Prise",
+                    "Bibliothèque",
+                    "Activités sportives",
+                    "Activités diverses",
+                    "Activités diverses",
+                    "Activités diverses",
+                    "Atelier numérique",
+                    "Activités diverses",
+                    "Activités diverses",
+                    "Restauration assise"
+                ]
+            },
+            {
+                "title": " Centre d'accueil et de distribution alimentaire Restos du Coeur 18ème Marcadet Poissonniers ",
+                "description": "Chaque personne accueillie aux Restos a droit à une aide alimentaire qui lui permet de préparer des repas équilibrés pour tous les membres de son foyer. Accessible à toute personne justiﬁant de sa situation précaire et domiciliée dans les 17e et 18e arrondissements. Propose également des colis alimentaires bébés (Restos Bébés du Coeur), et un vestiaire homme le vendredi matin. ",
+                "prefential": " Autre information importante : Personnes isolées ou familles . Accessible sur inscription selon justificatif de revenus et de domiciliation dans les 17e et 18e arr.",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://ad75.restosducoeur.org/centres-departementaux/ad75-centre-dactivites-paris-5/",
+                "lastUpdate": " Dernière mise à jour : 31/01/2022 ",
+                "address": "124 Rue des Poissonniers, 75018 Paris",
+                "phone": " 09 86 46 66 78",
+                "horaires": {
+                    "Lundi": "8h30 à 12h00  13h30 à 16h00",
+                    "Mardi": "8h30 à 12h00  13h30 à 16h00",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "8h30 à 12h00  13h30 à 16h00",
+                    "Vendredi": "Fermé",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Colis Alimentaire",
+                    "Colis Alimentaire",
+                    "Vêtements",
+                    "Cours de français",
+                    "Permanence juridique",
+                    "Conseil administratif",
+                    "Domiciliation",
+                    "Conseil administratif"
+                ]
+            },
+            {
+                "title": " Café Social Belleville (20ème) ",
+                "description": "L'association Ayyem Zamen se mobilise auprès des personnes vieillissantes, en situation de précarité économique ou de fragilité sociale, notamment celles ayant vécu une migration  Le Café Social est un lieu de sociabilité pour briser l'isolement des vieux migrants et leur venir en aide dans des démarches quotidiennes   • Un lieu de mixité sociale et culturelle, qui accueille toutes les nationalités, des hommes aussi bien que des femmes, pour se rencontrer, sortir de la solitude et de l'oubli, trouver une écoute...  • Un salon de thé pour prendre un café ou un thé, dans un cadre chaleureux et beau.  • Un espace “Entre-femmes“ (sorties hammam, ateliers artistiques, bijoux, décoration ﬂorale, patchwork…).  • Un espace de jeux (cartes, dominos, jeux d’échecs, jeux traditionnels…).",
+                "prefential": " Accueil exclusif :  À partir de 60 ans. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "https://www.cafesocial.org/",
+                "lastUpdate": " Dernière mise à jour : 01/12/2021 ",
+                "address": "7 Rue de Pali-Kao, 75020 Paris, France",
+                "phone": " 01 40 33 25 25",
+                "horaires": {
+                    "Lundi": "9h30 à 17h30",
+                    "Mardi": "9h30 à 17h30",
+                    "Mercredi": "9h30 à 17h30",
+                    "Jeudi": "13h30 à 17h30",
+                    "Vendredi": "9h30 à 17h30",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Activités diverses",
+                    "Conseil administratif",
+                    "Accompagnement social",
+                    "Atelier numérique",
+                    "Restauration assise",
+                    "Permanence juridique",
+                    "Infirmerie",
+                    "Activités diverses"
+                ]
+            },
+            {
+                "title": " CAARUD Boréal- La Terrasse- GHU Paris Psychiatrie & Neurosciences ",
+                "description": "Les Centres d'accueil et d'accompagnement à la réduction des risques pour usagers de drogues (CAARUD) accueillent sans condition les usagers de tous produits (drogues, alcool, etc.) en leur garantissant l'anonymat. Ils mettent à disposition du matériel de prévention des infections (préservatifs, échange de seringues, etc.), un espace hygiène et dispensent des soins de première nécessité. Leur rôle consiste également à informer, à orienter et à proposer un accompagnement social, tout en favorisant l'accès aux droits sociaux et aux soins. Leur action est complétée par celle des CSAPA (Centres de soins, d'accompagnement et de prévention en addictologie)  Accueil individuel sur rendez-vous l'après-midi, de 13h45 à 15h45 (fermé le jeudi après-midi).Echange de matériel du lundi au vendredi 9h30 – 16h30.Maraudes : Stalingrad-Rotonde et Villette : Mardi, Mercredi, Vendredi 14h – 16h30.",
+                "prefential": " Accueil exclusif :  Adultes uniquement, en situation d'addiction. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 21/12/2021 ",
+                "address": "64 ter rue de Meaux, 75019",
+                "phone": " 01 42 45 16 43",
+                "horaires": {
+                    "Lundi": "9h45 à 12h45  13h45 à 15h45",
+                    "Mardi": "9h45 à 12h45  13h45 à 15h45",
+                    "Mercredi": "9h45 à 12h45  13h45 à 15h45",
+                    "Jeudi": "9h45 à 12h45",
+                    "Vendredi": "9h45 à 12h45  13h45 à 15h45",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Addiction",
+                    "Médecin généraliste",
+                    "Laverie",
+                    "Infirmerie",
+                    "Douche",
+                    "Restauration assise",
+                    "Accueil de jour",
+                    "Accompagnement social",
+                    "Accompagnement à l'emploi",
+                    "Psychologie"
+                ]
+            },
+            {
+                "title": " Centre de repas chauds A Table / Centre d'accueil et de distribution alimentaire Restos du Coeur 1er Saint-Roch ",
+                "description": "Repas chauds tous les soirs en restauration assise.Colis alimentaires pour bébés (Restos Bébés du Coeur) les lundis, mardis et jeudi de 14h à 16h30.Atelier lecture les mardis et jeudis de 10h à 12h30.",
+                "prefential": " Accueil préférentiel :  Situation régulière. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "http://www.restosducoeur75.org/notre-action",
+                "lastUpdate": " Dernière mise à jour : 10/12/2021 ",
+                "address": "24 Rue Saint-Roch, 75001 Paris",
+                "phone": "",
+                "horaires": {
+                    "Lundi": "19h30 à 20h45",
+                    "Mardi": "19h30 à 20h45",
+                    "Mercredi": "19h30 à 20h45",
+                    "Jeudi": "19h30 à 20h45",
+                    "Vendredi": "19h30 à 20h45",
+                    "Samedi": "19h30 à 20h45",
+                    "Dimanche": "19h30 à 20h45"
+                },
+                "services": [
+                    "Restauration assise",
+                    "Activités diverses",
+                    "Colis Alimentaire",
+                    "Conseil administratif"
+                ]
+            },
+            {
+                "title": " Œuvre de la soupe populaire du 6e ",
+                "description": "Adultes sans enfants. Les tickets d'accès sont distribués à partir de 10h. Repas chaud - 6 services de 11h à 13h30. Fermeture des portes à 14h.",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 17/12/2021 ",
+                "address": "4 Rue Clément, 75006 Paris, France",
+                "phone": " 01 43 54 56 41",
+                "horaires": {
+                    "Lundi": "11h00 à 14h00",
+                    "Mardi": "11h00 à 14h00",
+                    "Mercredi": "11h00 à 14h00",
+                    "Jeudi": "11h00 à 14h00",
+                    "Vendredi": "11h00 à 14h00",
+                    "Samedi": "11h00 à 14h00",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Restauration assise",
+                    "Distribution de repas"
+                ]
+            },
+            {
+                "title": " Sœurs Missionnaires de la Charité ",
+                "description": "Restauration assise.   A partir de 18 ans   Tous les jours de l'année sauf les jeudis.",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 22/12/2021 ",
+                "address": "60 rue de la Folie-Méricourt, 75011 Paris",
+                "phone": "",
+                "horaires": {
+                    "Lundi": "9h00 à 11h00",
+                    "Mardi": "9h00 à 11h00",
+                    "Mercredi": "9h00 à 11h00",
+                    "Jeudi": "Fermé",
+                    "Vendredi": "9h00 à 11h00",
+                    "Samedi": "9h00 à 11h00",
+                    "Dimanche": "9h00 à 11h00"
+                },
+                "services": [
+                    "Restauration assise"
+                ]
+            }
+        ]
+    },
+    {
+        "hygiene": [
+            {
+                "title": " ESI La maison du partage  ",
+                "description": "Comptoir d'accueil et orientation, et cafétéria. Espace hygiène (toilettes, douches, etc.). Espace domiciliation. Bureaux d'accueil et d'entretiens personnalisés. Diﬀérentes permanences sociales.",
+                "prefential": " Accueil préférentiel :  Adultes uniquement, personne isolée, couple. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://www.armeedusalut.fr/etablissements/mdp",
+                "lastUpdate": " Dernière mise à jour : 16/02/2022 ",
+                "address": "32 rue Bouret, 75019 Paris",
+                "phone": " 01 53 38 41 30",
+                "horaires": {
+                    "Lundi": "8h00 à 12h30  14h00 à 16h30",
+                    "Mardi": "8h00 à 12h30  14h00 à 16h30",
+                    "Mercredi": "8h00 à 12h30  14h00 à 16h30",
+                    "Jeudi": "8h00 à 12h30  14h00 à 16h30",
+                    "Vendredi": "8h00 à 12h30  14h00 à 16h30",
+                    "Samedi": "Fermé",
+                    "Dimanche": "9h00 à 12h30  14h00 à 16h30"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Fontaine à eau",
+                    "Douche",
+                    "Toilettes",
+                    "Laverie",
+                    "Accompagnement social",
+                    "Domiciliation",
+                    "Permanence juridique",
+                    "Permanence juridique"
+                ]
+            },
+            {
+                "title": " ESI Agora ",
+                "description": "L'Espace Solidarité Insertion (ESI) Agora accueille, oriente et accompagne de manière inconditionnelle et anonyme les personnes exclues, défavorisées, vivant à la rue ou dans des lieux inappropriés. Il propose des accompagnements globaux et permet l'accès à des prestations de base.   Accompagnement juridique et social douche. Laverie. Domiciliation. Consultations médicales. Activités (culturelles, sportives, informatiques, FLE)   Toutes les prestations sur rendez-vous doivent passer par une prise de rendez-vous à l'accueil le matin.   Ouvert toute l'année sauf les jours fériés et les week-ends.",
+                "prefential": " Accueil préférentiel :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français, Anglais, Polonais, Russe, Arabe",
+                "by_appointement": true,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 28/02/2022 ",
+                "address": "32 rue des Bourdonnais, 75001 Paris",
+                "phone": " 01 77 37 63 19",
+                "horaires": {
+                    "Lundi": "10h00 à 12h00  14h00 à 16h30",
+                    "Mardi": "10h00 à 12h00  14h00 à 16h30",
+                    "Mercredi": "10h00 à 12h00",
+                    "Jeudi": "10h00 à 12h00  14h00 à 16h30",
+                    "Vendredi": "10h00 à 12h00  14h00 à 16h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Espace de repos",
+                    "Douche",
+                    "Accompagnement social",
+                    "Permanence juridique",
+                    "Laverie",
+                    "Médecin généraliste",
+                    "Accompagnement à l'emploi",
+                    "Psychologie",
+                    "Pédicure",
+                    "Fontaine à eau",
+                    "Domiciliation",
+                    "Halte de nuit",
+                    "Activités diverses",
+                    "Cours de français"
+                ]
+            },
+            {
+                "title": " ESI Chez monsieur Vincent ",
+                "description": "Hygiène (douches conditionnées, lave-linge), prestations sociales (écoute, évaluation, conseil et orientation), accès aux droits (domiciliation conditionnées), accueil santé et orientation",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "http://www.captifs.fr/",
+                "lastUpdate": " Dernière mise à jour : 16/12/2021 ",
+                "address": "10 Rue de Rocroy, 75010, Paris, France",
+                "phone": " 01 42 80 98 73",
+                "horaires": {
+                    "Lundi": "9h30 à 12h00  14h00 à 17h00",
+                    "Mardi": "9h30 à 12h00  14h00 à 17h00",
+                    "Mercredi": "9h30 à 12h00  14h00 à 17h00",
+                    "Jeudi": "14h00 à 17h00",
+                    "Vendredi": "14h00 à 17h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Douche",
+                    "Douche",
+                    "Accompagnement social",
+                    "Infirmerie",
+                    "Activités diverses",
+                    "Laverie",
+                    "Domiciliation",
+                    "Psychologie",
+                    "Cours de français",
+                    "Médecin généraliste"
+                ]
+            },
+            {
+                "title": " ESI La maison dans le jardin / Saint-Michel ",
+                "description": "L'Espace Solidarité Insertion accueille des personnes isolées et majeures, dans le respect des principes d'inconditionnalité et d'anonymat. De 8h à 20h les personnes peuvent accéder à un ensemble de prestations (douche, laverie, casier solidaire, domiciliation, entretien social, café et collation, ateliers/animations). Elles peuvent également rencontrer un travailleur social ou un professionnel de santé",
+                "prefential": " Accueil exclusif :  Adultes uniquement, demandeur / demandeuse d'asile, réfugié / réfugiée, situation régulière. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://www.samusocial.paris/",
+                "lastUpdate": " Dernière mise à jour : 23/12/2021 ",
+                "address": "35 Avenue Courteline, 75012, Paris, France",
+                "phone": " 01 41 74 88 10",
+                "horaires": {
+                    "Lundi": "8h00 à 20h00",
+                    "Mardi": "8h00 à 20h00",
+                    "Mercredi": "8h00 à 20h00",
+                    "Jeudi": "13h30 à 20h00",
+                    "Vendredi": "8h00 à 20h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Douche",
+                    "Infirmerie",
+                    "Permanence juridique",
+                    "Laverie",
+                    "Médecin généraliste",
+                    "Dentaire",
+                    "Pédicure",
+                    "Accompagnement social",
+                    "Dermatologie",
+                    "Psychologie",
+                    "Fontaine à eau",
+                    "Coffre-fort numérique",
+                    "Halte de nuit",
+                    "Vétérinaire"
+                ]
+            },
+            {
+                "title": " ESI La maison dans la rue ",
+                "description": "L'ESI la Maison dans la Rue permet l'accueil et le soutien des personnes majeures sans enfant, en situation de rue ou en très grande précarité d'hébergement. L'accueil est inconditionnel et comprend un espace hygiène (WC, lavabos, douches), un espace buanderie, une cafétéria pour la prise de petit-déjeuner et de boissons chaudes et froides durant la journée.Un accompagnement social peut être proposé après la prise de RDV auprès d'un travailleur social.Des ateliers collectifs sont proposés (revue de presse, photolangage, arthérapie, etc.). Possibilité d'être orienté par des associations de maraude.",
+                "prefential": " Accueil exclusif :  Adultes uniquement, personne isolée, couple. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://www.casp.asso.fr/index.php/component/k2/itemlist/category/152-esi-la-maison-dans-la-rue.html",
+                "lastUpdate": " Dernière mise à jour : 09/12/2021 ",
+                "address": "18 Rue de Picpus, 75012, Paris, France",
+                "phone": " 01 40 02 09 88",
+                "horaires": {
+                    "Lundi": "8h00 à 12h00  14h00 à 17h00",
+                    "Mardi": "8h00 à 12h00  14h00 à 17h00",
+                    "Mercredi": "14h00 à 17h00",
+                    "Jeudi": "8h00 à 12h00  14h00 à 17h00",
+                    "Vendredi": "8h00 à 12h00  14h00 à 17h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Médecin généraliste",
+                    "Douche",
+                    "Activités sportives",
+                    "Laverie",
+                    "Accompagnement social",
+                    "Psychologie",
+                    "Activités diverses",
+                    "Permanence juridique",
+                    "Conseil administratif",
+                    "Addiction",
+                    "Atelier numérique",
+                    "Toilettes",
+                    "Activités sportives",
+                    "Activités diverses",
+                    "Vêtements",
+                    "Coffre-fort numérique"
+                ]
+            },
+            {
+                "title": " ESI l'Arche d'Avenirs ",
+                "description": "Accueil avec des équipements.   Les animaux ne sont pas autorisés dans la structure, mais il est possible de les attacher à l'extérieur   Collation le matin (mardi, mercredi, vendredi et samedi de 8h30 à 11h30). L'accueil propose aussi une salle de repos non mixte en accès libre   L'ESI ne feme pas pendant l'été ni l'hiver (si plan grand froid activé : élargissement des horaires)  Fermé les jours fériés.",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Anglais, Espagnol, Roumain, Polonais, Russe, Arabe, Français",
+                "by_appointement": true,
+                "link": "http://www.miedepain.asso.fr/larche-davenirs/",
+                "lastUpdate": " Dernière mise à jour : 13/12/2021 ",
+                "address": "113 Rue Regnault, 75013 Paris, France",
+                "phone": " 01 44 06 98 84",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "8h30 à 12h00  13h45 à 16h00",
+                    "Mercredi": "8h30 à 12h00  13h45 à 17h00",
+                    "Jeudi": "8h30 à 12h00  13h45 à 17h00",
+                    "Vendredi": "8h30 à 12h00  13h45 à 17h00",
+                    "Samedi": "8h30 à 12h00  13h45 à 17h00",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Douche",
+                    "Bagagerie",
+                    "Conseil administratif",
+                    "Toilettes",
+                    "Laverie",
+                    "Activités diverses",
+                    "Cours de français",
+                    "Psychologie",
+                    "Espace de repos",
+                    "Activités diverses"
+                ]
+            },
+            {
+                "title": " ESI Centre René Coty ",
+                "description": "Les ESI accueillent de manière inconditionnelle tous ceux que les difficultés de l’existence ont conduit à un état de très grande précarité et d’exclusion. Les ESI offrent une mise à l’abri en journée et des prestations sociales et sanitaires aux personnes vivant à la rue à Paris. Ils s’intègrent au réseau parisien de la veille sociale Hygiène et soins (douche, laverie, coiﬀure, soins infirmiers, pédicurie). Boissons chaudes. Consultation médicale à venir Accueil pour tous : femmes et hommes du lundi au vendredi Accès aux douches et à la buanderie pour les femmes uniquement, les mardis, mercredis, jeudis et vendredis après-midiAccès aux douches et à la buanderie pour les hommes uniquement, tous les matins et le lundi après-midiFamilles : mardis après-midi",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://api-site-cdn.paris.fr/images/146472.pdf",
+                "lastUpdate": " Dernière mise à jour : 14/12/2021 ",
+                "address": "6 Avenue René Coty, 75014 Paris, France",
+                "phone": " 01 43 27 54 15",
+                "horaires": {
+                    "Lundi": "8h30 à 13h00  14h00 à 17h00",
+                    "Mardi": "8h30 à 13h00  14h00 à 17h00",
+                    "Mercredi": "8h30 à 13h00  14h00 à 17h00",
+                    "Jeudi": "8h30 à 13h00  14h00 à 17h00",
+                    "Vendredi": "8h30 à 13h00  14h00 à 17h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Douche",
+                    "Douche",
+                    "Laverie",
+                    "Infirmerie",
+                    "Pédicure",
+                    "Protections périodiques",
+                    "Bien-être",
+                    "Accueil de jour",
+                    "Médecin généraliste"
+                ]
+            },
+            {
+                "title": " ESI La Halle Saint-Didier ",
+                "description": "Les ESI accueillent de manière inconditionnelle tous ceux que les difficultés de l’existence ont conduit à un état de très grande précarité et d’exclusion. Les ESI offrent une mise à l’abri en journée et des prestations sociales et sanitaires aux personnes vivant à la rue à Paris. Ils s’intègrent au réseau parisien de la veille sociale Organisé sur le principe d’un accueil immédiat inconditionnel, chaleureux et convivial, l’établissement offre aux personnes en grande précarité- un lieu d’accueil sécurisant la journée- des prestations de qualité qui répondent aux besoins de première nécessité (douche, buanderie, coiffure, vestiaire, casiers pour charger son téléphone)- des prestations paramédicales (pédicurie, soins infirmiers, entretien avec un psychologue)- un accompagnement social Fermeture après-midi le 2ème vendredi du mois pour la désinfection des locaux + 1/2 journée par mois pour réunion générale.",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://api-site-cdn.paris.fr/images/146471.pdf",
+                "lastUpdate": " Dernière mise à jour : 08/03/2022 ",
+                "address": "23 Rue Mesnil, 75016, Paris, France",
+                "phone": " 01 53 70 48 88",
+                "horaires": {
+                    "Lundi": "8h30 à 12h30  13h30 à 17h00",
+                    "Mardi": "8h30 à 12h30  13h30 à 17h00",
+                    "Mercredi": "8h30 à 12h30  13h30 à 17h00",
+                    "Jeudi": "8h30 à 12h30  13h30 à 17h00",
+                    "Vendredi": "8h30 à 12h30  13h30 à 17h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Conseil administratif",
+                    "Douche",
+                    "Douche",
+                    "Accompagnement social",
+                    "Laverie",
+                    "Psychologie",
+                    "Infirmerie",
+                    "Fontaine à eau",
+                    "Coffre-fort numérique",
+                    "Permanence juridique",
+                    "Toilettes",
+                    "Pédicure",
+                    "Protections périodiques"
+                ]
+            },
+            {
+                "title": " Bains-douches des Deux Ponts ",
+                "description": "Bain-douche accessible aux personnes en situation de handicap. La mairie de Paris met gratuitement à la disposition de tous des bains-douches municipaux en cabine individuelle. Vous devez vous munir d'un nécessaire de toilette et d'une serviette de toilette.   Attention : les dernières entrées s’eﬀectuent 30 minutes avant la fermeture de l’établissement.   Les bains-douches sont fermés les jours fériés suivants : 1er janvier, 1er mai, 14 juillet, 15 août, 25 décembre.",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "https://www.paris.fr/equipements/bain-douche-des-deux-ponts-18290",
+                "lastUpdate": " Dernière mise à jour : 10/12/2021 ",
+                "address": "8 Rue des Deux Ponts, 75004 Paris, France",
+                "phone": " 01 43 54 47 40",
+                "horaires": {
+                    "Lundi": "7h00 à 18h00",
+                    "Mardi": "7h00 à 18h00",
+                    "Mercredi": "7h00 à 18h00",
+                    "Jeudi": "Fermé",
+                    "Vendredi": "7h00 à 18h00",
+                    "Samedi": "8h00 à 18h00",
+                    "Dimanche": "8h00 à 12h00"
+                },
+                "services": [
+                    "Douche",
+                    "Bagagerie"
+                ]
+            }
+        ]
+    },
+    {
+        "accueil": [
+            {
+                "title": " Antenne de Paris Centre / Café-rencontre (Eglise Saint Eustache) ",
+                "description": "Fondée à Sainte Jeanne de Chantal en 1981, l’association a pour mission d’être une présence auprès des personnes en grande exclusion sociale : personnes sans domicile ou en situation de prostitution, mineurs en errance, et de les accompagner dans un chemin de libération et d’insertionOuvert toute l'année sauf fermeture exceptionnelle. Alcooliques Anonymes est une association bénévole, internationale, d’hommes et de femmes, provenant de toutes les catégories sociales, qui se réunissent dans le but de devenir abstinents et de le rester. Le désir d’arrêter de boire est la seule condition pour être membre. Les AA ne demandent ni cotisation, ni droit d’entrée. Narcotiques Anonymes est une association à but non lucratif, composée d’hommes et de femmes pour qui la drogue était devenue un problème majeur. Nous nous réunissons régulièrement pour nous entraider à rester abstinents. C’est un programme d’abstinence complète de toute drogue. La seule condition pour devenir membre est le désir d’arrêter de consommer.",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français, Anglais",
+                "by_appointement": false,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 23/12/2021 ",
+                "address": "1 Rue Montmartre, 75001 Paris",
+                "phone": " 01 45 08 14 85",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "Fermé",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "9h00 à 11h45",
+                    "Vendredi": "Fermé",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Addiction",
+                    "Addiction"
+                ]
+            },
+            {
+                "title": " Antenne de Paris 12 (Immaculée Conception) ",
+                "description": "Les permanences d’accueil sont des lieux ressources au sein de l’association. Elles sont ouvertes toute l’année pour les personnes qui souhaitent rencontrer nos équipes de salariés et de bénévoles pour une écoute, un moment de convivialité, un accompagnement social ou spirituel. Ce sont des lieux, hors de la rue et du regard de tous, où un dialogue plus profond et plus intime peut se nouer. Pendant les permanences d’accueil, les personnes peuvent prendre rendez-vous avec un travailleur social mais aussi venir pour discuter, boire un café, jouer à des jeux de société, participer à des ateliers (sport, cuisine, cinéma, écriture, bricolage) ou simplement créer des liens d’amitié   Le lieu reste ouvert en été.",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français, Anglais",
+                "by_appointement": true,
+                "link": "http://www.captifs.fr",
+                "lastUpdate": " Dernière mise à jour : 14/01/2022 ",
+                "address": "15 Rue Marsoulan, 75012 Paris, France",
+                "phone": " 01 44 74 91 50",
+                "horaires": {
+                    "Lundi": "15h00 à 17h00",
+                    "Mardi": "14h00 à 17h00",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "9h30 à 11h00",
+                    "Vendredi": "Fermé",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Accompagnement social",
+                    "Domiciliation",
+                    "Activités sportives",
+                    "Activités diverses",
+                    "Psychologie"
+                ]
+            },
+            {
+                "title": " Antenne Montgallet - Secours Populaire Français ",
+                "description": "Les permanences d'accueil et de solidarité (PAS) sont des lieux d'entraide et d'échange où les bénévoles accueillent, écoutent, informent, orientent et proposent des aides aux personnes qui se tournent vers le Secours populaire Après évaluation sociale, délivrance des cartes permettant d’accéder au Libre-service solidaire et/ou au boutique vestimentaire. Cours d'alphabétisation / FLE Accompagnement scolaireLes permanences sont accessibles sur rendez-vous par téléphone aux heures de permanences.",
+                "prefential": " Autre information importante : Sur inscription en septembre ! Voir le site ou envoyer un mail pour connaître les dates exactes à alpha@spf75.org ou renseignements aux heures des permanences d'activité.",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://www.secourspopparis.org/",
+                "lastUpdate": " Dernière mise à jour : 15/12/2021 ",
+                "address": "12 Rue Montgallet, 75012 Paris",
+                "phone": " 01 43 07 86 09",
+                "horaires": {
+                    "Lundi": "14h00 à 17h00",
+                    "Mardi": "Fermé",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "Fermé",
+                    "Vendredi": "14h00 à 17h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Soutien scolaire",
+                    "Cours de français"
+                ]
+            },
+            {
+                "title": " Busabri ",
+                "description": "Les Enfants du Canal lutte contre l’exclusion des personnes vivant dans la rue, en bidonville ou mal-logées. Le Busabri est un accueil de jour dans un bus  aménagé. Il s'agit d'un espace d’accueil et d’orientation   C'est un lieu apaisé qui permet aux personnes de quitter l’environnement anxiogène de la rue et ainsi se libérer un temps des questions récurrentes du manger, boire, dormir, se protéger.",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français, Anglais",
+                "by_appointement": false,
+                "link": "https://www.lesenfantsducanal.fr/nos-actions/busabri/",
+                "lastUpdate": " Dernière mise à jour : 06/01/2022 ",
+                "address": "10 Boulevard Edgar Quinet, Paris, France",
+                "phone": "",
+                "horaires": {
+                    "Lundi": "9h30 à 10h45",
+                    "Mardi": "13h15 à 14h30",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "9h30 à 10h45",
+                    "Vendredi": "13h15 à 14h30",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Prise"
+                ]
+            }
+        ]
+    },
+    {
+        "conseil": [
+            {
+                "title": " ESI Espace Saint Martin  ",
+                "description": "L’Espace Solidarité Insertion (ESI) Saint Martin est fermé mais le local de domiciliation reste ouvert. ",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://www.armeedusalut.fr/etablissements/esistmartin",
+                "lastUpdate": " Dernière mise à jour : 16/02/2022 ",
+                "address": "27 Boulevard Saint-Martin, 75003 Paris",
+                "phone": " 01 44 59 64 90",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "9h30 à 13h00  14h00 à 16h30",
+                    "Mercredi": "9h30 à 13h00  14h00 à 16h30",
+                    "Jeudi": "9h30 à 13h00  14h00 à 16h30",
+                    "Vendredi": "Fermé",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Domiciliation",
+                    "Permanence juridique",
+                    "Permanence juridique"
+                ]
+            },
+            {
+                "title": " Antenne Bayet - Secours Populaire Français ",
+                "description": "Accueil, écoute et accompagnement social les mardis, mercredis et jeudis 9h00 - 12h00 (prise de rendez-vous par téléphone aux heures de permanence)Aide aux démarches administratives avec des écrivains publics le mardi et jeudi de 10H à 12h sur RDV.Ateliers Smartphone tous les mercredis de 10h à 12h sans rendez-vous.Cours d'alphabétisation et soutien scolaire sur inscription en Septembre.Accompagnement vers l'emploi : permanence dédiée aux personnes majeures, en recherche d'emploi, domiciliées à Paris et autorisées à travailler, prise de rendez-vous par email à emploi@spf75.org Accueil des étudiants (aide alimentaire et vestimentaire, réservé aux étudiants inscrits dans une fac ou école parisienne ou domiciliés sur Paris) : les mardis de 12h à 16h et les vendredis de 11h à 14h ",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://www.secourspopparis.org/",
+                "lastUpdate": " Dernière mise à jour : 15/12/2021 ",
+                "address": "6 Rue Albert Bayet, 75013 Paris",
+                "phone": " 09 83 30 99 28",
+                "horaires": {
+                    "Lundi": "14h00 à 18h00",
+                    "Mardi": "9h00 à 18h00",
+                    "Mercredi": "9h00 à 12h00  14h00 à 18h00",
+                    "Jeudi": "9h00 à 12h00  14h00 à 18h00",
+                    "Vendredi": "11h00 à 17h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accompagnement à l'emploi",
+                    "Écrivain public",
+                    "Cours de français",
+                    "Cours de français",
+                    "Atelier numérique",
+                    "Accompagnement social",
+                    "Soutien scolaire"
+                ]
+            },
+            {
+                "title": " Antenne Marcel Paul - Secours Populaire Français ",
+                "description": "Accueil écoute et accompagnement social : carte alimentaire et bon vestiaire. Permanence logement (aide aux démarches, conseil, orientation). Les permanences sont dorénavant sur rendez-vous par téléphone ou sur place aux heures de permanence.",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://www.secourspopparis.org/",
+                "lastUpdate": " Dernière mise à jour : 15/12/2021 ",
+                "address": "9 Place Marcel Paul, 75014 Paris",
+                "phone": " 06 63 83 89 82",
+                "horaires": {
+                    "Lundi": "9h30 à 12h00",
+                    "Mardi": "Fermé",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "9h30 à 12h00",
+                    "Vendredi": "Fermé",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accompagnement social",
+                    "Accueil de jour",
+                    "Soutien scolaire"
+                ]
+            }
+        ]
+    },
+    {
+        "sante": [
+            {
+                "title": " Café Social Dejean ",
+                "description": "L'association Ayyem Zamen se mobilise auprès des personnes vieillissantes, en situation de précarité économique ou de fragilité sociale, notamment celles ayant vécu une migration  Le Café Social est un lieu de sociabilité pour briser l'isolement des vieux migrants et leur venir en aide dans des démarches quotidiennes   • Un lieu de mixité sociale et culturelle, qui accueille toutes les nationalités, des hommes aussi bien que des femmes, pour se rencontrer, sortir de la solitude et de l'oubli, trouver une écoute...  • Un salon de thé pour prendre un café ou un thé, dans un cadre chaleureux et beau.  • Un espace “Entre-femmes“ (sorties hammam, ateliers artistiques, bijoux, décoration ﬂorale, patchwork…).  • Un espace de jeux (cartes, dominos, jeux d’échecs, jeux traditionnels…).",
+                "prefential": " Accueil exclusif :  À partir de 60 ans. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "https://www.cafesocial.org/",
+                "lastUpdate": " Dernière mise à jour : 17/12/2021 ",
+                "address": "1 Rue Dejean, 75018 Paris, France",
+                "phone": " 01 42 23 05 93",
+                "horaires": {
+                    "Lundi": "9h30 à 17h30",
+                    "Mardi": "9h30 à 17h30",
+                    "Mercredi": "9h30 à 17h30",
+                    "Jeudi": "9h30 à 17h30",
+                    "Vendredi": "9h30 à 17h30",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Activités diverses",
+                    "Conseil administratif",
+                    "Accompagnement social",
+                    "Accueil de jour",
+                    "Atelier numérique",
+                    "Permanence juridique",
+                    "Infirmerie",
+                    "Activités diverses"
+                ]
+            },
+            {
+                "title": " CAARUD AIDES 75 - Paris les Halles ",
+                "description": "Les Centres d'accueil et d'accompagnement à la réduction des risques pour usagers de drogues (CAARUD) accueillent sans condition les usagers de tous produits (drogues, alcool, etc.) en leur garantissant l'anonymat. Ils mettent à disposition du matériel de prévention des infections (préservatifs, échange de seringues, etc.). Leur rôle consiste également à informer, à orienter et à proposer un accompagnement social, tout en favorisant l'accès aux droits sociaux et aux soins.  Usagers de drogues, travailleurs du sexe, personnes séropositives, personnes transgenre, personnes pratiquant le slam, personnes ayant eu un rapport sexuel à risque, personne ayant eu une consommation à risque.   Le CAARUD reste ouvert tout l'été   A la même adresse se trouve l'association AIDES, où les travailleurs accueillent, écoutent et accompagnent afin de lutter contre les discriminations.",
+                "prefential": " Accueil exclusif :  En situation d'addiction. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://www.aides.org",
+                "lastUpdate": " Dernière mise à jour : 22/12/2021 ",
+                "address": "36 Rue Dussoubs, 75002 Paris, France",
+                "phone": " 01 44 82 53 14",
+                "horaires": {
+                    "Lundi": "9h30 à 12h30",
+                    "Mardi": "9h30 à 12h30",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "9h30 à 12h30  17h30 à 21h00",
+                    "Vendredi": "9h30 à 12h30",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Addiction",
+                    "Laverie",
+                    "Dépistage",
+                    "Conseil administratif",
+                    "Douche",
+                    "Permanence juridique"
+                ]
+            },
+            {
+                "title": " CAARUD République- B10 Charonne Oppelia ",
+                "description": "Les Centres d'accueil et d'accompagnement à la réduction des risques pour usagers de drogues (CAARUD) accueillent les usagers de tous produits (drogues, alcool, etc.) en leur garantissant l'anonymat et la gratuité de leurs services. Ils mettent à disposition du matériel de prévention des infections (préservatifs, échange de seringues, kits crack, etc.), un espace hygiène et dispensent des soins de première nécessité. Leur rôle consiste également à informer, à orienter et à proposer un accompagnement social, tout en favorisant l'accès aux droits sociaux et aux soins. Leur action est complétée par celle des CSAPA (Centres de soins, d'accompagnement et de prévention en addictologie)Le centre CAARUD République de Charonne  dispose maintenant d'un appareil d'analyse des produits afin de permettre aux usagers de consommer avec le moins de risques possibles.L'équipe est également formée aux TRODs VIH et VHC A noter : centre fermé les jours fériés.",
+                "prefential": " Accueil exclusif :  Adultes uniquement, en situation d'addiction. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://www.oppelia.fr/etablissement/charonne-paris-10eme/",
+                "lastUpdate": " Dernière mise à jour : 01/12/2021 ",
+                "address": "9 Rue Beaurepaire, Paris, France",
+                "phone": " 01 53 38 96 20",
+                "horaires": {
+                    "Lundi": "9h30 à 12h30  14h00 à 16h30",
+                    "Mardi": "9h30 à 12h30  14h00 à 16h30",
+                    "Mercredi": "9h30 à 12h30",
+                    "Jeudi": "9h30 à 12h30  14h00 à 16h30  18h00 à 22h00",
+                    "Vendredi": "9h30 à 12h30  14h00 à 16h30",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Addiction",
+                    "Accueil de jour",
+                    "Médecin généraliste",
+                    "Douche",
+                    "Infirmerie",
+                    "Accompagnement social",
+                    "Addiction",
+                    "Permanence juridique",
+                    "Dépistage",
+                    "Pédicure"
+                ]
+            }
+        ]
+    },
+    {
+        "formation-emploi": [
+            {
+                "title": " Espace Solidarité Ramey - Secours Populaire ",
+                "description": "L’espace solidarité RAMEY s’adresse aux personnes domiciliées dans les 8e, 10e, 17e et 18e arrondissements de Paris. Il comprend plusieurs activités :- La domiciliation (COMPLET sauf sur orientation des travailleurs sociaux des hôpitaux Lariboisière, Saint Louis et Fernand Widal)- Un point d’information généraliste- Un espace café solidaire- Des permanences d’accueil permettant aux aides et services du Secours Pop Paris ou spécialisés (inscription à l'aide alimentaire et vestimentaire, info santé, droits des étrangers, écrivains publics, ateliers smartphone, logement-hébergement, optique)- Un espace qui permet de charger la batterie des téléphones portables gratuitement. Les téléphones sont sous la responsabilité de leur propriétaire. - Des cours de français : https://www.secourspopparis.org/article/alphabetisation-francais-langue-etrangere Jamais fermé sauf les jours fériés.",
+                "prefential": " Accueil préférentiel :  Demandeur / demandeuse d'asile, situation régulière. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://www.secourspopparis.org/",
+                "lastUpdate": " Dernière mise à jour : 15/12/2021 ",
+                "address": "6 Passage Ramey, 75018 Paris",
+                "phone": " 01 53 41 39 39",
+                "horaires": {
+                    "Lundi": "9h30 à 12h30  14h30 à 17h30",
+                    "Mardi": "9h30 à 12h30  14h30 à 17h30",
+                    "Mercredi": "9h30 à 12h30  14h30 à 17h30",
+                    "Jeudi": "9h30 à 12h30  14h30 à 17h30",
+                    "Vendredi": "9h30 à 12h30  14h30 à 17h00",
+                    "Samedi": "9h30 à 12h00",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Activités diverses",
+                    "Accompagnement social",
+                    "Conseil logement",
+                    "Permanence juridique",
+                    "Cours de français",
+                    "Écrivain public",
+                    "Prise",
+                    "Soutien scolaire",
+                    "Coffre-fort numérique",
+                    "Domiciliation",
+                    "Téléphone",
+                    "Permanence juridique",
+                    "Cours de français"
+                ]
+            },
+            {
+                "title": " Maison Caritas La Chapelle Paris Nord (Secours Catholique) ",
+                "description": "Tout public des 9e, 10e, 18e et 19 arr.Accueil, écoute, orientation et actions collectives.Sur rendez-vous: accompagnement dans les démarches.Pour de plus amples informations, merci de contacter le 01 53 35 09 10Alpha Fle : mardi 9h30 - 12h30 / 14h - 17hAccès en transport : bus 60 (Evangile) pour 35 (Radiguet)     ",
+                "prefential": " Accueil préférentiel :  Sans-papier, famille. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 14/12/2021 ",
+                "address": "126 Rue d'Aubervilliers, 75018 Paris",
+                "phone": " 01 53 35 09 10",
+                "horaires": {
+                    "Lundi": "9h30 à 12h30  14h00 à 17h00",
+                    "Mardi": "9h30 à 12h30  14h00 à 17h00",
+                    "Mercredi": "9h30 à 12h30  14h00 à 17h00",
+                    "Jeudi": "9h30 à 12h30  14h00 à 17h00",
+                    "Vendredi": "Fermé",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Accompagnement social",
+                    "Permanence juridique",
+                    "Accompagnement à l'emploi",
+                    "Accompagnement à l'emploi",
+                    "Cours de français",
+                    "Cours de français",
+                    "Activités diverses"
+                ]
+            },
+            {
+                "title": " Association Autremonde ",
+                "description": "L’objectif est de créer et maintenir un lien social avec des personnes exclues, isolées et en situation de grande précarité, afin d’encourager leur parcours de réinsertion   Trois principales activités sont mises en œuvre    - Aller au-devant et accueillir chaque semaine ces publics sur plusieurs sites parisien  - Réaliser une veille sociale en direction de personnes en situation de rue, en coordination avec les acteurs associatifs et institutionnels du territoir  - Informer, orienter et accompagner les personnes accueillies dans leurs démarches administratives, afin d’encourager une prise en charge, une auto­nomisation et une stabilisation   Depuis les maraudes jusqu’à l’accueil de jour, Autremonde structure ses missions dans une dynamique où le lien social se construit progressivement et s’inscrit dans une continuité : l’objectif est d’amener les personnes rencontrées lors des maraudes sur les lieux d’accueil des camions, et de là, vers l’accueil de jour. Deux types d’orientation sont assurées : en interne, vers les temps de convivialité, des ateliers de remobilisation ou d’apprentissage ; en externe vers des acteurs sociaux institutionnels   Acteur de la veille sociale, Autremonde assure ainsi un rôle de « passerelle ». Elle se positionne comme un intermédiaire et un relais d’orientation, qui intervient en complément et en coordination avec les dispositifs institutionnels de l’action sociale   Camion d'accueil de 21h à 23h: le mardi gare de l'Est, le jeudi gare du Nord, le vendredi place de la République.",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français, Anglais",
+                "by_appointement": false,
+                "link": "http://www.autremonde.org/",
+                "lastUpdate": " Dernière mise à jour : 13/12/2021 ",
+                "address": "30 rue de la Mare, 75020 Paris",
+                "phone": " 01 43 14 96 87",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "Fermé",
+                    "Mercredi": "14h00 à 17h30",
+                    "Jeudi": "Fermé",
+                    "Vendredi": "14h00 à 17h30",
+                    "Samedi": "Fermé",
+                    "Dimanche": "14h00 à 17h30"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Bibliothèque",
+                    "Atelier numérique",
+                    "Prise",
+                    "Activités sportives",
+                    "Ordinateur",
+                    "Cours de français",
+                    "Activités diverses"
+                ]
+            },
+            {
+                "title": " Antenne Fougères - Secours Populaire Français ",
+                "description": "Accueil, écoute, accompagnement social. Après évaluation, délivrance des cartes permettant d'accéder au libre-service alimentaire.Soutien scolaire (renseignements sur place lors des permanences)Permanence assurée par l'association Projet 19, association d'insertion par l'emploi.   ",
+                "prefential": " Autre information importante : Personnes domiciliées dans le 19e et 20e arrondissement ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://www.secourspopparis.org/",
+                "lastUpdate": " Dernière mise à jour : 15/12/2021 ",
+                "address": "3 Rue de Noisy-le-Sec, 75020 Paris",
+                "phone": " 01 53 39 13 49",
+                "horaires": {
+                    "Lundi": "9h30 à 12h00",
+                    "Mardi": "Fermé",
+                    "Mercredi": "14h00 à 17h00",
+                    "Jeudi": "9h30 à 12h00",
+                    "Vendredi": "Fermé",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Activités diverses",
+                    "Écrivain public",
+                    "Accompagnement social",
+                    "Cours de français",
+                    "Soutien scolaire"
+                ]
+            },
+            {
+                "title": " Maison Caritas  Saint Ambroise Paris Centre-Est (Secours Catholique) ",
+                "description": "Les « Maisons » Secours Catholique-Caritas France ont été pensées comme de véritables lieux de vie ou les personnes sont accompagnées sur les différentes thématiques dont elles ont besoin. Elles peuvent aussi y trouver des ateliers d’actions collectives ou tout simplement faire des rencontres afin de ne pas rester seules.Orientation, écoute, accompagnement, activités collectives.",
+                "prefential": " Accueil préférentiel :  Femmes, adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français, Anglais",
+                "by_appointement": true,
+                "link": "http://www.secours-catholique.org",
+                "lastUpdate": " Dernière mise à jour : 18/02/2022 ",
+                "address": "13 Rue Saint-Ambroise, 75011 Paris",
+                "phone": " 01 55 28 86 90",
+                "horaires": {
+                    "Lundi": "9h30 à 12h30  14h00 à 17h30",
+                    "Mardi": "9h30 à 12h30  14h00 à 17h30",
+                    "Mercredi": "9h30 à 12h30  14h00 à 17h30",
+                    "Jeudi": "9h30 à 12h30  14h00 à 17h30",
+                    "Vendredi": "9h30 à 12h30  14h00 à 17h30",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Accompagnement social",
+                    "Écrivain public",
+                    "Permanence juridique",
+                    "Accompagnement à l'emploi",
+                    "Activités diverses",
+                    "Activités diverses"
+                ]
+            }
+        ]
+    },
+    {
+        "activites": [
+            {
+                "title": " Accueil de la Voûte (Secours Catholique) ",
+                "description": "Accueil, orientation et activités collectives des personnes sans domiciles.Métro : Jourdain Fermé en août.Pour de plus amples informations, merci de contacter le 01 43 07 35 11",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français, Anglais",
+                "by_appointement": false,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 31/01/2022 ",
+                "address": "68 rue des Rigoles, 75020 Paris",
+                "phone": " 01 43 07 35 11",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "9h30 à 12h00  13h30 à 17h00",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "9h30 à 12h30  13h30 à 17h00",
+                    "Vendredi": "Fermé",
+                    "Samedi": "9h30 à 13h00",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Accueil de jour",
+                    "Activités diverses"
+                ]
+            },
+            {
+                "title": " Bains-douches Charenton ",
+                "description": "La mairie de Paris met gratuitement à la disposition de tous des bains-douches municipaux en cabine individuelle. Vous devez vous munir d'un nécessaire de toilette et d'une serviette de toilette. Attention : les dernières entrées s’eﬀectuent 30 minutes avant la fermeture de l’établissement. Il est donc possible de prendre sa douche pour les personnes qui arrivent dans le créneau mentionné.   Les bains-douches sont fermés les jours fériés suivants : 1er janvier, 1er mai, 14 juillet, 15 août, 25 décembre",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "https://www.paris.fr/pages/les-bains-douches-municipaux-138#districts-gwnpsex1uz-12",
+                "lastUpdate": " Dernière mise à jour : 10/12/2021 ",
+                "address": "188 rue de Charenton, 75012 Paris",
+                "phone": " 01 43 07 64 87",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "7h30 à 12h30",
+                    "Mercredi": "7h30 à 12h30",
+                    "Jeudi": "7h30 à 12h30",
+                    "Vendredi": "7h30 à 12h30",
+                    "Samedi": "7h30 à 12h30",
+                    "Dimanche": "7h30 à 12h30"
+                },
+                "services": [
+                    "Douche",
+                    "Laverie",
+                    "Accompagnement social",
+                    "Pédicure",
+                    "Activités diverses",
+                    "Permanence juridique"
+                ]
+            },
+            {
+                "title": " Bains-Douches Rouvet / Piscine ",
+                "description": "La mairie de Paris met gratuitement à la disposition de tous des bainsdouches municipaux en cabine individuelle. Vous devez vous munir d'un nécessaire de toilette et d'une serviette de toilette. Attention : les dernières entrées s’eﬀectuent 30 minutes avant la fermeture de l’établissement. Il est donc possible de prendre sa douche pour les personnes qui arrivent dans le créneau mentionné.Les bains-douches sont fermés les jours fériés suivants : 1er janvier, 1er mai, 14 juillet, 15 août, 25 décembrePour bénéficier de la gratuité dans une piscine municipale, il faut être demandeur d'emploi, bénéficiaire du Revenu de Solidarité Active (RSA), bénéficiaire de l'Allocation Temporaire d'Attente (ATA),ou bénéficiaire de l'Allocation de Demandeur d'Asile (ADA). Ensuite, il faut être domicilié à Paris, se présenter à la caisse muni d'un justificatif ouvrant droit à la gratuité, d'un justificatif de domicile et d'une pièce d'identité.Les horaires sont à retrouver ici : HORAIRES PISCINE ROUVET",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "https://www.paris.fr/pages/les-bains-douches-municipaux-138#districts-7w9y0oruux-19",
+                "lastUpdate": " Dernière mise à jour : 08/12/2021 ",
+                "address": "1 Rue Rouvet, Paris, France",
+                "phone": " 01 40 36 40 97",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "7h30 à 13h00",
+                    "Mercredi": "7h30 à 13h00",
+                    "Jeudi": "7h30 à 13h00",
+                    "Vendredi": "7h30 à 13h00",
+                    "Samedi": "7h30 à 13h00",
+                    "Dimanche": "8h00 à 12h30"
+                },
+                "services": [
+                    "Douche",
+                    "Activités sportives"
+                ]
+            },
+            {
+                "title": " Piscine Suzanne Berlioux (Les Halles) ",
+                "description": "Pour bénéficier de la gratuité dans une piscine municipale, il faut être demandeur d'emploi, bénéficiaire du Revenu de Solidarité Active (RSA), bénéficiaire de l'Allocation Temporaire d'Attente (ATA),ou bénéficiaire de l'Allocation de Demandeur d'Asile (ADA). Ensuite, il faut être domicilié à Paris, se présenter à la caisse muni d'un justificatif ouvrant droit à la gratuité, d'un justificatif de domicile et d'une pièce d'identité  Les horaires sont à retrouver ici : HORAIRES PISCINE SUZANNE BERLIOUX",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "http://www.piscine-berlioux.fr/",
+                "lastUpdate": " Dernière mise à jour : 25/02/2022 ",
+                "address": "10 place de la Rotonde, 75001 Paris",
+                "phone": " 01 42 36 36 82",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "Fermé",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "Fermé",
+                    "Vendredi": "Fermé",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Activités sportives"
+                ]
+            }
+        ]
+    },
+    {
+        "technologie": [
+            {
+                "title": " CSAPA (Centre de prévention et soin des addictions) SOS 75 - Site 110 les Halles ",
+                "description": "CSAPA : accueil et accompagnement (éducatif, social, médical et psychologique). Les centres de soins, d'accompagnement et de prévention en addictologie (CSAPA) assurent une prise en charge psycho-médicosociale. Les prestations (gratuites) sont financées par le centre et l'anonymat est assuré. Les consultations ont lieu sur rendezvous (par téléphone), sauf mention contraire, pour toute personne (ou son entourage) ayant un problème avec l'alcool, le tabac, le cannabis ou d'autres produits psychoactifs. Certains CSAPA proposent un hébergement, d'autres fonctionnent en ambulatoire   Ouvert pendant l'été.",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "http://www.groupe-sos.org",
+                "lastUpdate": " Dernière mise à jour : 23/12/2021 ",
+                "address": "110 rue Saint-Denis, 75002 Paris",
+                "phone": " 01 55 34 76 22",
+                "horaires": {
+                    "Lundi": "9h30 à 12h45",
+                    "Mardi": "9h30 à 12h45  14h30 à 17h00",
+                    "Mercredi": "9h45 à 12h00",
+                    "Jeudi": "9h30 à 12h45  14h30 à 17h00",
+                    "Vendredi": "9h30 à 12h45  14h30 à 17h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Addiction",
+                    "Douche",
+                    "Laverie",
+                    "Accueil de jour",
+                    "Coffre-fort numérique"
+                ]
+            },
+            {
+                "title": " Repas chauds La Chorba - Porte de la Villette ",
+                "description": "La Chorba propose une distribution de repas chauds assis toute l'année. La distribution est ouverte à tout public (animaux acceptés à l'extérieur du bâtiment) et tous les jours (sauf le jeudi), de 17h à 20h.",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français, Anglais, Arabe",
+                "by_appointement": false,
+                "link": "http://www.lachorba.fr",
+                "lastUpdate": " Dernière mise à jour : 08/12/2021 ",
+                "address": "7-15 Avenue de la Porte de la Villette, 75019, Paris, France",
+                "phone": " 01 43 43 84 75",
+                "horaires": {
+                    "Lundi": "17h30 à 20h00",
+                    "Mardi": "17h30 à 20h00",
+                    "Mercredi": "17h30 à 20h00",
+                    "Jeudi": "Fermé",
+                    "Vendredi": "17h30 à 20h00",
+                    "Samedi": "17h30 à 20h00",
+                    "Dimanche": "17h30 à 20h00"
+                },
+                "services": [
+                    "Restauration assise",
+                    "Accompagnement social",
+                    "Prise"
+                ]
+            },
+            {
+                "title": " La Bagagerie Coeur du Cinq ",
+                "description": "La Bagagerie Cœur du Cinq offre un service de « consigne à bagages » de 54 casiers pour y déposer des affaires personnelles le matin et dans la soirée. C'est aussi un un lieu d’accueil où l’attention à chacun et les relations humaines sont nos priorités   À noter : Pour devenir usager de la bagagerie, toute personne devra être présentée par une association assurant sa domiciliation administrative ou son accompagnement   La personne détenant un casier est tenue de respecter le règlement de fonctionnement de la bagagerie. Elle est membre de l'association dont la cotisation est de 3€   Ouvert toute l'année.",
+                "prefential": " Accueil exclusif :  Adultes uniquement. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 22/12/2021 ",
+                "address": "75005, Paris",
+                "phone": " 01 73 73 22 92",
+                "horaires": {
+                    "Lundi": "7h00 à 9h00  19h00 à 21h00",
+                    "Mardi": "7h00 à 9h00  19h00 à 21h00",
+                    "Mercredi": "7h00 à 9h00  19h00 à 21h00",
+                    "Jeudi": "7h00 à 9h00  19h00 à 21h00",
+                    "Vendredi": "7h00 à 9h00  19h00 à 21h00",
+                    "Samedi": "18h30 à 20h30",
+                    "Dimanche": "7h00 à 9h00  19h00 à 21h00"
+                },
+                "services": [
+                    "Bagagerie",
+                    "Ordinateur"
+                ]
+            },
+            {
+                "title": " Bagagerie Onze Mille Potes ",
+                "description": "L'association Onze Mille Potes propose une bagagerie et une laverie aux usagers Bagagerie et laverie sur orientation de partenaires ayant signé une convention avec Onze Mille Potes - La bagagerie dispose de 62 casiers fermés à clé (P48 x L38 x H88 cm). Seuls les dépôts d'effets pouvant être contenus dans un casier/personne sont autorisés.  - La laverie est équipée de 6 lave-linges et 6 sèche-linges professionnels. Les lavages se font sans rendez-vous après inscription. Le linge à laver est déposé dans un sac fourni par l’association. Il peut être récupéré, lavé et séché, 2 jours au plus tard après dépôt. ",
+                "prefential": " Autre information importante : Le service est UNIQUEMENT réservé aux usagers de la bagagerie !",
+                "langage": "Langue(s) parlée(s) : Français, Anglais",
+                "by_appointement": true,
+                "link": "https://onzemillepotes.com/",
+                "lastUpdate": " Dernière mise à jour : 04/12/2021 ",
+                "address": "75011, Paris",
+                "phone": " 01 43 57 83 68",
+                "horaires": {
+                    "Lundi": "9h00 à 11h00  18h00 à 20h00",
+                    "Mardi": "9h00 à 11h00  18h00 à 20h00",
+                    "Mercredi": "7h30 à 11h00  18h00 à 20h00",
+                    "Jeudi": "9h00 à 11h00",
+                    "Vendredi": "9h00 à 11h00  17h30 à 19h00",
+                    "Samedi": "10h00 à 13h00",
+                    "Dimanche": "16h30 à 19h30"
+                },
+                "services": [
+                    "Bagagerie",
+                    "Laverie",
+                    "Toilettes",
+                    "Ordinateur",
+                    "Vêtements"
+                ]
+            },
+            {
+                "title": " Bibliothèque Amélie ",
+                "description": "La bibliothèque propose 61 places assises.",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "https://www.paris.fr/equipements/bibliotheque-amelie-1692",
+                "lastUpdate": " Dernière mise à jour : 13/12/2021 ",
+                "address": "164 Rue De Grenelle 75007 Paris France",
+                "phone": " 01 47 05 89 66",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "13h00 à 19h00",
+                    "Mercredi": "10h00 à 19h00",
+                    "Jeudi": "13h00 à 19h00",
+                    "Vendredi": "13h00 à 19h00",
+                    "Samedi": "10h00 à 18h00",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Bibliothèque",
+                    "Ordinateur",
+                    "Prise",
+                    "Wifi"
+                ]
+            },
+            {
+                "title": " Bibliothèque André Malraux ",
+                "description": "Accès PMR",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "https://www.paris.fr/equipements/bibliotheque-andre-malraux-1691",
+                "lastUpdate": " Dernière mise à jour : 10/12/2021 ",
+                "address": "78 Boulevard Raspail 75006 Paris France",
+                "phone": " 01 45 44 53 85",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "13h00 à 19h00",
+                    "Mercredi": "10h00 à 19h00",
+                    "Jeudi": "13h00 à 19h00",
+                    "Vendredi": "13h00 à 19h00",
+                    "Samedi": "10h00 à 18h00",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Bibliothèque",
+                    "Toilettes",
+                    "Ordinateur",
+                    "Prise",
+                    "Wifi"
+                ]
+            },
+            {
+                "title": " Bibliothèque Batignolles ",
+                "description": "Accessible aux personnes à mobilité réduite.   La bibliothèque Batignolles propose 50 places assises.",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "https://www.paris.fr/equipements/bibliotheque-batignolles-1739",
+                "lastUpdate": " Dernière mise à jour : 10/12/2021 ",
+                "address": "18 Rue Des Batignolles 75017 Paris France",
+                "phone": " 01 44 69 18 30",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "10h00 à 19h00",
+                    "Mercredi": "10h00 à 19h00",
+                    "Jeudi": "13h00 à 19h00",
+                    "Vendredi": "13h00 à 19h00",
+                    "Samedi": "10h00 à 12h30",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Bibliothèque",
+                    "Wifi",
+                    "Ordinateur",
+                    "Prise"
+                ]
+            }
+        ]
+    },
+    {
+        "materiel": [
+            {
+                "title": " Boutique du 104 ",
+                "description": "Les activités principales d’Emmaüs Defi est la : COLLECTE, TRI, VENTE. Nous valorisons des matériels et des matériaux usagés que nous mettons à la vente dans nos Bric-à-Brac de quartiers : meubles, vêtements, vaisselle/bibelots, livres  La vente d'objets est à prix abordables.",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "http://emmaus-defi.org/bric-a-brac/riquet/magasin-104/",
+                "lastUpdate": " Dernière mise à jour : 22/12/2021 ",
+                "address": "5 rue Curial, 75019 Paris",
+                "phone": " 09 70 81 89 60",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "Fermé",
+                    "Mercredi": "13h30 à 18h30",
+                    "Jeudi": "13h30 à 18h00",
+                    "Vendredi": "13h30 à 18h00",
+                    "Samedi": "11h30 à 19h00",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Boutique solidaire",
+                    "Activités diverses",
+                    "Activités diverses"
+                ]
+            },
+            {
+                "title": " Centre d'accueil et de distribution alimentaire Restos du Coeur 15ème Alleray ",
+                "description": "Colis alimentaire et colis alimentaire pour bébés (Restos Bébés du Coeur) pour toute personne justifiant sa situation précaire et domiciliée dans les 1e, 2e, 6e, 7e, 8e, 9e, 15e, 16e arrondissements.Bébés du Coeur et atelier cuisine le vendredi de 13h30 à 16h30. Vestiaire familles le mercredi de 13h30 à 15h30.",
+                "prefential": " Autre information importante : Pour toute personne justifiant sa situation précaire et domiciliée dans les 1e, 2e, 6e, 7e, 8e, 9e, 15e, 16e arrondissements.",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://ad75.restosducoeur.org/centres-departementaux/ad75-centre-dactivites-paris-4/",
+                "lastUpdate": " Dernière mise à jour : 10/12/2021 ",
+                "address": "15-17 Rue d'Alleray, 75015 Paris, France",
+                "phone": "",
+                "horaires": {
+                    "Lundi": "13h00 à 16h00",
+                    "Mardi": "9h00 à 12h00  13h00 à 16h00",
+                    "Mercredi": "13h30 à 15h30",
+                    "Jeudi": "Fermé",
+                    "Vendredi": "13h30 à 16h30",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Colis Alimentaire",
+                    "Colis Alimentaire",
+                    "Conseil administratif",
+                    "Vêtements",
+                    "Vêtements",
+                    "Activités diverses",
+                    "Accompagnement à l'emploi",
+                    "Écrivain public",
+                    "Bien-être",
+                    "Bibliothèque"
+                ]
+            },
+            {
+                "title": " Centre de repas chauds à table Restos du Coeur 13ème Bédier ",
+                "description": "Distribution de repas chauds le midi : restauration assise. Vestiaire Hommes sans rendez-vous les jeudis et vendredis de 11h à 13h. ",
+                "prefential": " Accueil exclusif :  Hommes. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "https://ad75.restosducoeur.org/centres-departementaux/ad75-repas-chauds-midi-paris-13/",
+                "lastUpdate": " Dernière mise à jour : 10/12/2021 ",
+                "address": "6 Avenue Joseph Bédier, 75013 Paris, France",
+                "phone": " 01 53 24 98 00",
+                "horaires": {
+                    "Lundi": "11h00 à 13h00",
+                    "Mardi": "11h00 à 13h00",
+                    "Mercredi": "11h00 à 13h00",
+                    "Jeudi": "11h00 à 13h00",
+                    "Vendredi": "11h00 à 13h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Restauration assise",
+                    "Vêtements",
+                    "Conseil administratif"
+                ]
+            },
+            {
+                "title": " Centre Corot ",
+                "description": "Le Centre Corot Entraide d'Auteuil propose une épicerie sociale et un vestiaire sur orientation.Depuis 1973, Corot Entraide est engagé dans le soutien et l'aide aux personnes exclues-Familles démunies et personnes isolées du XVIè sud-Jeunes de 18 à 25 ans sans domicile fixe à Paris-Personnes en grande précarité à Paris",
+                "prefential": " Autre information importante : Personnes orientées par les services sociaux ou association du 16è arrondissement",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "http://www.corot-entraide.org",
+                "lastUpdate": " Dernière mise à jour : 22/12/2021 ",
+                "address": "75016, Paris",
+                "phone": " 01 45 24 54 46",
+                "horaires": {
+                    "Lundi": "9h30 à 12h30  14h30 à 18h00",
+                    "Mardi": "9h30 à 12h30  14h30 à 18h00",
+                    "Mercredi": "9h30 à 12h30  14h30 à 18h00",
+                    "Jeudi": "9h30 à 12h30  14h30 à 18h00",
+                    "Vendredi": "9h30 à 12h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Épicerie Sociale et Solidaire",
+                    "Vêtements",
+                    "Vêtements"
+                ]
+            },
+            {
+                "title": " La Bagagerie 188 ",
+                "description": "La bagagerie se situe au 1er étage des bains douches. Les casiers sont oﬀerts pour trois mois selon les disponibilités.",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 23/12/2021 ",
+                "address": "75012, Paris",
+                "phone": " 06 38 95 71 79",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "10h00 à 12h00",
+                    "Mercredi": "10h00 à 12h00",
+                    "Jeudi": "10h00 à 12h00",
+                    "Vendredi": "10h00 à 12h00",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Bagagerie"
+                ]
+            },
+            {
+                "title": " Bagagerie 20 ",
+                "description": "Pour les personnes sans-abri en cours de réinsertion, orientées par un partenaire social de la Bagagerie 20.   Le délai d'occupation est de 3 mois. Le contrat est renouvelable 1 fois   Ouvert toute l'année.",
+                "prefential": " Accueil exclusif :  Victime de violence, en situation d'addiction, sortant / sortante de prison. ",
+                "langage": "Langue(s) parlée(s) : Français, Anglais",
+                "by_appointement": true,
+                "link": "",
+                "lastUpdate": " Dernière mise à jour : 11/01/2022 ",
+                "address": "75020, Paris",
+                "phone": " 01 40 30 52 13",
+                "horaires": {
+                    "Lundi": "9h00 à 11h30",
+                    "Mardi": "9h00 à 11h30",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "9h00 à 11h30",
+                    "Vendredi": "Fermé",
+                    "Samedi": "9h00 à 11h30",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Bagagerie"
+                ]
+            },
+            {
+                "title": " Centre Social Espace Torcy - École Normale Sociale ",
+                "description": "Les usagers, bénévoles, habitants sont au cœur de notre démarche. Nous accompagnons le développement de lieux d’échanges, et favorisons toutes les  prises d’initiatives pour que chacun soit acteur du lien social et s’approprient «l’outil» centre social.",
+                "prefential": " Accueil exclusif :  Victime de violence. ",
+                "langage": "Langue(s) parlée(s) : Français, Anglais",
+                "by_appointement": true,
+                "link": "http://www.ensparis.fr/",
+                "lastUpdate": " Dernière mise à jour : 24/02/2022 ",
+                "address": "2 rue de Torcy, 75018 Paris",
+                "phone": " 01 40 38 67 00",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "9h00 à 21h30",
+                    "Mercredi": "9h00 à 20h00",
+                    "Jeudi": "9h00 à 21h30",
+                    "Vendredi": "9h00 à 20h00",
+                    "Samedi": "10h00 à 17h30",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Atelier numérique",
+                    "Ordinateur",
+                    "Accompagnement à l'emploi",
+                    "Accompagnement à l'emploi",
+                    "Soutien scolaire",
+                    "Activités diverses",
+                    "Activités diverses",
+                    "Activités diverses",
+                    "Permanence juridique",
+                    "Écrivain public",
+                    "Wifi",
+                    "Protections périodiques",
+                    "Vêtements",
+                    "Accompagnement à l'emploi",
+                    "Activités diverses",
+                    "Cours de français",
+                    "Cours de français"
+                ]
+            },
+            {
+                "title": " Boutique de Solidarité - Secours Populaire ",
+                "description": "La boutique solidaire du Secours Pop Paris propose des vêtements neufs et/ ou de seconde main aux personnes suivies par le Secours Pop Paris. La boutique propose des vêtements pour homme, femme, enfant et bébé de la tête aux pieds. Ces vêtements sont vendus à des prix modiques allant de cinquante centimes à cinq euros. Un coin enfant est aménagé pour permettre aux parents d'effectuer leurs achats. Si vous accompagnez une personne sans domicile fixe, vous pouvez l'orienter vers l'Espace Solidarité Ramey pour qu'elle soit reçu en entretien social (6 passage Ramey 75018 Paris).  ",
+                "prefential": "Tous publics",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "https://www.secourspopparis.org/",
+                "lastUpdate": " Dernière mise à jour : 15/12/2021 ",
+                "address": "75011, Paris",
+                "phone": " 01 43 38 13 16",
+                "horaires": {
+                    "Lundi": "9h30 à 13h30",
+                    "Mardi": "14h00 à 18h00",
+                    "Mercredi": "14h00 à 18h00",
+                    "Jeudi": "14h00 à 18h00",
+                    "Vendredi": "9h30 à 13h30",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Boutique solidaire",
+                    "Vêtements"
+                ]
+            },
+            {
+                "title": " Boutique Coup de Main Saint-Blaise ",
+                "description": "La Boutique Saint-Blaise collecte les meubles, gros et petits électroménager, vaisselles, vêtements auprès des particuliers et entreprises, sous la forme d'un chantier d'insertion. Ils sont ensuite mis en vente dans la boutique, accessible à tous, à prix solidaire.",
+                "prefential": " Accueil préférentiel :  Situation régulière. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": false,
+                "link": "http://www.emmaus-coupdemain.org/ou-acheter/",
+                "lastUpdate": " Dernière mise à jour : 22/12/2021 ",
+                "address": "70 rue Saint-Blaise, 75020 Paris",
+                "phone": " 01 48 44 44 92",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "Fermé",
+                    "Mercredi": "14h30 à 19h00",
+                    "Jeudi": "14h30 à 19h00",
+                    "Vendredi": "14h30 à 19h00",
+                    "Samedi": "10h00 à 13h00  14h00 à 19h00",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Boutique solidaire",
+                    "Vêtements",
+                    "Insertion par l'activité économique"
+                ]
+            },
+            {
+                "title": " Vestiaire femmes et enfants Croix-Rouge Paris 9e ",
+                "description": "Vêtements, chaussures et produits d'hygiène pour femmes et enfants le mardi et le jeudi de 14h30 à 17h sur orientation : pour les personnes démunies sur présentation d'une lettre de l'assistante sociale du secteur de domicile et d'une participation de 1 €.",
+                "prefential": " Accueil exclusif :  Femmes, famille, femme enceinte. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "http://paris09.croix-rouge.fr/",
+                "lastUpdate": " Dernière mise à jour : 25/02/2022 ",
+                "address": "75009, Paris",
+                "phone": " 01 48 78 12 62",
+                "horaires": {
+                    "Lundi": "Fermé",
+                    "Mardi": "14h30 à 17h00",
+                    "Mercredi": "Fermé",
+                    "Jeudi": "14h30 à 17h00",
+                    "Vendredi": "Fermé",
+                    "Samedi": "Fermé",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Vêtements"
+                ]
+            },
+            {
+                "title": " Vestiboutique et écrivain public Albert-Thomas ",
+                "description": "Possibilité d'y trouver des objets du quotidien (livres, produits maison, jouets, vaisselle...) en plus des vêtements   Écrivain public sur rendez-vous tous les soirs de la semaine à 18h30.  A prendre par téléphone, directement au secrétariat ou par mail à écrivains.paris10@croix-rouge.fr.",
+                "prefential": " Accueil exclusif :  Adultes uniquement, situation régulière. ",
+                "langage": "Langue(s) parlée(s) : Français",
+                "by_appointement": true,
+                "link": "http://paris03et10.croix-rouge.fr/article.php3?id_article=30559",
+                "lastUpdate": " Dernière mise à jour : 24/12/2021 ",
+                "address": "40 Rue Albert Thomas, 75010, Paris, France",
+                "phone": " 01 42 06 79 05",
+                "horaires": {
+                    "Lundi": "10h30 à 19h00",
+                    "Mardi": "10h30 à 19h00",
+                    "Mercredi": "10h30 à 19h00",
+                    "Jeudi": "10h30 à 19h00",
+                    "Vendredi": "10h30 à 19h00",
+                    "Samedi": "10h30 à 13h00  14h00 à 19h00",
+                    "Dimanche": "Fermé"
+                },
+                "services": [
+                    "Boutique solidaire",
+                    "Écrivain public",
+                    "Vêtements"
+                ]
+            }
+        ]
+    }
+]
