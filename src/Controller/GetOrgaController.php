@@ -2,16 +2,23 @@
 
 namespace App\Controller;
 
+use Nelmio\ApiDocBundle\Annotation\Model;
+use Nelmio\ApiDocBundle\Annotation\Security;
 use App\Entity\Organization;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use OpenApi\Annotations as OA;
+
 
 class GetOrgaController extends AbstractController
 {
     /**
-     * @Route("/getorga", name="app_get_orga")
+     * @Route("/api/getorga", name="app_get_orga", methods="GET")
+     * 
+     * @OA\Get(description="recupere toute les organisation")
+     * @OA\Tag(name="organisation")
      */
     public function index(NormalizerInterface $normalizer): Response
     {

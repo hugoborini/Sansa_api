@@ -14,8 +14,10 @@ use App\Entity\PreferencialWelcome;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 
+
 class SansaFixtures extends Fixture
 {
+
     public function load(ObjectManager $manager): void
     {
         $faker = \Faker\Factory::create();
@@ -30,7 +32,7 @@ class SansaFixtures extends Fixture
                 $finalUser = new FinalUser();
                 $finalUser->setUsername($faker->name());
                 $finalUser->setEmail($faker->email());
-                $finalUser->setPassword(md5("alpha wann"));
+                $finalUser->setPassword(password_hash("test", PASSWORD_DEFAULT));
                 $finalUser->setSecretAnswer("brutus");
                 $finalUser->setSecretQuestion($secretQuestionObj);
                 $finalUser->setFavorites([1, 2, 3]);

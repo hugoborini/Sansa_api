@@ -40,7 +40,7 @@ class Organization
     private $adress;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text", nullable=true)
      * @Groups("orga")
      */
     private $description;
