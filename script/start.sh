@@ -1,4 +1,7 @@
 #!/bin/bash
+echo "install depency"
+composer install
+sleep 2
 docker compose up -d
 echo "init docker"
 sleep 10
