@@ -2,13 +2,14 @@
 
 namespace App\Entity;
 
-use App\Repository\FinalUserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\FinalUserRepository;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=FinalUserRepository::class)
  */
-class FinalUser
+class FinalUser implements UserInterface
 {
     /**
      * @ORM\Id
@@ -47,6 +48,13 @@ class FinalUser
      * @ORM\JoinColumn(nullable=false)
      */
     private $secret_question;
+
+    public function eraseCredentials() {}
+    public function getSalt(){}
+
+    public function getRoles(){
+        return ["ROLE_TEST"];
+    }
 
     public function getId(): ?int
     {
