@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Api;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,5 +20,7 @@ class IndexController extends AbstractController
                 "Get all Orga" => "/getorga"
             ]
         ]);
+
+        // return $this->render('@App/base.html.twig');
     }
 }
