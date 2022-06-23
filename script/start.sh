@@ -12,5 +12,7 @@ sleep 1
 symfony console doctrine:fixtures:load
 symfony serve:start -d
 sleep 1
+yarn install
+sleep 1
 yarn encore dev --watch
 echo "all is running bo + api"

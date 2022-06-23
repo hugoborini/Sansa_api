@@ -17,4 +17,21 @@ class BoAuthController extends AbstractController
             'controller_name' => 'BoAuthController',
         ]);
     }
+
+    /**
+     * @Route("/bo/login", name="app_bo_auth_login")
+     */
+    public function login(): Response
+    {
+        return $this->render('bo_auth/login.html.twig', [
+            'controller_name' => 'BoAuthController',
+        ]);
+    }
+
+    /**
+     * @Route("/bo/logout", name="app_bo_auth_logout")
+     */
+    public function logout(){
+        
+    }
 }
