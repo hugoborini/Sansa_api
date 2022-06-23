@@ -1,4 +1,7 @@
 security:
+    encoders:
+        App\Entity\OrganizationOwner:
+            algorithm: bcrypt
     enable_authenticator_manager: true
     # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
     password_hashers:
@@ -11,6 +14,11 @@ security:
             entity:
                 class: 'App\Entity\FinalUser'
                 property: 'email'
+        
+        in_database:
+            entity:
+                class: App\Entity\OrganizationOwner
+                property: email
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -23,6 +31,17 @@ security:
             custom_authenticator:
                 - App\Security\ApiAuth
         
+        back-office:
+            pattern: '^/bo'
+            provider: in_database
+            form_login:
+                login_path: app_bo_auth_login
+                check_path: app_bo_auth_login
+            logout:
+                path: app_bo_auth_logout
+                target: app_bo_auth_login
+            
+
         main:
             lazy: true
             provider: users_in_memory

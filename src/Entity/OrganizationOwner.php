@@ -3,15 +3,17 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\OrganizationOwner;
 use Doctrine\Common\Collections\Collection;
 use App\Repository\OrganizationOwnerRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=OrganizationOwnerRepository::class)
  */
-class OrganizationOwner
+class OrganizationOwner implements UserInterface
 {
     /**
      * @ORM\Id
@@ -19,7 +21,7 @@ class OrganizationOwner
      * @ORM\Column(type="integer")
      */
     private $id;
-
+    
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups("orga")
@@ -37,6 +39,15 @@ class OrganizationOwner
      * 
      */
     private $oraganization;
+
+    public function eraseCredentials() {}
+    public function getSalt(){}
+    public function getUsername():string{
+        return"log";
+    }
+    public function getRoles(){
+        return ["ROLE_ADMIN"];
+    }
 
 
     public function __construct()
