@@ -13,7 +13,7 @@ class SecretQuestionController extends AbstractController
 {
     /**
      * @Route("/api/secretquestion", name="app_secret_question", methods="GET")
-     * @OA\Get(description="recupere toute les question secret")
+     * @OA\Get(description="Permet de récupérer la liste des questions secrètes")
      * @OA\Tag(name="auth")
      */
     public function index(NormalizerInterface $normalizer): Response

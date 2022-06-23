@@ -17,8 +17,8 @@ class GetOrgaController extends AbstractController
     /**
      * @Route("/api/getorga", name="app_get_orga", methods="GET")
      * 
-     * @OA\Get(description="recupere toute les organisation")
-     * @OA\Tag(name="organisation")
+     * @OA\Get(description="Récupère les informations de toutes les organisations")
+     * @OA\Tag(name="Associations")
      */
     public function index(NormalizerInterface $normalizer): Response
     {

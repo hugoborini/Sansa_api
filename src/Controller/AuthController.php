@@ -20,45 +20,45 @@ class AuthController extends AbstractController
      * @Route("/api/auth/register", name="app_auth", methods="POST")
      * 
      * @OA\Get(description="ajoute un user")
-     * @OA\Tag(name="auth")
+     * @OA\Tag(name="Authentification")
      * 
      * @OA\Response(
      *     response=200,
-     *     description="Retourne success si l'user a bien été enregistrer dans la bdd",
+     *     description="Retourne success si l'utilisateur a bien été enregistré dans la bdd",
      * )
      * 
      * @OA\Parameter(
-     *     name="username",
+     *     name="Username",
      *     in="query",
-     *     description="username de l'utilisateur",
+     *     description="Username de l'utilisateur",
      *     @OA\Schema(type="string")
      * )
      * 
      * @OA\Parameter(
-     *     name="email",
+     *     name="Email",
      *     in="query",
      *     description="email de l'utilisateur",
      *     @OA\Schema(type="string")
      * )
      * 
      * @OA\Parameter(
-     *     name="password",
+     *     name="Mot de passe",
      *     in="query",
-     *     description="password de l'utilisateur",
+     *     description="mot de passe de l'utilisateur",
      *     @OA\Schema(type="string")
      * )
      * 
      * @OA\Parameter(
      *     name="secretQuestion",
      *     in="query",
-     *     description="secretQuestion pour recup le mdp (envoie la string exact de la question)",
+     *     description="Retourne une question secrète pour la récupération d'un mot de passe si l'utilisateur n'a pas de mail",
      *     @OA\Schema(type="string")
      * )
      * 
      * @OA\Parameter(
      *     name="answer",
      *     in="query",
-     *     description="reponse a la question secrete",
+     *     description="Réponse à la question secrète",
      *     @OA\Schema(type="string")
      * )
      * 
