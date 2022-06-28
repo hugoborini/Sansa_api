@@ -13,10 +13,18 @@ use App\Entity\OrganizationOwner;
 use App\Entity\PreferencialWelcome;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 
 class SansaFixtures extends Fixture
 {
+
+    private $hasher;
+
+    public function __construct(UserPasswordHasherInterface $hasher)
+    {
+        $this->hasher = $hasher;
+    }
 
     public function load(ObjectManager $manager): void
     {
@@ -68,7 +76,9 @@ class SansaFixtures extends Fixture
 
                     $organasationOwnerObj =  new OrganizationOwner();
                     $organasationOwnerObj->setEmail($faker->email());
-                    $organasationOwnerObj->setPassword(md5("ok google"));
+                    $organasationOwnerObj->setTel("0787632712");
+                    $password = $this->hasher->hashPassword($organasationOwnerObj, '123');
+                    $organasationOwnerObj->setPassword($password);
                     $manager->persist($organasationOwnerObj);
 
                     $date =  explode(": ", $org->lastUpdate);

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BoAuthController!{% endblock %}
+
+{% block body %}
+<h1>Incription</h1>
+        {{form_start(form)}}
+        {{form_row(form.email, {'attr' : {"placeholder" : "username"}})}}
+        {{form_row(form.tel, {'attr' : {"placeholder" : "email"}})}}
+        {{form_row(form.password, {'attr' : {"placeholder" : "password"}})}}
+        <input type="checkbox"> condition en bal tfacon c d sdf
+        <br>
+        <button type="submit" class="btn btn-info">Inscription</button>
+        {{form_end(form)}}
+        {% if debug %}
+                {{debug}}
+        {% endif %}
+{% endblock %}
