@@ -14,5 +14,8 @@
         <input name="_password" type="password" id="password"  placeholder="password">
 
         <input type="submit" value="Login">
+    {% if error %}
+        <div class="c-danger-text">cette user existe ap</div>
+    {% endif %}
     </form>
 {% endblock %}

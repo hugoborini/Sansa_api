@@ -40,7 +40,7 @@ security:
             logout:
                 path: app_bo_auth_logout
                 target: app_bo_auth_login
-            
+
 
         main:
             lazy: true

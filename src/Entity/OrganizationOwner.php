@@ -40,32 +40,39 @@ class OrganizationOwner implements UserInterface
      */
     private $oraganization;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $tel;
+
     public function eraseCredentials() {}
     public function getSalt(){}
-    public function getUsername():string{
-        return"log";
-    }
     public function getRoles(){
         return ["ROLE_ADMIN"];
     }
-
-
+    
+    
     public function __construct()
     {
         $this->organization_name = new ArrayCollection();
         $this->oraganization = new ArrayCollection();
     }
-
+    
     public function getId(): ?int
     {
         return $this->id;
     }
-
+    
     public function getEmail(): ?string
     {
         return $this->email;
     }
+    
+    public function getUsername():string{
+        return $this->email;
+    }
 
+    
     public function setEmail(string $email): self
     {
         $this->email = $email;
@@ -111,6 +118,18 @@ class OrganizationOwner implements UserInterface
                 $oraganization->setOrganizationOwner(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getTel(): ?string
+    {
+        return $this->tel;
+    }
+
+    public function setTel(?string $tel): self
+    {
+        $this->tel = $tel;
 
         return $this;
     }
