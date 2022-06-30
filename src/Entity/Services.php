@@ -19,18 +19,18 @@ class Services
     private $id;
 
     /**
+     * 
      * @ORM\Column(type="string", length=255)
+     * @Groups("orga")
+     * @Groups("orgaByService")
+     * @Groups("allService")
+     * 
      */
     private $service_name;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Organization::class, inversedBy="organization_id")
-     * @Groups("orga")
-     */
-    private $organization_id;
-
-    /**
      * @ORM\Column(type="boolean", nullable=true)
+     * @Groups("orga")
      */
     private $subscribe;
 
@@ -55,9 +55,13 @@ class Services
     private $category_id;
 
     /**
-     * @ORM\OneToOne(targetEntity=Hours::class, mappedBy="service_id", cascade={"persist", "remove"})
+     * @ORM\ManyToOne(targetEntity=Organization::class, inversedBy="services_id")
+     * @ORM\JoinColumn(nullable=false)
+     * @Groups("orgaByService")
      */
-    private $hours_id;
+    private $organization_id;
+
+
 
     public function getId(): ?int
     {
@@ -76,17 +80,6 @@ class Services
         return $this;
     }
 
-    public function getOrganizationId(): ?Organization
-    {
-        return $this->organization_id;
-    }
-
-    public function setOrganizationId(?Organization $organization_id): self
-    {
-        $this->organization_id = $organization_id;
-
-        return $this;
-    }
 
     public function getSubscribe(): ?bool
     {
@@ -148,20 +141,17 @@ class Services
         return $this;
     }
 
-    public function getHoursId(): ?Hours
+    public function getOrganizationId(): ?Organization
     {
-        return $this->hours_id;
+        return $this->organization_id;
     }
 
-    public function setHoursId(Hours $hours_id): self
+    public function setOrganizationId(?Organization $organization_id): self
     {
-        // set the owning side of the relation if necessary
-        if ($hours_id->getServiceId() !== $this) {
-            $hours_id->setServiceId($this);
-        }
-
-        $this->hours_id = $hours_id;
+        $this->organization_id = $organization_id;
 
         return $this;
     }
+
+
 }

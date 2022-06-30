@@ -30,48 +30,56 @@ class Organization
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $organization_name;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $adress;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $description;
 
     /**
      * @ORM\Column(type="date")
      * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $last_updata;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $phone_number;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $website;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $spoken_language;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $importante_information;
 
@@ -81,9 +89,37 @@ class Organization
      */
     private $organization_id;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Groups("orgaByService")
+     */
+    private $longitude;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Groups("orgaByService")
+     */
+    private $latitude;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Services::class, mappedBy="organization_id")
+     * @Groups("orga")
+     * 
+     */
+    private $services_id;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Hours::class, mappedBy="organization_id")
+     * @Groups("orga")
+     * @Groups("orgaByService")
+     */
+    private $hours_id;
+
     public function __construct()
     {
         $this->organization_id = new ArrayCollection();
+        $this->services_id = new ArrayCollection();
+        $this->hours_id = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -223,6 +259,90 @@ class Organization
             // set the owning side to null (unless already changed)
             if ($organizationId->getOrganizationId() === $this) {
                 $organizationId->setOrganizationId(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getLongitude(): ?string
+    {
+        return $this->longitude;
+    }
+
+    public function setLongitude(string $longitude): self
+    {
+        $this->longitude = $longitude;
+
+        return $this;
+    }
+
+    public function getLatitude(): ?string
+    {
+        return $this->latitude;
+    }
+
+    public function setLatitude(string $latitude): self
+    {
+        $this->latitude = $latitude;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Services>
+     */
+    public function getServicesId(): Collection
+    {
+        return $this->services_id;
+    }
+
+    public function addServicesId(Services $servicesId): self
+    {
+        if (!$this->services_id->contains($servicesId)) {
+            $this->services_id[] = $servicesId;
+            $servicesId->setOrganisationId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeServicesId(Services $servicesId): self
+    {
+        if ($this->services_id->removeElement($servicesId)) {
+            // set the owning side to null (unless already changed)
+            if ($servicesId->getOrganisationId() === $this) {
+                $servicesId->setOrganisationId(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Hours>
+     */
+    public function getHoursId(): Collection
+    {
+        return $this->hours_id;
+    }
+
+    public function addHoursId(Hours $hoursId): self
+    {
+        if (!$this->hours_id->contains($hoursId)) {
+            $this->hours_id[] = $hoursId;
+            $hoursId->setOrganizationId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeHoursId(Hours $hoursId): self
+    {
+        if ($this->hours_id->removeElement($hoursId)) {
+            // set the owning side to null (unless already changed)
+            if ($hoursId->getOrganizationId() === $this) {
+                $hoursId->setOrganizationId(null);
             }
         }
 
