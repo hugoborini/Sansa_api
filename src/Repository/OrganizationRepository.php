@@ -2,11 +2,13 @@
 
 namespace App\Repository;
 
+use App\Entity\Services;
 use App\Entity\Organization;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
+use Doctrine\ORM\Mapping\Entity;
+use Doctrine\ORM\OptimisticLockException;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**
  * @method Organization|null find($id, $lockMode = null, $lockVersion = null)
@@ -73,4 +75,28 @@ class OrganizationRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findAllService(): array
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = '
+            SELECT DISTINCT organization.id 
+            from organization JOIN services 
+            as s ON s.organization_id_id = organization.id 
+            WHERE 
+            s.service_name = "Douche" OR s.service_name = "Laverie";
+            ';
+
+        $stmt = $conn->prepare($sql);
+        $allId =  $stmt->execute()->fetchAll();
+        $allIdTab = [];
+
+        foreach ($allId as $key => $id) {
+            array_push($allIdTab, $id["id"]);  
+        }
+
+        
+
+        return $allIdTab;
+    }
 }

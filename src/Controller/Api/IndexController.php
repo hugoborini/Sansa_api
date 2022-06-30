@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+
 class IndexController extends AbstractController
 {
     /**
@@ -15,12 +16,14 @@ class IndexController extends AbstractController
     {
 
 
+
+
         return $this->json([
             "index" => [
-                "Get all Orga" => "/getorga"
+                "Get all Orga" => "/api/getallorga"
             ]
         ]);
 
-        // return $this->render('@App/base.html.twig');
+        //return $this->render('@App/debug.html.twig');
     }
 }
