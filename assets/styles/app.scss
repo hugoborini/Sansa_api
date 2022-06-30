@@ -4,6 +4,13 @@
            url("../fonts/Helvetica_Neue.ttf") format("ttf");
 }
 
+// FOOTER
+
+.footer-bg {
+    background-repeat: no-repeat;
+    background-image: url('/templates/img/sansa_background_footer.svg')
+}
+
 // FONT
 
 .ff-body {
@@ -593,11 +600,15 @@
 }
 
 .pt-4 {
-    padding-top: 3rem
+    padding-top: 4rem
 }
 
 .pt-5 {
-    padding-top: 3rem
+    padding-top: 5rem
+}
+
+.pt-15 {
+    padding-top: 15rem;
 }
 
 .pr-0 {
@@ -641,7 +652,7 @@
 }
 
 .pr-5 {
-    padding-right: 3rem
+    padding-right: 5rem
 }
 
 .pb-0 {
@@ -681,11 +692,19 @@
 }
 
 .pb-4 {
-    padding-bottom: 3rem
+    padding-bottom: 4rem
 }
 
 .pb-5 {
-    padding-bottom: 3rem
+    padding-bottom: 5rem
+}
+
+.pb-12 {
+    padding-bottom: 12rem
+}
+
+.pb-25 {
+    padding-bottom: 25rem;
 }
 
 .pl-0 {
@@ -725,11 +744,11 @@
 }
 
 .pl-4 {
-    padding-left: 3rem
+    padding-left: 4rem
 }
 
 .pl-5 {
-    padding-left: 3rem
+    padding-left: 5rem
 }
 
 // MARGIN
@@ -843,7 +862,11 @@
 }
 
 .mt-5 {
-    margin-top: 3rem
+    margin-top: 5rem
+}
+
+.mt-10 {
+    margin-top: 10rem
 }
 
 .mr-0 {
@@ -1030,6 +1053,9 @@
     line-height: 2
 }
 
+.lh-24 {
+    line-height: 24px;
+}
 .bs-0 {
     box-shadow: 0 0 0
 }
@@ -1568,6 +1594,14 @@
 
 .o-0 {
     opacity: 0
+}
+
+.o-1 {
+    opacity: 1;
+}
+
+.o-2 {
+    opacity: 2;
 }
 
 // POSITION
