@@ -92,12 +92,14 @@ class Organization
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups("orgaByService")
+     * @Groups("orga")
      */
     private $longitude;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups("orgaByService")
+     * @Groups("orga")
      */
     private $latitude;
 
