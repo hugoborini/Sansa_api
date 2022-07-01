@@ -26,8 +26,15 @@ class GetOrgaController extends AbstractController
 
         $orgaRepo = $this->getDoctrine()->getRepository(Organization::class);
         $orga = $orgaRepo->findAll();
-
         $orgaNormalize = $normalizer->normalize($orga, null, ["groups" => "orga"]);
+
+        for ($i=0; $i < count($orgaNormalize); $i++) {
+            $serviceReFacto = [];
+            foreach ($orgaNormalize[$i]["services_id"] as $key => $service) {
+                array_push($serviceReFacto, $service["service_name"]);
+            }
+            $orgaNormalize[$i]["services_id"] = array_values(array_unique($serviceReFacto));
+        }
 
         return $this->json($orgaNormalize);
     }
@@ -80,6 +87,14 @@ class GetOrgaController extends AbstractController
     {
         $orga = $orgaRepo->findById($id_orga);
         $orgaNormalize = $normalizer->normalize($orga, null, ["groups" => "orga"]);
+
+        for ($i=0; $i < count($orgaNormalize); $i++) {
+            $serviceReFacto = [];
+            foreach ($orgaNormalize[$i]["services_id"] as $key => $service) {
+                array_push($serviceReFacto, $service["service_name"]);
+            }
+            $orgaNormalize[$i]["services_id"] = array_values(array_unique($serviceReFacto));
+        }
 
         return $this->json($orgaNormalize);
     }
