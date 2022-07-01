@@ -75,27 +75,40 @@ class OrganizationRepository extends ServiceEntityRepository
         ;
     }
     */
-    public function findAllService(): array
+    public function findAllService(string $service): array
     {
-        $conn = $this->getEntityManager()->getConnection();
 
+        $serviceTab = unserialize($service);
+        
+        $sqlString = "";
+
+        $numItems = count($serviceTab);
+        $i = 0;
+        
+        foreach ($serviceTab as $service) {
+            if(++$i === $numItems) {
+                $sqlString = $sqlString . "s.service_name = '{$service}';";
+            }else{
+                
+                $sqlString = $sqlString . "s.service_name = '{$service}' OR ";
+            }
+        }
+        
+        $conn = $this->getEntityManager()->getConnection();
+        
         $sql = '
             SELECT DISTINCT organization.id 
             from organization JOIN services 
             as s ON s.organization_id_id = organization.id 
-            WHERE 
-            s.service_name = "Douche" OR s.service_name = "Laverie";
-            ';
+            WHERE ' . $sqlString;
 
         $stmt = $conn->prepare($sql);
         $allId =  $stmt->execute()->fetchAll();
         $allIdTab = [];
 
         foreach ($allId as $key => $id) {
-            array_push($allIdTab, $id["id"]);  
+            array_push($allIdTab, intval($id["id"]));  
         }
-
-        
 
         return $allIdTab;
     }
