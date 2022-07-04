@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\HoursRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=HoursRepository::class)
@@ -18,62 +19,66 @@ class Hours
     private $id;
 
     /**
-     * @ORM\OneToOne(targetEntity=Services::class, inversedBy="hours_id", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $service_id;
-
-    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $monday;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $tuesday;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $wednesday;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $thurday;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $friday;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $saturday;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("orga")
+     * @Groups("orgaByService")
      */
     private $sunday;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Organization::class, inversedBy="hours_id")
+     * @ORM\JoinColumn(nullable=false)
+     * 
+     */
+    private $organization_id;
+
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getServiceId(): ?Services
-    {
-        return $this->service_id;
-    }
 
-    public function setServiceId(Services $service_id): self
-    {
-        $this->service_id = $service_id;
-
-        return $this;
-    }
 
     public function getMonday(): ?string
     {
@@ -155,6 +160,18 @@ class Hours
     public function setSunday(?string $sunday): self
     {
         $this->sunday = $sunday;
+
+        return $this;
+    }
+
+    public function getOrganizationId(): ?Organization
+    {
+        return $this->organization_id;
+    }
+
+    public function setOrganizationId(?Organization $organization_id): self
+    {
+        $this->organization_id = $organization_id;
 
         return $this;
     }

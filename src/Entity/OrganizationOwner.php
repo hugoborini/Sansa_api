@@ -42,6 +42,7 @@ class OrganizationOwner implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("orga")
      */
     private $tel;
 

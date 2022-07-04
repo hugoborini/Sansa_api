@@ -14,6 +14,9 @@ use App\Entity\PreferencialWelcome;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use Geocoder\Query\GeocodeQuery;
+use Geocoder\Query\ReverseQuery;
+
 
 
 class SansaFixtures extends Fixture
@@ -30,6 +33,13 @@ class SansaFixtures extends Fixture
     {
         $faker = \Faker\Factory::create();
         $questionJson = json_decode(file_get_contents('public/data/question.json'));
+        $httpClient = new \Http\Adapter\Guzzle6\Client();
+        $provider = new \Geocoder\Provider\GoogleMaps\GoogleMaps($httpClient, null, 'AIzaSyBiG9V9KBLLv-TYeu8gcuc-yWmEG6jqVn8');
+        $geocoder = new \Geocoder\StatefulGeocoder($provider, 'en');
+        
+        
+  
+
 
         foreach ($questionJson as $question) {
             $secretQuestionObj = new SecretQuestion();
@@ -63,16 +73,6 @@ class SansaFixtures extends Fixture
                     $preferencialObj->setValue($org->prefential);
                     $manager->persist($preferencialObj);
 
-                    $hoursObj = new Hours();
-                    $hoursObj->setMonday($org->horaires->Lundi);
-                    $hoursObj->setTuesday($org->horaires->Mardi);
-                    $hoursObj->setWednesday($org->horaires->Mercredi);
-                    $hoursObj->setThurday($org->horaires->Jeudi);
-                    $hoursObj->setFriday($org->horaires->Vendredi);
-                    $hoursObj->setSaturday($org->horaires->Samedi);
-                    $hoursObj->setSunday($org->horaires->Dimanche);
-                    $manager->persist($hoursObj);
-
 
                     $organasationOwnerObj =  new OrganizationOwner();
                     $organasationOwnerObj->setEmail($faker->email());
@@ -84,7 +84,7 @@ class SansaFixtures extends Fixture
                     $date =  explode(": ", $org->lastUpdate);
 
                     $spokenLanguage = explode(": ", $org->langage);
-                    echo trim($spokenLanguage[1] , " ");
+
 
 
                     $organisationObj = new Organization();
@@ -97,14 +97,15 @@ class SansaFixtures extends Fixture
                     $organisationObj->setWebsite($org->link);
                     $organisationObj->setSpokenLanguage(trim($spokenLanguage[1] , " "));
                     $organisationObj->setImportanteInformation("Warning");
+                    $result = $geocoder->geocodeQuery(GeocodeQuery::create($org->address));
+                    $organisationObj->setLongitude($result->all()[0]->getCoordinates()->getLongitude()); 
+                    $organisationObj->setLatitude($result->all()[0]->getCoordinates()->getLatitude()); 
                     $manager->persist($organisationObj);
-
 
                     foreach($org->services as $service){
                         $servicesObj = new Services();
                         $servicesObj->setServiceName($service);
                         $servicesObj->setOrganizationId($organisationObj);
-                        $servicesObj->setHoursId($hoursObj);
                         $servicesObj->setSubscribe(false);
                         $servicesObj->setByAppointement($org->by_appointement);
                         $servicesObj->setServiceDescription("lorem ispsum jizfgjizgjzeigfjzeikgvjherugvjjzefhrzejdfjzeokfgjezkofcjzeigvjziogjzo");
@@ -112,6 +113,21 @@ class SansaFixtures extends Fixture
                         $servicesObj->setCategoryId($categoryObj);
                         $manager->persist($servicesObj);
                     }
+                    
+                    $hoursObj = new Hours();
+                    $hoursObj->setOrganizationId($organisationObj);
+                    $hoursObj->setMonday($org->horaires->Lundi);
+                    $hoursObj->setTuesday($org->horaires->Mardi);
+                    $hoursObj->setWednesday($org->horaires->Mercredi);
+                    $hoursObj->setThurday($org->horaires->Jeudi);
+                    $hoursObj->setFriday($org->horaires->Vendredi);
+                    $hoursObj->setSaturday($org->horaires->Samedi);
+                    $hoursObj->setSunday($org->horaires->Dimanche);
+                    $manager->persist($hoursObj);
+
+
+
+
 
                 }
             }

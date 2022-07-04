@@ -47,7 +47,7 @@ class BoAuthController extends AbstractController
             //     '_password' => $nonHash,
             // ]);
 
-            return $response;
+            //return $response;
         }
         return $this->render('bo_auth/register.html.twig', [
             'form' => $form->createView(),
