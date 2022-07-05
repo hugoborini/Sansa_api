@@ -117,6 +117,26 @@ class Organization
      */
     private $hours_id;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $valitated;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $siret;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $rna;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $note;
+
     public function __construct()
     {
         $this->organization_id = new ArrayCollection();
@@ -347,6 +367,54 @@ class Organization
                 $hoursId->setOrganizationId(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getValitated(): ?bool
+    {
+        return $this->valitated;
+    }
+
+    public function setValitated(bool $valitated): self
+    {
+        $this->valitated = $valitated;
+
+        return $this;
+    }
+
+    public function getSiret(): ?string
+    {
+        return $this->siret;
+    }
+
+    public function setSiret(string $siret): self
+    {
+        $this->siret = $siret;
+
+        return $this;
+    }
+
+    public function getRna(): ?string
+    {
+        return $this->rna;
+    }
+
+    public function setRna(string $rna): self
+    {
+        $this->rna = $rna;
+
+        return $this;
+    }
+
+    public function getNote(): ?int
+    {
+        return $this->note;
+    }
+
+    public function setNote(int $note): self
+    {
+        $this->note = $note;
 
         return $this;
     }

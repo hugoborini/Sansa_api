@@ -15,12 +15,11 @@ class IndexController extends AbstractController
     public function index(): Response
     {
 
-        // return $this->json([
-        //     "index" => [
-        //         "Get all Orga" => "/getorga"
-        //     ]
-        // ]);
-
-        return $this->render('@App/base.html.twig');
+        return $this->json([
+            "index" => [
+                "Get all Orga" => "/api/getallorga"
+            ]
+        ]);
+        //return $this->render('@App/debug.html.twig');
     }
 }

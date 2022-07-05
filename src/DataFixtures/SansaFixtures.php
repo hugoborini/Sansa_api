@@ -28,7 +28,25 @@ class SansaFixtures extends Fixture
     {
         $this->hasher = $hasher;
     }
+    private function randomSecurity(string $type)
+    {
+        if($type == "siret"){
+            $siren = "";
+            for ($i=0; $i < 14 ; $i++){
+                $siren = $siren . rand(0, 9);
+            }
 
+            return $siren;
+
+        } elseif( $type == "rna"){
+            $rna = 'W';
+            for ($i = 0; $i < 9; $i++){
+                $rna = $rna . rand(0, 9);
+            }
+
+            return $rna;
+        }
+    }
     public function load(ObjectManager $manager): void
     {
         $faker = \Faker\Factory::create();
@@ -100,6 +118,10 @@ class SansaFixtures extends Fixture
                     $result = $geocoder->geocodeQuery(GeocodeQuery::create($org->address));
                     $organisationObj->setLongitude($result->all()[0]->getCoordinates()->getLongitude()); 
                     $organisationObj->setLatitude($result->all()[0]->getCoordinates()->getLatitude()); 
+                    $organisationObj->setValitated(True);
+                    $organisationObj->setSiret($this->randomSecurity("siret"));
+                    $organisationObj->setRna($this->randomSecurity("rna"));
+                    $organisationObj->setNote(rand(0, 5));
                     $manager->persist($organisationObj);
 
                     foreach($org->services as $service){

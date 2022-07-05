@@ -4,11 +4,17 @@
            url("../fonts/Helvetica_Neue.ttf") format("ttf");
 }
 
+
 // FOOTER
 
 .footer-bg {
     background-repeat: no-repeat;
     background-image: url('/templates/img/sansa_background_footer.svg')
+
+.divider {
+    display: inline-block;
+    border-left: 1px solid #E8E8E8;
+
 }
 
 // FONT
@@ -910,7 +916,7 @@
 }
 
 .mr-5 {
-    margin-right: 3rem
+    margin-right: 5rem
 }
 
 .mb-0 {
@@ -999,6 +1005,10 @@
 
 .ml-5 {
     margin-left: 3rem
+}
+
+.ml-10 {
+    margin-left: 10rem;
 }
 
 // Z-INDEX
@@ -1235,6 +1245,10 @@
 
 .br-xxl {
     border-radius: 30px
+}
+
+.br-xxxl {
+    border-radius: 32px
 }
 
 .br-50 {

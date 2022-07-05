@@ -3,8 +3,6 @@
 {% block title %}Hello BoAuthController!{% endblock %}
 
 {% block body %}
-    
-    {% include '@App/Components/navbar.html.twig' %}
     <form method="post" action="{{ path("app_bo_auth_login") }}">
 
         <h3><label for="loginName">Username or email</label></h3>
