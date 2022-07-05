@@ -20,7 +20,9 @@
   </head>
   <body>
     {% include '@App/Components/navbar.html.twig' %}
+    {% block body %}
 
-    {% block body %}{% endblock %}
+    {% endblock %}
+    {% include '@App/Components/footer.html.twig' %}
   </body>
 </html>
