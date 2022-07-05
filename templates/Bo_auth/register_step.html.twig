@@ -1,0 +1,416 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('form') }}
+{% endblock %}
+
+{% block bodyStyle %}bgc-backo h-100v m-0{% endblock %}
+
+{% block title %}Sansa | Login{% endblock %}
+
+{% block body %}
+
+{% set days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'] %}
+
+{% set langages = ['Francais', 'Espagnol', 'Anglais', 'Italien', 'Wolof', 'Bambara', 'Russe', 'Polonais', 'Ukrainien', 'Arabe', 'Portugais', 'Allemand'] %}
+
+{% set acceuil = ['Accueil de jour', 'Hebergement d’urgence', 'Herbergement long', 'Halte de nuit', 'Espace de repos', 'Bagagerie'] %}
+{% set alimentation = ['Distribution de repas', 'Restaurant assise', 'Colis alimentaire', 'Épicerie solidaire', 'Fontaine à eau'] %}
+{% set sante = ['Addiction', 'Depistage', 'Soins enfants', 'Vaccination', 'Suivi grossesse', 'Medecin généraliste', 'Infirmière'] %}
+{% set medecine = ['Allergologie', 'Cardiologie', 'Radiologie', 'Gynécologie', 'Pneumologue', 'Nutrition', 'Dermathologue'] %}
+{% set hygiene = ['Douches', 'Toilettes', 'Protection périodique', 'Fontaine à eau', 'Bien-être'] %}
+{% set conseil = ['Permanence juridique', 'Conseil logement', 'Domiciliation', 'Conseil handicap'] %}
+{% set activity = ['Activités sportives', 'Musée', 'Bibliothéque'] %}
+{% set technologie = ['Ordinateur', 'Wifi', 'Prise', 'Téléphone'] %}
+
+<section class="h-100v d-f ai-c">
+    <div class="d-f jc-sa ai-c w-100">
+        <div class="fb-33c3">
+            <img src="{{ asset('build/images/note_taking.png') }}" alt="" class="w-100" />
+        </div>
+        <div class="fb-45 o-a">
+            <div class="d-f ai-c jc-c p-r">
+                <div class="d-f ai-c pr-0c5 goBack">{% include '@App/img/left_arrow.html.twig' %}</div>
+                <div class="progress-bar">
+                    <div class="progress-bar__current"></div>
+                </div>
+            </div>
+            <div class="d-f w-100" id="slider__ctn">
+                <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_1">
+                    <h2 class="ff-body fs-xl fw-600 c-black pb-1">Quel est l’identité de votre association ?</h2>
+                    <form class="p-r w-70" method="" action="">
+                        <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="association_name">Nom de l’association</label></h3>
+                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="identity" type="text" id="association_name" placeholder="Les restos du coeur" required>
+
+                        <div class="d-f jc-sb">
+                            <div class="fb-45">
+                                <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="siret">SIRET</label></h3>
+                                <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="identity" type="number" id="siret" placeholder="76354000981233" required>
+                            </div>
+                            
+                            <div class="fb-45">
+                                <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="rna_number">N° RNA</label></h3>
+                                <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="identity" type="text" id="rna_number" placeholder="W000687347" required>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_2">
+                    <h2 class="ff-body fs-xl fw-600 c-black pb-1">Quelle est votre mission ?</h2>
+                    <form class="p-r w-70" method="" action="">
+                        <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="mission">Description de l’association</label></h3>
+                        <textarea class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="mission" type="text" id="mission" rows="4" required></textarea>
+                    </form>
+                </div>
+
+                <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_3">
+                    <h2 class="ff-body fs-xl fw-600 c-black pb-1">Ajoutez vos coordonnées</h2>
+                    <form class="p-r w-70" method="" action="">
+                        <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="email">Adresse e-mail</label></h3>
+                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="coordonnees" type="text" id="email"  placeholder="johndoe@gmail.com" required>
+
+                        <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="telephone">Téléphone</label></h3>
+                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="coordonnees" type="tel" id="telephone"  placeholder="0786831179" required>
+
+                        <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="siteName">Site internet</label></h3>
+                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="coordonnees" type="text" id="siteName"  placeholder="www.association.fr">
+
+                        <div class="d-f ai-c">
+                            <input name="site" id="site" type="checkbox">
+                            <p class="ff-body fs-xxs c-black pl-0c5">Je n’ai pas de site internet</p>
+                        </div>
+            
+                    </form>
+                </div>
+
+                <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_4">
+                    <h2 class="ff-body fs-xl fw-600 c-black pb-1">Quelle est votre adresse ?</h2>
+                    <form class="p-r w-70" method="" action="">
+                        <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="address">Adresse</label></h3>
+                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="address" type="text" id="address"  placeholder="18 Rue Jacques Prevert, 75015 PARIS" required>
+
+                    </form>
+                </div>
+
+                <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_5">
+                    <h2 class="ff-body fs-xl fw-600 c-black pb-1">Ajoutez vos horaires</h2>
+                    <form class="p-r w-70" method="" action="">
+                        <div class="d-f fd-c">
+
+                            {% for day in days %}
+                                <div class="d-f fd-c">
+                                    <div class="d-f jc-sb mb-2 w-70">
+                                        <p class="ff-body fs-s c-black fw-600 m-0 lh-1">{{day}}</p>
+                                        <div class="switchSlider d-f ai-c">
+                                            <label class="ff-body fs-s c-black fw-600 d-f">
+                                                <input type="checkbox" name="schedules" id="{{day}}" data-day="{{day}}" class="dataToSave" required>
+                                                <span class="switch slider round p-r"></span>
+                                            </label>
+                                            <p class="ff-body fs-s c-black fw-400 m-0 lh-1 ml-1 col-50 toggleOpening">Fermé</p>
+                                        </div>
+                                    </div>
+                                    <div class="selectSchedule d-n fd-c">
+                                        <div class="d-f jc-sb ai-c">
+                                            <div class="fb-40">
+                                                <label for="schedules-select-open" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Ouverture</label>
+
+                                                <select name="scheduleOpen" id="schedules-select-open" class="br-15 p-0c75 b-black-10 w-100 c-black-10 mb-1">
+                                                    <option value="">8h30</option>
+                                                    {% set scheduleHour = 0 %}
+                                                    {% set scheduleMinute = 0 %}
+                                                    {% for i in 1..48 %}
+                                                        {% if loop.index is even %}{% set scheduleHour = scheduleHour + 1 %}{% endif %}
+                                                        {% set scheduleMinute = scheduleMinute + 30 %}
+                                                        {% if scheduleMinute >= 60 %}{% set scheduleMinute = 0 ~ '0' %}{% endif %}
+                                                        <option class="dataToSave" value="{{scheduleHour}}h{{scheduleMinute}}">{{scheduleHour}}h{{scheduleMinute}}</option>
+                                                    {% endfor %}>
+                                                </select>
+                                            </div>
+                                            <div class="fb-40">
+                                                <label for="schedules-select-close" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Fermeture</label>
+
+                                                <select name="scheduleClose" id="schedules-select-close" class="br-15 p-0c75 b-black-10 w-100 c-black-10 mb-1">
+                                                    <option class="ff-body fs-s c-black-40 fw-400 mb-0c5 d-b" value="17h30">17h30</option>
+                                                    {% set scheduleHour = 0 %}
+                                                    {% set scheduleMinute = 0 %}
+                                                    {% for i in 1..48 %}
+                                                        {% if loop.index is even %}{% set scheduleHour = scheduleHour + 1 %}{% endif %}
+                                                        {% set scheduleMinute = scheduleMinute + 30 %}
+                                                        {% if scheduleMinute >= 60 %}{% set scheduleMinute = 0 ~ '0' %}{% endif %}
+                                                        <option class="dataToSave" value="{{scheduleHour}}h{{scheduleMinute}}">{{scheduleHour}}h{{scheduleMinute}}</option>
+                                                    {% endfor %}>
+                                                </select>
+                                            </div>
+                                            <div class="pl-0c75 closeCross">
+                                                {% include '@App/img/close_cross.html.twig' %}
+                                            </div>
+                                        </div>
+
+                                        <div class="selectSchedule2 d-n jc-sb ai-c">
+                                            <div class="fb-40">
+                                                <label for="schedules-select-open2" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Ouverture</label>
+
+                                                <select name="scheduleOpen" id="schedules-select-open2" class="br-15 p-0c75 b-black-10 w-100 c-black-10 mb-1">
+                                                    <option value="">8h30</option>
+                                                    {% set scheduleHour = 0 %}
+                                                    {% set scheduleMinute = 0 %}
+                                                    {% for i in 1..48 %}
+                                                        {% if loop.index is even %}{% set scheduleHour = scheduleHour + 1 %}{% endif %}
+                                                        {% set scheduleMinute = scheduleMinute + 30 %}
+                                                        {% if scheduleMinute >= 60 %}{% set scheduleMinute = 0 ~ '0' %}{% endif %}
+                                                        <option value="{{scheduleHour}}h{{scheduleMinute}}">{{scheduleHour}}h{{scheduleMinute}}</option>
+                                                    {% endfor %}>
+                                                </select>
+                                            </div>
+                                            <div class="fb-40">
+                                                <label for="schedules-select-close2" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Fermeture</label>
+
+                                                <select name="scheduleClose" id="schedules-select-close2" class="br-15 p-0c75 b-black-10 w-100 c-black-10 mb-1">
+                                                    <option class="ff-body fs-s c-black-40 fw-400 mb-0c5 d-b" value="17h30">17h30</option>
+                                                    {% set scheduleHour = 0 %}
+                                                    {% set scheduleMinute = 0 %}
+                                                    {% for i in 1..48 %}
+                                                        {% if loop.index is even %}{% set scheduleHour = scheduleHour + 1 %}{% endif %}
+                                                        {% set scheduleMinute = scheduleMinute + 30 %}
+                                                        {% if scheduleMinute >= 60 %}{% set scheduleMinute = 0 ~ '0' %}{% endif %}
+                                                        <option value="{{scheduleHour}}h{{scheduleMinute}}">{{scheduleHour}}h{{scheduleMinute}}</option>
+                                                    {% endfor %}>
+                                                </select>
+                                            </div>
+                                            <div class="pl-0c75 closeCross2">
+                                                {% include '@App/img/close_cross.html.twig' %}
+                                            </div>
+                                        </div>
+
+                                        <p class="addSchedule ff-body fs-s c-blue fw-600 mb-0c25 mt-0 c-p mb-2">Ajouter un horaire</p>
+                                    </div>
+                                </div>
+
+                            {% endfor %}
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_6">
+                    <h2 class="ff-body fs-xl fw-600 c-black pb-1">Ajoutez vos préférences d'acceuil</h2>
+                    <form class="p-r w-90 langages" method="" action="">
+                        <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Langu(e)s</label>
+                        <div class="p-r expandInput c-p">
+                            <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                <p class="langages"></p>
+                                <p class="counter"></p>
+                            </div>
+                            <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
+                        </div>
+
+                        <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n expandList">
+                            {% for langage in langages %}
+                                <div class="mb-0c5">
+                                    <input class="mutliple-select dataToSave" type="checkbox" id="langages" name="langages" value="{{langage}}" required>
+                                    <label class="ff-body fs-xs c-black fw-400">{{langage}}</label>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="mt-1c5">
+                            <label class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b" for="accueil_type">Type d’accueil</label>
+                            <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="accueil_type" type="text" id="accueil_type" placeholder="Adultes, enfants, animaux..." required>
+                        </div>
+
+
+                        <h3 class="ff-body fs-s c-black fw-400 mb-0c5 mt-2" for="true">L’accueil se fait-il sur rendez vous ?</h3>
+                        <div class="d-f ai-c">
+                            <div class="d-f jc-sb fb-15 mr-1c5">
+                                <input class="br-15 p-0c75 b-black-10 c-black-10 dataToSave" name="appointement" type="radio" id="appointement" value="true" required>
+                                <label for="true" class="ff-body fs-s c-black fw-400">Oui</label>
+                            </div>
+                            <div class="d-f jc-sb fb-15">
+                                <input class="br-15 p-0c75 b-black-10 c-black-10 dataToSave" name="appointement" type="radio" id="appointement" value="false" required>
+                                <label for="false" class="ff-body fs-s c-black fw-400">Non</label>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+
+                <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_7">
+                    <h2 class="ff-body fs-xl fw-600 c-black pb-1">Ajoutez vos services</h2>
+                    <form class="p-r w-100 d-f fw-w jc-sb services" method="" action="">
+                        <div class="fb-45 mb-1c5 p-r">
+                            <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Accueil</label>
+                            <div class="p-r  expandInput expandInput--services zi-1 c-p">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                    <p class="langages accueil"></p>
+                                    <p class="counter accueil"></p>
+                                </div>
+                                <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
+                            </div>
+
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 p-a d-n zi-9 expandList">
+                                {% for item in acceuil %}
+                                    <div class="mb-0c5">
+                                        <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="accueil" name="services" value="{{item}}" required>
+                                        <label class="ff-body fs-xs c-black fw-400">{{item}}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="fb-45 mb-1c5 p-r">
+                            <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Alimentation</label>
+                            <div class="p-r  expandInput expandInput--services zi-1 c-p">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                    <p class="langages alimentation"></p>
+                                    <p class="counter alimentation"></p>
+                                </div>
+                                <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
+                            </div>
+
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                                {% for item in alimentation %}
+                                    <div class="mb-0c5">
+                                        <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="alimentation" name="services" value="{{item}}" required>
+                                        <label class="ff-body fs-xs c-black fw-400">{{item}}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="fb-45 mb-1c5 p-r">
+                            <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Santé</label>
+                            <div class="p-r  expandInput expandInput--services zi-1 c-p">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                    <p class="langages sante"></p>
+                                    <p class="counter sante"></p>
+                                </div>
+                                <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
+                            </div>
+
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                                {% for item in sante %}
+                                    <div class="mb-0c5">
+                                        <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="sante" name="services" value="{{item}}" required>
+                                        <label class="ff-body fs-xs c-black fw-400">{{item}}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="fb-45 mb-1c5 p-r">
+                            <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Médecine</label>
+                            <div class="p-r  expandInput expandInput--services zi-1 c-p">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                    <p class="langages medecine"></p>
+                                    <p class="counter medecine"></p>
+                                </div>
+                                <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
+                            </div>
+
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                                {% for item in medecine %}
+                                    <div class="mb-0c5">
+                                        <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="medecine" name="services" value="{{item}}" required>
+                                        <label class="ff-body fs-xs c-black fw-400">{{item}}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="fb-45 mb-1c5 p-r">
+                            <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Hygiène</label>
+                            <div class="p-r  expandInput expandInput--services zi-1 c-p">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                    <p class="langages hygiene"></p>
+                                    <p class="counter hygiene"></p>
+                                </div>
+                                <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
+                            </div>
+
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                                {% for item in hygiene %}
+                                    <div class="mb-0c5">
+                                        <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="hygiene" name="services" value="{{item}}" required>
+                                        <label class="ff-body fs-xs c-black fw-400">{{item}}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="fb-45 mb-1c5 p-r">
+                            <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Conseil</label>
+                            <div class="p-r  expandInput expandInput--services zi-1 c-p">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                    <p class="langages conseil"></p>
+                                    <p class="counter conseil"></p>
+                                </div>
+                                <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
+                            </div>
+
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                                {% for item in conseil %}
+                                    <div class="mb-0c5">
+                                        <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="conseil" name="services" value="{{item}}" required>
+                                        <label class="ff-body fs-xs c-black fw-400">{{item}}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="fb-45 mb-1c5 p-r">
+                            <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Activités</label>
+                            <div class="p-r  expandInput expandInput--services zi-1 c-p">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                    <p class="langages activites"></p>
+                                    <p class="counter activites"></p>
+                                </div>
+                                <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
+                            </div>
+
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                                {% for item in activity %}
+                                    <div class="mb-0c5">
+                                        <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="activites" name="services" value="{{item}}" required>
+                                        <label class="ff-body fs-xs c-black fw-400">{{item}}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="fb-45 mb-1c5 p-r">
+                            <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Technologie</label>
+                            <div class="p-r  expandInput expandInput--services zi-1 c-p">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                    <p class="langages technologie"></p>
+                                    <p class="counter technologie"></p>
+                                </div>
+                                <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
+                            </div>
+
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                                {% for item in technologie %}
+                                    <div class="mb-0c5">
+                                        <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="technologie" name="services" value="{{item}}" required>
+                                        <label class="ff-body fs-xs c-black fw-400">{{item}}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2">
+                    <h2 class="ff-body fs-xl fw-600 c-black mb-0c5">Félicitation, inscription terminée !</h2>
+                    <p class="ff-body fs-s fw-400 c-black m-0">Nous étudions votre demande. Un e-mail de confirmation vous sera envoyé sous 72 heures lorsque votre inscription sera validée</p>
+                </div>
+            </div>
+            <button type="button" class="bgc-black-10 br-xxl pt-1 pb-1 pl-2 pr-2 b-black-10 fs-s c-black-40 d-b mt-0c5 ml-2" value="Continuer">Continuer</button>
+            <button type="button" class="bgc-white br-xxl pt-1 pb-1 pl-2 pr-2 b-blue mt-0c5 d-n final__button ml-2" value="Retour à l’accueil"><a class="c-blue fs-s td-u" href="{{ path('app_index_bo')}}">Retour à l’accueil</a></button>
+        </div>
+    </div>
+</section>
+{% endblock %}
