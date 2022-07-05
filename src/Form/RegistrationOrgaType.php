@@ -16,9 +16,9 @@ class RegistrationOrgaType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('email', EmailType::class)
-            ->add('tel', TelType::class)
-            ->add('password', PasswordType::class)
+            ->add('email', EmailType::class, array('label' => false))
+            ->add('tel', TelType::class, array('label' => false))
+            ->add('password', PasswordType::class, array('label' => false))
         ;
     }
 

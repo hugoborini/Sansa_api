@@ -3838,6 +3838,11 @@ schema-utils@^4.0.0:
     ajv-formats "^2.1.1"
     ajv-keywords "^5.0.0"
 
+scss-reset@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/scss-reset/-/scss-reset-1.2.2.tgz#bf454e7bca7d9f6498c2ad4d0ae0b10e5e9932e6"
+  integrity sha512-y3QLhXQCiwS5YxYSl4nGQkyIvaCtMm6O8V7clVrIihWQGOEv1IpEpLGpcOWOasizc+DEEMyge1Peu0BCmeu/bg==
+
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/select-hose/-/select-hose-2.0.0.tgz"
