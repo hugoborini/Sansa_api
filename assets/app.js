@@ -11,3 +11,5 @@ import './styles/mobileApp.scss';
 
 // start the Stimulus application
 import './bootstrap';
+
+import './images';
