@@ -1,8 +1,42 @@
-<div class="d-f jc-c c-blue">
-    <p>Sansa</p>
-    <p>Nos valeurs</p>
-    <p>Notre solution</p>
-    <button>Inscription</button>
-    <button>Connexion</button>
-    
-</div>
+<header>
+  <nav class="bgc-white ff-body td-n">
+    <div class="fw-600 td-n m-0c5 d-f jc-sa">
+      <div class="d-f">
+        <a class="pr-0 m-0c5" href="/">
+          {% include '@App/img/sansa_logo.html.twig' %}
+        </a>
+        <a class="td-n c-blue-dark fs-l fw-700 bgc-white m-1" href="/">SANSA</a>
+        <div class="divider m-0c5 h-40"></div>
+
+        <div class="c-blue-dark fs-m mr-5">
+          <ul>
+            <a href="/" class="td-n c-blue pt-1 pr-2 pb-1 pl-0" role="button">
+              Nos valeurs
+            </a>
+            <a href="/" class="td-n c-blue pt-1 pr-2 pb-1 pl-2" role="button">
+              Notre solution
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="jc-fe m-1c5">
+        {% if app.user %}
+          <a href="/logout"
+            class="td-n br-xxxl c-blue pt-1 pr-2c5 pb-1 pl-2c5"
+            style="">
+            Déconnexion
+          </a>
+        {% else %}
+          <a href="/register"
+            class="br-xxxl b-blue c-blue fw-600 pt-1 pr-2c5 pb-1 pl-2c5 m-1 td-n">
+            Inscription
+          </a>
+          <a href="/login"
+            class="br-xxxl b-blue c-white bgc-blue fw-600 pt-1 pr-2c5 pb-1 pl-2c5 m-1 td-n">
+            Connexion
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+</header>
