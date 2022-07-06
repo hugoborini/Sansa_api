@@ -19,10 +19,6 @@
     {% endblock %}
   </head>  
   <body class="{% block bodyStyle %}{% endblock %}">
-    {% include '@App/Components/navbar.html.twig' %}
-    {% block body %}
-
-    {% endblock %}
-    {% include '@App/Components/footer.html.twig' %}
+    {% block body %}{% endblock %}
   </body>
 </html>
