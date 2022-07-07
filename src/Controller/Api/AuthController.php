@@ -50,6 +50,13 @@ class AuthController extends AbstractController
      *     @OA\Schema(type="string")
      * )
      * 
+     * @OA\Parameter(
+     *     name="Téléphone",
+     *     in="query",
+     *     description="Téléphone de l'utilisateur",
+     *     @OA\Schema(type="string")
+     * )
+     * 
      * 
      *)
      */
