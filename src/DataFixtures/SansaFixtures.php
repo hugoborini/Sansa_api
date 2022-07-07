@@ -144,9 +144,12 @@ class SansaFixtures extends Fixture
 
                     if($randomInt == 1){
                         $organisationObj->setValitated(True);
+                        $organisationObj->setByAppointment(False);
                     } else{
                         $organisationObj->setValitated(False);
+                        $organisationObj->setByAppointment(True);
                     }
+
 
                     $organisationObj->setSiret($this->randomSecurity("siret"));
                     $organisationObj->setRna($this->randomSecurity("rna"));
@@ -156,7 +159,7 @@ class SansaFixtures extends Fixture
                     $preferencialObj = new PreferencialWelcome();
                     $preferencialObj->setValue($org->prefential);
                     $preferencialObj->setOrganisationId($organisationObj);
-                    
+
                     $manager->persist($preferencialObj);
 
 
