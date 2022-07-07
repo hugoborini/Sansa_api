@@ -9,11 +9,11 @@
     </tr>
     {% for user in users %}
         <tr class="ff-body fs-s c-black p-r {{ loop.last ? '' : 'bb-black-5' }}">
-            <td class="c-blue fw-600 pt-1 pb-1">{{user.name}}</td>
+            <td class="c-blue fw-600 pt-1 pb-1">{{user.username}}</td>
             <td class="pt-1 pb-1">{{user.email}}</td>
-            <td class="pt-1 pb-1">{{user.phone}}</td>
-            <td class="pt-1 pb-1">{{user.inscription_date}}</td>
-            <td class="pt-1 pb-1">{{user.last_connexion}}</td>
+            <td class="pt-1 pb-1">{{user.tel}}</td>
+            <td class="pt-1 pb-1">{{user.dateIncription|date("m/d/Y")}}</td>
+            <td class="pt-1 pb-1">{{user.lastConnection|date("m/d/Y")}}</td>
             <td class="open-popup pt-1 pb-1 ta-c p-r">
                 {% include '@App/img/pictos/three_dots.html.twig' %}
                 <div class="popup bgc-white zi-9 p-a r-0 br-m bs-light d-n ta-l col-150 o-h">
