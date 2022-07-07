@@ -18,7 +18,7 @@
                 {% include '@App/img/pictos/three_dots.html.twig' %}
                 <div class="popup bgc-white zi-9 p-a r-0 br-m bs-light d-n ta-l col-150 o-h">
                     <p class="pt-1 pl-1 pr-1 pb-0c5 m-0">Modifier</p>
-                    <p class="pl-1 pr-1 pb-1 pt-0c5 m-0">Supprimer</p>
+                    <a href={{path("app_users_delete", {idUser: user.id})}}><p class="pl-1 pr-1 pb-1 pt-0c5 m-0">Supprimer</p></a>
                 </div>
             </td>
         </tr>

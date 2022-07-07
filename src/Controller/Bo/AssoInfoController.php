@@ -2,21 +2,24 @@
 
 namespace App\Controller\Bo;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\OrganizationRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AssoInfoController extends AbstractController
 {
     /**
-     * @Route("bo/asso/info", name="app_asso_info")
+     * @Route("bo/asso/info/{idOrga}", name="app_asso_info")
      */
-    public function index(): Response
+    public function index(int $idOrga, OrganizationRepository $orgaRepo): Response
     {
+        $asso = $orgaRepo->findById($idOrga);
         return $this->render('views/admin/asso_info.html.twig', [
             'controller_name' => 'AssoInfoController',
             'title' => 'Foyer social Coallia',
-            'currentPage' => 'users',
+            'currentPage' => 'association',
+            'asso' => $asso
         ]);
     }
 }
