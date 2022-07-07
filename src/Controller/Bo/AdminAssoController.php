@@ -15,7 +15,7 @@ class AdminAssoController extends AbstractController
     public function index(OrganizationRepository $orga): Response
     {
         $allOrga = $orga->findAll();
-        dd($allOrga);
+        // dd($allOrga);
         return $this->render('views/admin/association.html.twig', [
             'controller_name' => 'AdminAssoController',
             'title' => 'Associations',

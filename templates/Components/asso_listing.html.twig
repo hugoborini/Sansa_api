@@ -5,14 +5,13 @@
         <th class="ta-l c-black-20 fw-400 pt-1 pb-1">N° RNA</th>
         <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Contact</th>
     </tr>
-    {% for asso in assos|filter(asso => asso.status == true) %}
-        <tr class="ff-body fs-s c-black p-r {{ loop.last ? '' : 'bb-black-5' }}">
-            <td class="c-blue fw-600 pt-1 pb-1"><a href="{{path('app_asso_info')}}" class="link-action td-n c-blue">{{asso.name}}</a></td>
-            <td class="pt-1 pb-1">{{asso.siret}}</td>
-            <td class="pt-1 pb-1">{{asso.rna}}</td>
-            <td class="pt-1 pb-1">
-                {{asso.contact.tel}}
-                <span class="fs-xxs c-black-40 d-b">{{asso.contact.email}}</span>
+    {% for orga in orgas|filter(orga => orga.valitated == true)%}
+        <tr class="ff-body  c-black p-r {{ loop.last ? '' : 'bb-black-5' }}">
+            <td class="fs-s c-blue fw-600 pt-1 pb-1"><a href="{{path('app_asso_info')}}" class="link-action td-n c-blue">{{orga.organizationName|u.truncate(80, '...')}}</a></td>
+            <td class="fs-xs pt-1 pb-1">{{orga.siret}}</td>
+            <td class="fs-xs pt-1 pb-1">{{orga.rna}}</td>
+            <td class="fs-xs pt-1 pb-1">
+                {{orga.phoneNumber is defined and orga.phoneNumber is not empty ? orga.phoneNumber|replace({' ' : ''}) : '-'  }}
             </td>
         </tr>
     {% endfor %}
