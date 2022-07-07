@@ -60,7 +60,7 @@ class FinalUser implements UserInterface
     private $tel;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="string", length=10)
      * @Groups("user")
      */
     private $date_incription;
