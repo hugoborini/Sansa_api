@@ -38,7 +38,7 @@ class SansaFixtures extends Fixture
     {
         $this->hasher = $hasher;
     }
-    private function randomSecurity(string $type)
+    private function randomSecurity(string $type) : string
     {
         if($type == "siret"){
             $siren = "";
@@ -55,6 +55,22 @@ class SansaFixtures extends Fixture
             }
 
             return $rna;
+
+        } elseif( $type == "tel"){
+
+            $random = rand(0,1);
+            $tel = "";
+            if($random == 1){
+                $tel = "07";
+            } else{
+                $tel = "06";
+            }
+
+            for($i = 0; $i < 8; $i++){
+                $tel = $tel . rand(0, 9);
+            }
+
+            return $tel;
         }
     }
     public function load(ObjectManager $manager): void
@@ -80,7 +96,7 @@ class SansaFixtures extends Fixture
                 $finalUser->setSecretAnswer("brutus");
                 $finalUser->setSecretQuestion($secretQuestionObj);
                 $finalUser->setFavorites([1, 2, 3]);
-                $finalUser->setTel("0787632712");
+                $finalUser->setTel($this->randomSecurity("tel"));
 
                 $finalUser->setLastConnection($this->randomDate());
                 $finalUser->setDateIncription($this->randomDate());
@@ -108,7 +124,7 @@ class SansaFixtures extends Fixture
 
                     $organasationOwnerObj =  new OrganizationOwner();
                     $organasationOwnerObj->setEmail($faker->email());
-                    $organasationOwnerObj->setTel("0787632712");
+                    $organasationOwnerObj->setTel($this->randomSecurity("tel"));
                     $password = $this->hasher->hashPassword($organasationOwnerObj, '123');
                     $organasationOwnerObj->setPassword($password);
                     $manager->persist($organasationOwnerObj);
@@ -131,8 +147,15 @@ class SansaFixtures extends Fixture
                     $organisationObj->setImportanteInformation("Warning");
                     $result = $geocoder->geocodeQuery(GeocodeQuery::create($org->address));
                     $organisationObj->setLongitude($result->all()[0]->getCoordinates()->getLongitude()); 
-                    $organisationObj->setLatitude($result->all()[0]->getCoordinates()->getLatitude()); 
-                    $organisationObj->setValitated(True);
+                    $organisationObj->setLatitude($result->all()[0]->getCoordinates()->getLatitude());
+                    $randomInt = rand(0, 1);
+
+                    if($randomInt == 1){
+                        $organisationObj->setValitated(True);
+                    } else{
+                        $organisationObj->setValitated(False);
+                    }
+
                     $organisationObj->setSiret($this->randomSecurity("siret"));
                     $organisationObj->setRna($this->randomSecurity("rna"));
                     $organisationObj->setNote(rand(0, 5));

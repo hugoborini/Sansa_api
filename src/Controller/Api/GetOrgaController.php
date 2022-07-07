@@ -98,14 +98,30 @@ class GetOrgaController extends AbstractController
         return $this->json($this->reFactoService($orgaNormalize));
     }
 
+
     /**
-     * @Route("/api/getorgaName/{like}", name="app_get_orga_by_like", methods="GET")
+     * @Route("/api/getorgaNameAdress/{like}", name="app_get_orga_by_ran", methods="GET")
      * 
      * @OA\Get(description="Recherche les associations par nom pour la barre de recherche")
      * required=true,
      * @OA\Tag(name="Association")
      */
     
+    public function getOrgaNameByNameAdressLike(NormalizerInterface $normalizer, OrganizationRepository $orgaRepo, string $like): Response
+    {
+        $orga = $orgaRepo->FindOrgaNameAdressLike($like);
+        $orgaNormalize = $normalizer->normalize($orga, null, ["groups" => "orga"]);
+
+        return $this->json($this->reFactoService($orgaNormalize));
+    }
+
+    /**
+     * @Route("/api/getorgaName/{like}", name="app_get_orga_by_id_es", methods="GET")
+     * 
+     * @OA\Get(description="recupere le nom organisation par rapport au nom donner")
+     * @OA\Tag(name="Association")
+     */
+
     public function getOrgaNameByNameLike(NormalizerInterface $normalizer, OrganizationRepository $orgaRepo, string $like): Response
     {
         $orga = $orgaRepo->FindOrgaNameLike($like);
@@ -113,4 +129,5 @@ class GetOrgaController extends AbstractController
 
         return $this->json($this->reFactoService($orgaNormalize));
     }
+    
 }
