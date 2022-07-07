@@ -78,7 +78,7 @@ class OrganizationRepository extends ServiceEntityRepository
     public function findAllService(string $service): array
     {
 
-        $serviceTab = unserialize($service);
+        $serviceTab = explode("~", $service);
         
         $sqlString = "";
 

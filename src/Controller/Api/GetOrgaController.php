@@ -55,12 +55,13 @@ class GetOrgaController extends AbstractController
     public function getOrgaByService(NormalizerInterface $normalizer, string $services,OrganizationRepository $orgaRepo): Response
     {
 
+
         $orgaIdTab = $orgaRepo->findAllService($services);
 
         $allInfoOrga = $orgaRepo->findBy(["id" => $orgaIdTab]);
         $orgaNormalize = $normalizer->normalize($allInfoOrga, null, ["groups" => "orga"]);
 
-        $serviceTab = unserialize($services);
+        $serviceTab = explode("~", $services);
 
 
         for ($i=0; $i < count($orgaNormalize); $i++) { 
