@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\FinalUserRepository;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -20,16 +21,19 @@ class FinalUser implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("user")
      */
     private $username;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("user")
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * 
      */
     private $password;
 
@@ -48,6 +52,24 @@ class FinalUser implements UserInterface
      * @ORM\JoinColumn(nullable=false)
      */
     private $secret_question;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Groups("user")
+     */
+    private $tel;
+
+    /**
+     * @ORM\Column(type="date")
+     * @Groups("user")
+     */
+    private $date_incription;
+
+    /**
+     * @ORM\Column(type="date")
+     * @Groups("user")
+     */
+    private $last_connection;
 
     public function eraseCredentials() {}
     public function getSalt(){}
@@ -129,6 +151,42 @@ class FinalUser implements UserInterface
     public function setSecretQuestion(?SecretQuestion $secret_question): self
     {
         $this->secret_question = $secret_question;
+
+        return $this;
+    }
+
+    public function getTel(): ?string
+    {
+        return $this->tel;
+    }
+
+    public function setTel(string $tel): self
+    {
+        $this->tel = $tel;
+
+        return $this;
+    }
+
+    public function getDateIncription(): ?\DateTimeInterface
+    {
+        return $this->date_incription;
+    }
+
+    public function setDateIncription(\DateTimeInterface $date_incription): self
+    {
+        $this->date_incription = $date_incription;
+
+        return $this;
+    }
+
+    public function getLastConnection(): ?\DateTimeInterface
+    {
+        return $this->last_connection;
+    }
+
+    public function setLastConnection(\DateTimeInterface $last_connection): self
+    {
+        $this->last_connection = $last_connection;
 
         return $this;
     }
