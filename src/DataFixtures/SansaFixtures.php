@@ -84,17 +84,12 @@ class SansaFixtures extends Fixture
         
 
         foreach ($questionJson as $question) {
-            $secretQuestionObj = new SecretQuestion();
-            $secretQuestionObj->setValue($question);
-            $manager->persist($secretQuestionObj);
 
             for ($i=0; $i < 2; $i++) {
                 $finalUser = new FinalUser();
                 $finalUser->setUsername($faker->name());
                 $finalUser->setEmail($faker->email());
                 $finalUser->setPassword(password_hash("test", PASSWORD_DEFAULT));
-                $finalUser->setSecretAnswer("brutus");
-                $finalUser->setSecretQuestion($secretQuestionObj);
                 $finalUser->setFavorites([1, 2, 3]);
                 $finalUser->setTel($this->randomSecurity("tel"));
 
@@ -117,10 +112,7 @@ class SansaFixtures extends Fixture
 
                 foreach($category as $org){
 
-                    $preferencialObj = new PreferencialWelcome();
-                    $preferencialObj->setValue($org->prefential);
-                    $manager->persist($preferencialObj);
-
+ 
 
                     $organasationOwnerObj =  new OrganizationOwner();
                     $organasationOwnerObj->setEmail($faker->email());
@@ -160,6 +152,13 @@ class SansaFixtures extends Fixture
                     $organisationObj->setRna($this->randomSecurity("rna"));
                     $organisationObj->setNote(rand(0, 5));
                     $manager->persist($organisationObj);
+
+                    $preferencialObj = new PreferencialWelcome();
+                    $preferencialObj->setValue($org->prefential);
+                    $preferencialObj->setOrganisationId($organisationObj);
+                    
+                    $manager->persist($preferencialObj);
+
 
                     foreach($org->services as $service){
                         $servicesObj = new Services();

@@ -44,17 +44,6 @@ class FinalUser implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
-     */
-    private $secret_answer;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=SecretQuestion::class, inversedBy="finalUsers")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $secret_question;
-
-    /**
-     * @ORM\Column(type="string", length=255)
      * @Groups("user")
      */
     private $tel;

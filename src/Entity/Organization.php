@@ -137,11 +137,18 @@ class Organization
      */
     private $note;
 
+    /**
+     * @ORM\OneToMany(targetEntity=PreferencialWelcome::class, mappedBy="organisation_id")
+     * @Groups("orga")
+     */
+    private $preferencialWelcomes;
+
     public function __construct()
     {
         $this->organization_id = new ArrayCollection();
         $this->services_id = new ArrayCollection();
         $this->hours_id = new ArrayCollection();
+        $this->preferencialWelcomes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -415,6 +422,36 @@ class Organization
     public function setNote(int $note): self
     {
         $this->note = $note;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, PreferencialWelcome>
+     */
+    public function getPreferencialWelcomes(): Collection
+    {
+        return $this->preferencialWelcomes;
+    }
+
+    public function addPreferencialWelcome(PreferencialWelcome $preferencialWelcome): self
+    {
+        if (!$this->preferencialWelcomes->contains($preferencialWelcome)) {
+            $this->preferencialWelcomes[] = $preferencialWelcome;
+            $preferencialWelcome->setOrganisationId($this);
+        }
+
+        return $this;
+    }
+
+    public function removePreferencialWelcome(PreferencialWelcome $preferencialWelcome): self
+    {
+        if ($this->preferencialWelcomes->removeElement($preferencialWelcome)) {
+            // set the owning side to null (unless already changed)
+            if ($preferencialWelcome->getOrganisationId() === $this) {
+                $preferencialWelcome->setOrganisationId(null);
+            }
+        }
 
         return $this;
     }
