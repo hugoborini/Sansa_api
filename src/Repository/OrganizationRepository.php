@@ -112,4 +112,13 @@ class OrganizationRepository extends ServiceEntityRepository
 
         return $allIdTab;
     }
+
+    public function FindOrgaNameLike(string $likeString)
+    {
+        $query = $this->createQueryBuilder('o')
+        ->where('o.organization_name LIKE :likeString')->orWhere('o.adress LIKE :likeString')
+        ->setParameter('likeString' , '%'.$likeString.'%')->getQuery();
+ 
+        return $query->getResult();
+    }
 }

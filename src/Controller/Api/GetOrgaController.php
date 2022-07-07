@@ -15,6 +15,19 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class GetOrgaController extends AbstractController
 {
+
+    private function reFactoService(Array $orgaNormalize) : Array{
+
+        for ($i=0; $i < count($orgaNormalize); $i++) {
+            $serviceReFacto = [];
+            foreach ($orgaNormalize[$i]["services_id"] as $key => $service) {
+                array_push($serviceReFacto, $service["service_name"]);
+            }
+            $orgaNormalize[$i]["services_id"] = array_values(array_unique($serviceReFacto));
+        }
+
+        return $orgaNormalize;
+    }
     /**
      * @Route("/api/getallorga", name="app_get_orga", methods="GET")
      * 
@@ -28,15 +41,8 @@ class GetOrgaController extends AbstractController
         $orga = $orgaRepo->findAll();
         $orgaNormalize = $normalizer->normalize($orga, null, ["groups" => "orga"]);
 
-        for ($i=0; $i < count($orgaNormalize); $i++) {
-            $serviceReFacto = [];
-            foreach ($orgaNormalize[$i]["services_id"] as $key => $service) {
-                array_push($serviceReFacto, $service["service_name"]);
-            }
-            $orgaNormalize[$i]["services_id"] = array_values(array_unique($serviceReFacto));
-        }
 
-        return $this->json($orgaNormalize);
+        return $this->json($this->reFactoService($orgaNormalize));
     }
 
     /**
@@ -87,15 +93,22 @@ class GetOrgaController extends AbstractController
     {
         $orga = $orgaRepo->findById($id_orga);
         $orgaNormalize = $normalizer->normalize($orga, null, ["groups" => "orga"]);
+        
+        return $this->json($this->reFactoService($orgaNormalize));
+    }
 
-        for ($i=0; $i < count($orgaNormalize); $i++) {
-            $serviceReFacto = [];
-            foreach ($orgaNormalize[$i]["services_id"] as $key => $service) {
-                array_push($serviceReFacto, $service["service_name"]);
-            }
-            $orgaNormalize[$i]["services_id"] = array_values(array_unique($serviceReFacto));
-        }
+        /**
+     * @Route("/api/getorgaName/{like}", name="app_get_orga_by_id", methods="GET")
+     * 
+     * @OA\Get(description="recupere le nom organisation par rapport au nom donner")
+     * @OA\Tag(name="organisation")
+     */
+    
+    public function getOrgaNameByNameLike(NormalizerInterface $normalizer, OrganizationRepository $orgaRepo, string $like): Response
+    {
+        $orga = $orgaRepo->FindOrgaNameLike($like);
+        $orgaNormalize = $normalizer->normalize($orga, null, ["groups" => "orga"]);
 
-        return $this->json($orgaNormalize);
+        return $this->json($this->reFactoService($orgaNormalize));
     }
 }
