@@ -2,16 +2,16 @@ const SaveData = {
     inputsToSave: document.querySelectorAll(".dataToSave"),
 
     categories: ["identity", "mission", "coordonnees", "address", "schedules", "langages", "accueil_type", "appointement", "services"],
-
+    
     services: {
-        acceuil: ['Accueil de jour', 'Hebergement d’urgence', 'Herbergement long', 'Halte de nuit', 'Espace de repos', 'Bagagerie'],
-        alimentation: ['Distribution de repas', 'Restaurant assise', 'Colis alimentaire', 'Épicerie solidaire', 'Fontaine à eau'],
-        sante: ['Addiction', 'Depistage', 'Soins enfants', 'Vaccination', 'Suivi grossesse', 'Medecin généraliste', 'Infirmière'],
-        medecine: ['Allergologie', 'Cardiologie', 'Radiologie', 'Gynécologie', 'Pneumologue', 'Nutrition', 'Dermathologue'],
-        hygiene: ['Douches', 'Toilettes', 'Protection périodique', 'Fontaine à eau', 'Bien-être'],
-        conseil: ['Permanence juridique', 'Conseil logement', 'Domiciliation', 'Conseil handicap'],
-        activity: ['Activités sportives', 'Musée', 'Bibliothéque'],
-        technologie: ['Ordinateur', 'Wifi', 'Prise', 'Téléphone']
+        acceuil: ['Espace de repos', 'Halte de nuit', 'Domiciliation' , 'Accueil de jour', 'Vêtements', 'Téléphone', 'Boutique solidaire', 'Bagagerie'],
+        alimentation: ['Épicerie Sociale et Solidaire', 'Colis Alimentaire', 'Restauration assise', 'Distribution de repas'],
+        sante: ['Médecin généraliste', 'Soins enfants', 'Dépistage', 'Suivi grossesse', 'Infirmière'],
+        medecine: ['Dermatologie', 'Addiction', 'Psychologie', 'Pédicure', 'Dentaire', 'Vétérinaire'],
+        hygiene: ['Douche', 'Toilettes', 'Protections périodiques', 'Fontaine à eau', 'Laverie', 'Bien-être'],
+        conseil: ['Permanence juridique', 'Accompagnement à l\'emploi', 'Conseil administratif', 'Conseil logement', 'Accompagnement social'],
+        activity: ['Activités sportives', 'Musée', 'Bibliothèque'],
+        technologie: ['Ordinateur', 'Wifi', 'Prise', 'Atelier numérique', 'Cours de français', 'Soutien scolaire']
     },
 
     categoryInput: {
