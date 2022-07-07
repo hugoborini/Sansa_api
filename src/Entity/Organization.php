@@ -143,6 +143,12 @@ class Organization
      */
     private $preferencialWelcomes;
 
+    /**
+     * @ORM\Column(type="boolean")
+     * @Groups("orga")
+     */
+    private $by_appointment;
+
     public function __construct()
     {
         $this->organization_id = new ArrayCollection();
@@ -452,6 +458,18 @@ class Organization
                 $preferencialWelcome->setOrganisationId(null);
             }
         }
+
+        return $this;
+    }
+
+    public function isByAppointment(): ?bool
+    {
+        return $this->by_appointment;
+    }
+
+    public function setByAppointment(bool $by_appointment): self
+    {
+        $this->by_appointment = $by_appointment;
 
         return $this;
     }
