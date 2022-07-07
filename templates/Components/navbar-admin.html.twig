@@ -1,0 +1,27 @@
+<div class="bgc-blue-xdark pt-2 pb-2 pl-1 pr-1 fb-20 br-xxl h-95v d-f fd-c jc-sb mr-1c5 mw-245">
+    <div>
+        <div class="d-f ai-c jc-fs mb-3 pl-1">
+            {% include '@App/img/sansa_logo-white.html.twig' %}
+            <p class="ff-body fs-xs c-white fw-700 ml-0c75">SANSA</p>
+        </div>
+        <div>
+            <div class="{{currentPage == 'dashboard' ? 'bgc-blue-dark br-m' : '' }} p-0c75">
+                <a href="{{path('app_admin')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/pictos_home.html.twig' %}</span>Dashboard</a>
+            </div>
+            <div class="{{currentPage == 'association' ? 'bgc-blue-dark br-m' : '' }} p-0c75">
+                <a href="{{path('app_admin_asso')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/pictos_assos.html.twig' %}</span>Associations</a>
+            </div>
+            <div class="{{currentPage == 'users' ? 'bgc-blue-dark br-m' : '' }} p-0c75">
+                <a  href="{{path('app_users')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/pictos_user.html.twig' %}</span>Utilisateurs</a>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="p-0c75">
+            <p class="d-f ai-c ff-body fs-xs c-white m-0"><span class="pr-1 lh-0">{% include '@App/img/pictos/pictos_user.html.twig' %}</span>Mon compte</p>
+        </div>
+        <div class="p-0c75">
+            <p class="d-f ai-c ff-body fs-xs c-white m-0"><span class="pr-1 lh-0">{% include '@App/img/pictos/picto_logout.html.twig' %}</span>Se déconnecter</p>
+        </div>
+    </div>
+</div>

@@ -1,86 +1,28 @@
-{% set users = {
-    "0": {
-        "name": "Valentin015",
-        "email": "jpdupont@gmail.com",
-        "phone": "0656986754",
-        "inscription_date": "12/07/2022",
-        "last_connexion": "12/07/2022 à 11h"
-    },
-    "1": {
-        "name": "Valentin015",
-        "email": "jpdupont@gmail.com",
-        "phone": "0656986754",
-        "inscription_date": "12/07/2022",
-        "last_connexion": "12/07/2022 à 11h"
-    },
-    "2": {
-        "name": "Valentin015",
-        "email": "jpdupont@gmail.com",
-        "phone": "0656986754",
-        "inscription_date": "12/07/2022",
-        "last_connexion": "12/07/2022 à 11h"
-    },
-    "3": {
-        "name": "Valentin015",
-        "email": "jpdupont@gmail.com",
-        "phone": "0656986754",
-        "inscription_date": "12/07/2022",
-        "last_connexion": "12/07/2022 à 11h"
-    },
-    "4": {
-        "name": "Valentin015",
-        "email": "jpdupont@gmail.com",
-        "phone": "0656986754",
-        "inscription_date": "12/07/2022",
-        "last_connexion": "12/07/2022 à 11h"
-    },
-    "3": {
-        "name": "Valentin015",
-        "email": "jpdupont@gmail.com",
-        "phone": "0656986754",
-        "inscription_date": "12/07/2022",
-        "last_connexion": "12/07/2022 à 11h"
-    },
-    "4": {
-        "name": "Valentin015",
-        "email": "jpdupont@gmail.com",
-        "phone": "0656986754",
-        "inscription_date": "12/07/2022",
-        "last_connexion": "12/07/2022 à 11h"
-    },
-    "5": {
-        "name": "Valentin015",
-        "email": "jpdupont@gmail.com",
-        "phone": "0656986754",
-        "inscription_date": "12/07/2022",
-        "last_connexion": "12/07/2022 à 11h"
-    },
-    "6": {
-        "name": "Valentin015",
-        "email": "jpdupont@gmail.com",
-        "phone": "0656986754",
-        "inscription_date": "12/07/2022",
-        "last_connexion": "12/07/2022 à 11h"
-    },
-} %}
-
-<section>
-     <table class="list-n w-100 bc-c">
-        <tr class="ff-body fs-s c-black">
-            <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Identifiant</th>
-            <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Email</th>
-            <th class="ta-l c-black-20 fw-400 pt-1 pb-1">N° de Téléphone</th>
-            <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Date d'inscription</th>
-            <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Dernière connexion</th>
+<table class="list-n w-100 bc-c">
+    <tr class="ff-body fs-s c-black bb-black-5">
+        <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Identifiant</th>
+        <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Contact</th>
+        <th class="ta-l c-black-20 fw-400 pt-1 pb-1">N° de Téléphone</th>
+        <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Date d'inscription</th>
+        <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Dernière connexion</th>
+        <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Action</th>
+    </tr>
+    {% for user in users %}
+        <tr class="ff-body fs-s c-black p-r {{ loop.last ? '' : 'bb-black-5' }}">
+            <td class="c-blue fw-600 pt-1 pb-1">{{user.name}}</td>
+            <td class="pt-1 pb-1">{{user.email}}</td>
+            <td class="pt-1 pb-1">{{user.phone}}</td>
+            <td class="pt-1 pb-1">{{user.inscription_date}}</td>
+            <td class="pt-1 pb-1">{{user.last_connexion}}</td>
+            <td class="open-popup pt-1 pb-1 ta-c p-r">
+                {% include '@App/img/pictos/three_dots.html.twig' %}
+                <div class="popup bgc-white zi-9 p-a r-0 br-m bs-light d-n ta-l col-150 o-h">
+                    <p class="pt-1 pl-1 pr-1 pb-0c5 m-0">Modifier</p>
+                    <p class="pl-1 pr-1 pb-1 pt-0c5 m-0">Supprimer</p>
+                </div>
+            </td>
         </tr>
-        {% for user in users %}
-            <tr class="ff-body fs-s c-black {{ loop.last ? '' : 'bb-black-5' }}">
-                <td class="fw-600 pt-1 pb-1">{{user.name}}</td>
-                <td class="pt-1 pb-1">{{user.email}}</td>
-                <td class="pt-1 pb-1">{{user.phone}}</td>
-                <td class="pt-1 pb-1">{{user.inscription_date}}</td>
-                <td class="pt-1 pb-1">{{user.last_connexion}}</td>
-            </tr>
-        {% endfor %}
-    </table>
-</section>
+    {% endfor %}
+</table>
+
+{{ encore_entry_script_tags('openPopup') }}

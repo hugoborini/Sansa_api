@@ -1,0 +1,25 @@
+<table class="list-n w-100 bc-c">
+    <tr class="ff-body fs-s c-black bb-black-5">
+        <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Association</th>
+        <th class="ta-l c-black-20 fw-400 pt-1 pb-1">N° Siret</th>
+        <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Date de demande</th>
+        <th class="ta-l c-black-20 fw-400 pt-1 pb-1">N° RNA</th>
+        <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Contact</th>
+        <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Statut</th>
+    </tr>
+    {% for asso in assos|filter(asso => asso.status == false) %}
+        <tr class="ff-body fs-s c-black p-r {{ loop.last ? '' : 'bb-black-5' }}">
+            <td class="c-blue fw-600 pt-1 pb-1"><a href="{{path('app_asso_info')}}" class="link-action td-n c-blue">{{asso.name}}</a></td>
+            <td class="pt-1 pb-1">{{asso.siret}}</td>
+            <td class="pt-1 pb-1">{{asso.asking_date}}</td>
+            <td class="pt-1 pb-1">{{asso.rna}}</td>
+            <td class="pt-1 pb-1">
+                {{asso.contact.tel}}
+                <span class="fs-xxs c-black-40 d-b">{{asso.contact.email}}</span>
+            </td>
+            <td class="pt-1 pb-1">
+                <p class="c-blue-xdark m-0 b-blue br-xxxl pl-1 pt-0c5 pr-1 pb-0c5 bgc-black-3 mw-fc">En attente</p>
+            </td>
+        </tr>
+    {% endfor %}
+</table>

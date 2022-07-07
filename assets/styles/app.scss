@@ -8,6 +8,10 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    margin: 0px;
+}
+
 *, *:before, *:after {
 box-sizing: inherit;
 }
@@ -31,6 +35,10 @@ box-sizing: inherit;
 }
 
 // FONT-SIZE
+
+.fs-xxl {
+    font-size: 40px;
+}
 
 .fs-xl {
     font-size: 32px;
@@ -1101,11 +1109,22 @@ box-sizing: inherit;
     border: none
 }
 
+
+//BOX-SHADOW
+
+.bs-light {
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
 // BORDER 
 
 
 .b-blue {
     border: 1px solid #55789B;
+}
+
+.bb-blue-dark {
+    border-bottom: 2px solid #305677;
 }
 
 .b-blue-light {
@@ -1227,6 +1246,10 @@ box-sizing: inherit;
 .bb-black-10 {
     border-bottom: 1px solid #D6D6D6;
 }
+
+.bb-black-10-m {
+    border-bottom: 2px solid #D6D6D6;
+}
 // BORDER-RADIUS
 
 .btrr-s {
@@ -1305,6 +1328,10 @@ box-sizing: inherit;
     transform: translateX(-50%)
 }
 
+.ttx-n25 {
+    transform: translateX(-25%)
+}
+
 .tty-n100 {
     transform: translateY(-100%)
 }
@@ -1353,6 +1380,10 @@ box-sizing: inherit;
 
 .mw-200 {
     max-width: 200px
+}
+
+.mw-245 {
+    max-width: 245px
 }
 
 .mw-col530 {
@@ -1589,6 +1620,10 @@ box-sizing: inherit;
 
 .mh-270 {
     min-height: 270px
+}
+
+.mh-95v {
+    min-height: 100vh
 }
 
 // TEXT-TRANSFORM
@@ -1933,5 +1968,27 @@ button.active {
         background-color: #55789B;
         border-radius: 16px;
         transition: all 0.5s;
+    }
+}
+
+.asking-asso_cta.active, .asso_cta.active {
+    background-color: #E3EAF2;
+    p {
+        border-bottom: 2px solid #305677;
+        color: #305677;
+    }
+}
+
+.link-action::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.popup {
+    p:hover {
+        background-color: #E8E8E8;
     }
 }
