@@ -2,6 +2,7 @@
 
 namespace App\Controller\Bo;
 
+use App\Entity\FinalUser;
 use App\Repository\FinalUserRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -22,5 +23,19 @@ class UsersController extends AbstractController
             'currentPage' => 'users',
             "users" => $allUser
         ]);
+    }
+
+        /**
+     * @Route("bo/admin/users/delete/{idUser}", name="app_users_delete")
+     */
+    public function deleteUser(FinalUserRepository $userRepo, int $idUser): Response
+    {
+        $user = $userRepo->find($idUser);
+
+        $manager = $this->getDoctrine()->getManager();
+        $manager->remove($user);
+        $manager->flush();
+
+        return $this->redirect($this->generateUrl('app_users'));
     }
 }

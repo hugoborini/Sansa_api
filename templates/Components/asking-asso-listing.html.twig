@@ -10,7 +10,7 @@
     
     {% for orga in orgas|filter(orga => orga.valitated == false)%}
         <tr class="ff-body c-black p-r {{ loop.last ? '' : 'bb-black-5' }}">
-            <td class="fs-s c-blue fw-600 pt-1 pb-1" width="35%"><a href="{{path('app_asso_info')}}" class="link-action td-n c-blue">{{orga.organizationName|u.truncate(40, '...')}}</a></td>
+            <td class="fs-s c-blue fw-600 pt-1 pb-1" width="35%"><a href="{{path('app_asso_info', {idOrga: orga.id})}}" class="link-action td-n c-blue">{{orga.organizationName|u.truncate(40, '...')}}</a></td>
             <td class="fs-xs pt-1 pb-1">{{orga.siret}}</td>
             <td class="fs-xs pt-1 pb-1">{{orga.lastUpdata|date("m/d/Y")}}</td>
             <td class="fs-xs pt-1 pb-1">{{orga.rna}}</td>
