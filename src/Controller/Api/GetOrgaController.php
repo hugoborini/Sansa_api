@@ -31,8 +31,8 @@ class GetOrgaController extends AbstractController
     /**
      * @Route("/api/getallorga", name="app_get_orga", methods="GET")
      * 
-     * @OA\Get(description="recupere toute les organisation")
-     * @OA\Tag(name="organisation")
+     * @OA\Get(description="Récupère toutes les organisations")
+     * @OA\Tag(name="Association")
      */
     public function index(NormalizerInterface $normalizer): Response
     {
@@ -48,8 +48,8 @@ class GetOrgaController extends AbstractController
     /**
      * @Route("/api/getallorgaByService/{services}", name="app_get_orga_by_service", methods="GET")
      * 
-     * @OA\Get(description="recupere toute les organisation")
-     * @OA\Tag(name="organisation")
+     * @OA\Get(description="Récupère toutes les associations par service")
+     * @OA\Tag(name="Service")
      */
 
     public function getOrgaByService(NormalizerInterface $normalizer, string $services,OrganizationRepository $orgaRepo): Response
@@ -86,7 +86,7 @@ class GetOrgaController extends AbstractController
      * @Route("/api/getorgabyid/{id_orga}", name="app_get_orga_by_id", methods="GET")
      * 
      * @OA\Get(description="recupere toute les organisation")
-     * @OA\Tag(name="organisation")
+     * @OA\Tag(name="Association")
      */
     
     public function getOrgaById(NormalizerInterface $normalizer, OrganizationRepository $orgaRepo, int $id_orga): Response
@@ -101,7 +101,7 @@ class GetOrgaController extends AbstractController
      * @Route("/api/getorgaName/{like}", name="app_get_orga_by_id", methods="GET")
      * 
      * @OA\Get(description="recupere le nom organisation par rapport au nom donner")
-     * @OA\Tag(name="organisation")
+     * @OA\Tag(name="Association")
      */
     
     public function getOrgaNameByNameLike(NormalizerInterface $normalizer, OrganizationRepository $orgaRepo, string $like): Response

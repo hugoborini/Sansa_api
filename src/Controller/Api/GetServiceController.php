@@ -14,7 +14,7 @@ class GetServiceController extends AbstractController
     /**
      * @Route("/api/getservice", name="app_get_service", methods="GET")
      * @OA\Get(description="recupere toute les organisation")
-     * @OA\Tag(name="service")
+     * @OA\Tag(name="Service")
      */
     public function index(NormalizerInterface $normalizer): Response
     {
