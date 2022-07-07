@@ -49,7 +49,7 @@ class GetOrgaController extends AbstractController
      * @Route("/api/getallorgaByService/{services}", name="app_get_orga_by_service", methods="GET")
      * 
      * @OA\Get(description="Récupère toutes les associations par service")
-     * @OA\Tag(name="Service")
+     * @OA\Tag(name="Services")
      */
 
     public function getOrgaByService(NormalizerInterface $normalizer, string $services,OrganizationRepository $orgaRepo): Response
@@ -85,7 +85,8 @@ class GetOrgaController extends AbstractController
     /**
      * @Route("/api/getorgabyid/{id_orga}", name="app_get_orga_by_id", methods="GET")
      * 
-     * @OA\Get(description="Récupère toutes les associations")
+     * @OA\Get(description="Récupère une association avec son ID")
+     * required=true,
      * @OA\Tag(name="Association")
      */
     
@@ -97,7 +98,7 @@ class GetOrgaController extends AbstractController
         return $this->json($this->reFactoService($orgaNormalize));
     }
 
-        /**
+    /**
      * @Route("/api/getorgaName/{like}", name="app_get_orga_by_id", methods="GET")
      * 
      * @OA\Get(description="Recherche les associations par nom pour la barre de recherche")

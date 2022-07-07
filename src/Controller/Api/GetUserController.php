@@ -16,6 +16,7 @@ class GetUserController extends AbstractController
     /**
      * @Route("api/getuserbyname/{name}", name="app_get_user_by_name", methods="GET")
      * @OA\Get(description="Chercher un utilisateur avec son identifiant")
+     * required=true,
      * @OA\Tag(name="Utilisateurs")
      */
     public function getUserByName(NormalizerInterface $normalizer, FinalUserRepository $userRepo, string $name): Response

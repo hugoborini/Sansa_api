@@ -62,10 +62,10 @@ class AuthController extends AbstractController
 
 
         $user->setUsername($parameters["username"])
-             ->setEmail($parameters["email"])
-             ->setPassword((password_hash($parameters["password"], PASSWORD_DEFAULT)))
-             ->setSecretQuestion($question)
-             ->setSecretAnswer($parameters["answer"])
+            ->setEmail($parameters["email"])
+            ->setPassword((password_hash($parameters["password"], PASSWORD_DEFAULT)))
+            ->setSecretQuestion($question)
+            ->setSecretAnswer($parameters["answer"])
         ;
 
         $manager->persist($user);
