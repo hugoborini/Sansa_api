@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UsersController!{% endblock %}
+
+{% block body %}
+    <div class="d-f p-1 mh-95v">
+        {% include '@App/Components/navbar-admin.html.twig' with {'currentPage': currentPage} %}
+        <div class="pt-1 fb-90">
+            <h1 class="ff-body fs-xl c-black-40 fw-700 mb-2 mt-0">{{title}}</h1>
+            <section class="asso bgc-white pt-1 pb-1 pl-2 pr-2 br-15">
+                {% include '@App/Components/user-listing.html.twig' %}
+            </section>
+        </div>
+    </div>
+{% endblock %}
+
