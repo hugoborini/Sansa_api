@@ -2,6 +2,8 @@
 
 {% block title %}Hello AssoInfoController!{% endblock %}
 
+{% set services = ['Espace de repos', 'Halte de nuit', 'Soins enfants', 'Dépistage', 'Fontaine à eau',  'Prise',  'Laverie', 'Bien-être', 'Téléphone', 'Boutique solidaire', 'Bagagerie',  'Psychologie',  'Conseil logement', 'Accompagnement social', 'Colis Alimentaire', 'Restauration assise'] %}
+
 {% block body %}
 <div class="d-f p-1 mh-95v">
     {% include '@App/Components/navbar-admin.html.twig' with {'currentPage': currentPage} %}
@@ -97,12 +99,16 @@
                 </div>
             </div>
         </div>
-        <div class="bgc-white br-15 b-blue d-f jc-sb p-2c5 mb-2">
-           <div class="fb-70 pr-1">
-                <p class="ff-body c-black fs-m fw-700 m-0 mb-2">Services proposés</p>
-                <p class="ff-body c-black-60 fs-s m-0">Si toutes les informations ne sont pas correct, ou qu’il manque une infos importante,
-                vous pouvez renvoyer cette demande à l’association qui complètera son inscription</p>
-           </div>
+        <div class="bgc-white br-15 bs-light p-2c5 mb-2">
+            <p class="ff-body c-black fs-m fw-700 m-0 mb-2">Services proposés</p>
+            <div class="d-f fw-w">
+                {% for service in services %}
+                    <div class="mb-1c5 d-f ai-c fb-25">
+                        <p class="ff-body c-black-60 fs-xs fw-700 m-0 mr-1 lh-0">{% include '@App/img/services/' ~ service|lower|replace({' ' : '_', 'é' : 'e', 'è' : 'e', "'" : '', 'à' : 'a', 'ê' : 'e' }) ~ '.html.twig' %}</p>
+                        <p class="ff-body c-black-60 fs-xs m-0">{{service}}</p>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
