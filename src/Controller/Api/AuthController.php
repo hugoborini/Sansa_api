@@ -49,6 +49,12 @@ class AuthController extends AbstractController
      *     required=true,
      *     @OA\Schema(type="string")
      * )
+     * @OA\Parameter(
+     *     name="Téléphone",
+     *     in="query",
+     *     description="Téléphone de l'utilisateur",
+     *     @OA\Schema(type="string")
+     * )
      * 
      * 
      *)
@@ -64,6 +70,7 @@ class AuthController extends AbstractController
         $user->setUsername($parameters["username"])
             ->setEmail($parameters["email"])
             ->setPassword((password_hash($parameters["password"], PASSWORD_DEFAULT)))
+            ->setPhoneNumber($tel)
             ->setSecretQuestion($question)
             ->setSecretAnswer($parameters["answer"])
         ;
