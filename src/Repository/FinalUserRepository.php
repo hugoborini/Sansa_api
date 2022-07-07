@@ -73,4 +73,13 @@ class FinalUserRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function FindUserNameLike(string $likeString)
+    {
+        $query = $this->createQueryBuilder('u')
+        ->where('u.username LIKE :likeString')
+        ->setParameter('likeString' , '%'.$likeString.'%')->getQuery();
+ 
+        return $query->getResult();
+    }
 }

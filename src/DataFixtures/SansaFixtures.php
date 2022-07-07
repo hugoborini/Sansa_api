@@ -24,6 +24,16 @@ class SansaFixtures extends Fixture
 
     private $hasher;
 
+    private function randomDate()
+    {
+        $timestamp = mt_rand(1, time());
+        $randomDate = date('Y/m/d', $timestamp);
+
+
+        return new DateTime($randomDate);
+
+    }
+
     public function __construct(UserPasswordHasherInterface $hasher)
     {
         $this->hasher = $hasher;
@@ -56,8 +66,6 @@ class SansaFixtures extends Fixture
         $geocoder = new \Geocoder\StatefulGeocoder($provider, 'en');
         
         
-  
-
 
         foreach ($questionJson as $question) {
             $secretQuestionObj = new SecretQuestion();
@@ -72,6 +80,12 @@ class SansaFixtures extends Fixture
                 $finalUser->setSecretAnswer("brutus");
                 $finalUser->setSecretQuestion($secretQuestionObj);
                 $finalUser->setFavorites([1, 2, 3]);
+                $finalUser->setTel("0787632712");
+
+                $finalUser->setLastConnection($this->randomDate());
+                $finalUser->setDateIncription($this->randomDate());
+
+
                 $manager->persist($finalUser);
 
             }
