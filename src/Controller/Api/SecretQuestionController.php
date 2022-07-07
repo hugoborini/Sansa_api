@@ -11,11 +11,6 @@ use OpenApi\Annotations as OA;
 
 class SecretQuestionController extends AbstractController
 {
-    /**
-     * @Route("/api/secretquestion", name="app_secret_question", methods="GET")
-     * @OA\Get(description="recupere toute les question secret")
-     * @OA\Tag(name="Authentification")
-     */
     public function index(NormalizerInterface $normalizer): Response
     {
         $questionRepo = $this->getDoctrine()->getRepository(SecretQuestion::class);
