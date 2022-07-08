@@ -135,7 +135,7 @@ class GetOrgaController extends AbstractController
     /**
      * @Route("/api/getfivebestorga", name="app_get_five_best_orga", methods="GET")
      * 
-     * @OA\Get(description="recupere le nom organisation par rapport au nom donner")
+     * @OA\Get(description="Génére 5 associations aléatoirement")
      * @OA\Tag(name="Association")
      */
 
