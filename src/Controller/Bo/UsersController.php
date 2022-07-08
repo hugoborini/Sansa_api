@@ -25,7 +25,7 @@ class UsersController extends AbstractController
         ]);
     }
 
-        /**
+    /**
      * @Route("bo/admin/users/delete/{idUser}", name="app_users_delete")
      */
     public function deleteUser(FinalUserRepository $userRepo, int $idUser): Response

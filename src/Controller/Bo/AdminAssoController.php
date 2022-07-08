@@ -23,4 +23,18 @@ class AdminAssoController extends AbstractController
             "orgas" => $allOrga
         ]);
     }
+
+    /**
+     * @Route("bo/admin/users/delete/{idAsso}", name="app_asso_delete")
+     */
+    public function deleteUser(OrganizationRepository $assoRepo, int $idAsso): Response
+    {
+        $asso = $assoRepo->find($idAsso);
+
+        $manager = $this->getDoctrine()->getManager();
+        $manager->remove($asso);
+        $manager->flush();
+
+        return $this->redirect($this->generateUrl('app_admin_asso'));
+    }
 }

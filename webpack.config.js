@@ -24,6 +24,8 @@ Encore
     .addEntry('tooglePassword', './assets/js/togglePassword.js')
     .addEntry('form', './assets/js/form.js')
     .addEntry('openPopup', './assets/js/openPopup.js')
+    .addEntry('openModal', './assets/js/openModal.js')
+    .addEntry('graph', './assets/js/graph.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
