@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AssoInfoController extends AbstractController
 {
     /**
-     * @Route("bo/asso/info/{idOrga}", name="app_asso_info")
+     * @Route("bo/admin/asso/info/{idOrga}", name="app_asso_info")
      */
     public function index(int $idOrga, OrganizationRepository $orgaRepo): Response
     {

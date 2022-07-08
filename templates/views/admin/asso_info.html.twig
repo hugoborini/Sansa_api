@@ -16,8 +16,8 @@
                 vous pouvez renvoyer cette demande à l’association qui complètera son inscription</p>
            </div>
            <div class="d-f ai-c">
-                <p class="ff-body fw-700 c-blue m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 mw-fc mr-1">Refusée</p>
-                <p class="ff-body fw-700 c-white m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 bgc-blue mw-fc">Validée</p>
+                <p class="ff-body fw-700 c-blue m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 mw-fc mr-1 openModal c-p">Refusée</p>
+                <p class="ff-body fw-700 c-white m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 bgc-blue mw-fc c-p">Validée</p>
            </div>
         </div>
         <div class="d-f">
@@ -33,13 +33,13 @@
                 </div>
                 <div class="mb-1c5">
                     <p class="ff-body c-black-60 fs-s fw-700 m-0">Date d’inscription</p>
-                    <p class="ff-body c-black fs-s m-0">{{asso.lastUpdata|date("m/d/Y")}}</p>
+                    <p class="ff-body c-black fs-s m-0">{{asso.lastUpdata|date("d/m/Y")}}</p>
                 </div>
             </div>
-            <div class="ml-0c75 fb-50">
+            <div class="ml-0c75 fb-50 mb-2">
                 <p class="ff-body c-black fs-m fw-700 m-0 mb-1c5">Mission</p>
                 <p class="ff-body c-black fs-s m-0 mb-1 lh-24">{{asso.description}}</p>
-                <p class="ff-body c-black-40 fs-s m-0">Dernières mises à jour le {{asso.lastUpdata|date("m/F/Y")}}</p>
+                <p class="ff-body c-black-40 fs-s m-0">Dernières mises à jour le {{asso.lastUpdata|date("d M Y")}}</p>
             </div>
         </div>
         <div class="d-f">
@@ -79,23 +79,25 @@
                 <p class="ff-body c-black fs-m fw-700 m-0 mb-2">Informations</p>
                 <div class="mb-1c5 d-f ai-c">
                     <p class="ff-body c-black-60 fs-xs fw-700 m-0 fb-10 lh-0">{% include '@App/img/pictos/map.html.twig' %}</p>
-                    <p class="ff-body c-black-60 fs-xs m-0">{{asso.adress}}</p>
+                    <p class="ff-body c-black-60 fs-xs m-0 fb-90">{{asso.adress}}</p>
                 </div>
                <div class="mb-1c5 d-f ai-c">
                     <p class="ff-body c-black-60 fs-xs fw-700 m-0 fb-10 lh-0">{% include '@App/img/pictos/tel.html.twig' %}</p>
-                    <p class="ff-body c-black-60 fs-xs m-0">{{asso.phoneNumber}}</p>
+                    <p class="ff-body c-black-60 fs-xs m-0 fb-90">{{asso.phoneNumber}}</p>
                 </div>
-                <div class="mb-1c5 d-f ai-c">
-                    <p class="ff-body c-black-60 fs-xs fw-700 m-0 fb-10 lh-0">{% include '@App/img/pictos/link.html.twig' %}</p>
-                    <p class="ff-body c-black-60 fs-xs m-0">{{asso.website}}</p>
-                </div>
+                {% if asso.website is defined and asso.website is not empty %}
+                    <div class="mb-1c5 d-f ai-c">
+                        <p class="ff-body c-black-60 fs-xs fw-700 m-0 fb-10 lh-0">{% include '@App/img/pictos/link.html.twig' %}</p>
+                        <a href="{{asso.website}}" class="ff-body c-black-60 fs-xs m-0 fb-90 td-n">{{asso.website}}</a>
+                    </div>
+                {% endif %}
                 <div class="mb-1c5 d-f ai-c">
                     <p class="ff-body c-black-60 fs-xs fw-700 m-0 fb-10 lh-0">{% include '@App/img/pictos/langages.html.twig' %}</p>
-                    <p class="ff-body c-black-60 fs-xs m-0">{{asso.spokenLanguage}}</p>
+                    <p class="ff-body c-black-60 fs-xs m-0 fb-90">{{asso.spokenLanguage}}</p>
                 </div>
                 <div class="mb-1c5 d-f ai-c">
                     <p class="ff-body c-black-60 fs-xs fw-700 m-0 fb-10 lh-0">{% include '@App/img/pictos/appointment.html.twig' %}</p>
-                    <p class="ff-body c-black-60 fs-xs m-0">{{asso.byAppointment ? "Sur rendez-vous" : "Sans rendez-vous"}}</p>
+                    <p class="ff-body c-black-60 fs-xs m-0 fb-90">{{asso.byAppointment ? "Sur rendez-vous" : "Sans rendez-vous"}}</p>
                 </div>
             </div>
         </div>
@@ -112,4 +114,17 @@
         </div>
     </div>
 </div>
+ <div class="p-a t-0 l-0 bgc-black-5-60 p-r h-100 w-100 d-n modal">
+    <div class="bgc-white bs-light p-2c5 pt-1 pr-1 d-f jc-c ai-c fd-c br-15 p-a t-50 l-50 ttxy-n50">
+        <span class="as-fe closeModal">{% include '@App/img/close_cross.html.twig' %}</span>
+        <img src="{{ asset('build/images/spotlight.png') }}" width="294" alt="spotlight" />
+        <p class="ff-body fs-l c-black fw-700 ta-c mb-0c5">Êtes-vous sûr de vouloir supprimer cet utilisateur ?</p>
+        <p class="ff-body fs-s c-black-20 ta-c mb-2 m-0">Êtes-vous sûr de vouloir supprimer cet utilisateur ? </p>
+        <div class="d-f ai-c">
+            <p class="ff-body fw-700 c-blue m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 mw-fc mr-1">Annuler</p>
+            <a href="{{path("app_asso_delete", {idAsso: asso.id})}}" class="td-n c-black"><p class="ff-body fw-700 c-white m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 bgc-blue mw-fc">Supprimer</p></a>
+        </div>
+    </div>
+</div>
+{{ encore_entry_script_tags('openModal') }}
 {% endblock %}
