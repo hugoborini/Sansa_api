@@ -118,7 +118,7 @@ class SansaFixtures extends Fixture
                     $organasationOwnerObj->setEmail($faker->email());
                     $organasationOwnerObj->setTel($this->randomSecurity("tel"));
                     $organasationOwnerObj->setHasasso(True);
-                    $$organasationOwnerObj->setRole("ROLE_USER");
+                    $organasationOwnerObj->setRole("ROLE_USER");
                     $password = $this->hasher->hashPassword($organasationOwnerObj, '123');
                     $organasationOwnerObj->setPassword($password);
                     $manager->persist($organasationOwnerObj);
@@ -196,10 +196,31 @@ class SansaFixtures extends Fixture
             }
             $manager->persist($categoryObj);
         }
-        $manager->flush();
-        for ($i = 10; $i < 0 ; $i++) { 
-            
+        
+        for ($i = 0; $i < 10 ; $i++) {
+            $organasationOwnerObj =  new OrganizationOwner();
+            $organasationOwnerObj->setEmail($faker->email());
+            $organasationOwnerObj->setTel($this->randomSecurity("tel"));
+            $organasationOwnerObj->setHasasso(False);
+            $organasationOwnerObj->setRole("ROLE_USER");
+            $password = $this->hasher->hashPassword($organasationOwnerObj, '123');
+            $organasationOwnerObj->setPassword($password);
+            $manager->persist($organasationOwnerObj);
+
         }
+
+        for ($i = 0; $i < 4 ; $i++) {
+            $organasationOwnerObj =  new OrganizationOwner();
+            $organasationOwnerObj->setEmail("admin" . $i . "@hetic.net");
+            $organasationOwnerObj->setTel($this->randomSecurity("tel"));
+            $organasationOwnerObj->setHasasso(False);
+            $organasationOwnerObj->setRole("ROLE_ADMIN");
+            $password = $this->hasher->hashPassword($organasationOwnerObj, '123');
+            $organasationOwnerObj->setPassword($password);
+            $manager->persist($organasationOwnerObj);
+
+        }
+        $manager->flush();
     }
 
 
