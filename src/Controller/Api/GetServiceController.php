@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\ServicesRepository;
 use OpenApi\Annotations as OA;
 
 class GetServiceController extends AbstractController
@@ -35,5 +36,17 @@ class GetServiceController extends AbstractController
             array_push($allOrga, $question);
         }
         return $this->json($allOrga);
+    }
+
+    /**
+     * @Route("/api/getservice/count", name="app_get_service_number", methods="GET")
+     * @OA\Get(description="Récupère tous les services")
+     * @OA\Tag(name="Services")
+     */
+    public function getNumberOfService(NormalizerInterface $normalizer , ServicesRepository $serviceRepo): Response
+    {
+        $countService = $serviceRepo->getCountOfService();
+
+        return $this->json($countService);
     }
 }

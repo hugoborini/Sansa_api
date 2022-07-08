@@ -73,4 +73,19 @@ class ServicesRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function getCountOfService() {
+
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = '
+           SELECT services.service_name as service , count(service_name) as count
+           FROM services
+           GROUP by services.service_name; ';
+
+        $stmt = $conn->prepare($sql);
+        $allCountService =  $stmt->execute()->fetchAll();
+
+        return $allCountService;
+    }
+
 }

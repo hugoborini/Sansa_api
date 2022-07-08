@@ -57,10 +57,30 @@ class BoAuthController extends AbstractController
     /**
      * @Route("/bo/login", name="app_bo_auth_login")
      */
-    public function login(AuthenticationUtils $authenticationUtils): Response
+    public function login(AuthenticationUtils $authenticationUtils, Request $request): Response
     {
+
+
+        if($this->getUser()) {
+            if ($this->getUser()->getRoles()[0] == "ROLE_ADMIN") {
+                return $this->redirectToRoute("app_admin");
+            } elseif ($this->getUser()->getRoles()[0] == "ROLE_USER") {
+                if($this->getUser()->isHasasso()){
+                    dd("redirect to user dashboard");
+                } else{
+                    return $this->redirectToRoute("app_register_step");
+
+                }
+            }
+        }
+
+
+
+
         $error = $authenticationUtils->getLastAuthenticationError();
 
+
+        
         return $this->render('bo_auth/login.html.twig', [
             "error" => $error,
             'controller_name' => 'BoAuthController'
