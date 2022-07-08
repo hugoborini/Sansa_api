@@ -15,11 +15,11 @@ class AssoInfoController extends AbstractController
     public function index(int $idOrga, OrganizationRepository $orgaRepo): Response
     {
         $asso = $orgaRepo->findById($idOrga);
+        //dd($asso);
         return $this->render('views/admin/asso_info.html.twig', [
             'controller_name' => 'AssoInfoController',
-            'title' => 'Foyer social Coallia',
             'currentPage' => 'association',
-            'asso' => $asso
+            'asso' => $asso[0]
         ]);
     }
 }

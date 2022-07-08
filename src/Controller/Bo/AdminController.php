@@ -18,7 +18,7 @@ class AdminController extends AbstractController
             'title' => 'Bonjour l’équipe SANSA !',
             'cards' => [
                 '0' => [
-                    'number' => 34,
+                    'number' => 35,
                     'title' => 'Associations en attente',
                     'subtitle' => 'Dont 6 en attente depuis 3 semaines'
                 ],

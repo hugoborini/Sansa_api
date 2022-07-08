@@ -20,6 +20,7 @@ class Hours
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("orga")
      */
     private $monday;
 
