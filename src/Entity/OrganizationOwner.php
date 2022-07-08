@@ -49,7 +49,7 @@ class OrganizationOwner implements UserInterface
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $role;
+    private $role = 'ROLE_USER';
 
     /**
      * @ORM\Column(type="boolean")
@@ -141,9 +141,11 @@ class OrganizationOwner implements UserInterface
         return $this;
     }
 
-    public function getRole(): ?string
+    public function getRole(): ?array
     {
-        return $this->role;
+        $roles = [];
+        $roles[] = $this->role;
+        return $roles;
     }
 
     public function setRole(string $role): self

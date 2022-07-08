@@ -17,8 +17,8 @@ security:
         
         in_database:
             entity:
-                class: App\Entity\OrganizationOwner
-                property: email
+                class: 'App\Entity\OrganizationOwner'
+                property: 'email'
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -32,11 +32,15 @@ security:
                 - App\Security\ApiAuth
         
         back-office:
+            #lazy: true
             pattern: '^/bo'
             provider: in_database
+#            custom_authenticator:
+#                - App\Security\BoAuth
             form_login:
                 login_path: app_bo_auth_login
                 check_path: app_bo_auth_login
+                default_target_path: app_bo_auth_login
             logout:
                 path: app_bo_auth_logout
                 target: app_bo_auth_login
@@ -56,8 +60,8 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        #- { path: ^/api, roles: ROLE_USER }
-        # - { path: ^/profile, roles: ROLE_USER }
+        # - { path: ^/api, roles: ROLE_USER }
+        #- { path: ^/profile, roles: ROLE_ }
 
 when@test:
     security:
