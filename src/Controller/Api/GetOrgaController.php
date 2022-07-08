@@ -103,7 +103,7 @@ class GetOrgaController extends AbstractController
     /**
      * @Route("/api/getorgaNameAdress/{like}", name="app_get_orga_by_ran", methods="GET")
      * 
-     * @OA\Get(description="Recherche les associations par nom pour la barre de recherche")
+     * @OA\Get(description="Recherche les associations par adresse pour la barre de recherche")
      * required=true,
      * @OA\Tag(name="Association")
      */
