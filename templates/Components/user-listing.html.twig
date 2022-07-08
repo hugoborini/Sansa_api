@@ -8,7 +8,7 @@
         <th class="ta-l c-black-20 fw-400 pt-1 pb-1">Action</th>
     </tr>
     {% for user in users %}
-        <tr class="ff-body fs-s c-black p-r {{ loop.last ? '' : 'bb-black-5' }}">
+        <tr class="ff-body fs-s c-black {{ loop.last ? '' : 'bb-black-5' }}">
             <td class="c-blue fw-600 pt-1 pb-1">{{user.username}}</td>
             <td class="pt-1 pb-1">{{user.email}}</td>
             <td class="pt-1 pb-1">{{user.tel}}</td>
@@ -18,11 +18,43 @@
                 {% include '@App/img/pictos/three_dots.html.twig' %}
                 <div class="popup bgc-white zi-9 p-a r-0 br-m bs-light d-n ta-l col-150 o-h">
                     <p class="pt-1 pl-1 pr-1 pb-0c5 m-0">Modifier</p>
-                    <a href={{path("app_users_delete", {idUser: user.id})}}><p class="pl-1 pr-1 pb-1 pt-0c5 m-0">Supprimer</p></a>
+                    <p class="pl-1 pr-1 pb-1 pt-0c5 m-0 openModal">Supprimer</p>
                 </div>
             </td>
         </tr>
+        <div class="p-a t-0 l-0 bgc-black-5-60 p-r h-100 w-100 d-n modal">
+            <div class="bgc-white bs-light p-2c5 pt-1 pr-1 d-f jc-c ai-c fd-c br-15 p-a t-50 l-50 ttxy-n50">
+                <span class="as-fe closeModal">{% include '@App/img/close_cross.html.twig' %}</span>
+                <img src="{{ asset('build/images/spotlight.png') }}" width="294" alt="spotlight" />
+                <p class="ff-body fs-l c-black fw-700 ta-c mb-0c5">Êtes-vous sûr de vouloir supprimer cet utilisateur ?</p>
+                <p class="ff-body fs-s c-black-20 ta-c mb-2 m-0">Êtes-vous sûr de vouloir supprimer cet utilisateur ? </p>
+                <div class="d-f ai-c">
+                    <p class="ff-body fw-700 c-blue m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 mw-fc mr-1">Annuler</p>
+                    <a href={{path("app_users_delete", {idUser: user.id})}} class="td-n c-black"><p class="ff-body fw-700 c-white m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 bgc-blue mw-fc">Supprimer</p></a>
+                </div>
+            </div>
+        </div>
     {% endfor %}
 </table>
+
+<script>
+    let modalsCta = document.querySelectorAll('.openModal');
+    let closesCta = document.querySelectorAll('.closeModal');
+    let modal = document.querySelectorAll('.modal');
+
+    modalsCta.forEach((modalCta, i) => {
+        modalCta.addEventListener('click', () => {
+            modal[i].classList.add('d-b');
+            modal[i].classList.remove('d-n');
+        });
+    });
+
+    closesCta.forEach((closeCta,i) => {
+        closeCta.addEventListener('click', () => {
+            modal[i].classList.remove('d-b');
+            modal[i].classList.add('d-n');
+        });
+    });
+</script>
 
 {{ encore_entry_script_tags('openPopup') }}
