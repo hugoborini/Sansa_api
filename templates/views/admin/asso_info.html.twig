@@ -8,7 +8,7 @@
 <div class="d-f p-1 mh-95v">
     {% include '@App/Components/navbar-admin.html.twig' with {'currentPage': currentPage} %}
     <div class="pt-1 fb-90">
-        <h1 class="ff-body fs-xl c-black-60 fw-700 mb-2 mt-0">{{title}}</h1>
+        <h1 class="ff-body fs-xl c-black-60 fw-700 mb-2 mt-0">{{asso.organizationName}}</h1>
         <div class="bgc-white br-15 b-blue d-f jc-sb p-2c5 mb-2">
            <div class="fb-70 pr-1">
                 <p class="ff-body c-black-60 fs-l fw-700 m-0 mb-0c5">Demande en cours</p>
@@ -25,22 +25,21 @@
                 <p class="ff-body c-black fs-m fw-700 m-0 mb-2">Identification</p>
                 <div class="mb-1c5">
                     <p class="ff-body c-black-60 fs-s fw-700 m-0">SIRET</p>
-                    <p class="ff-body c-black fs-s m-0">76354000981233</p>
+                    <p class="ff-body c-black fs-s m-0">{{asso.siret}}</p>
                 </div>
                 <div class="mb-1c5">
                     <p class="ff-body c-black-60 fs-s fw-700 m-0">Numéro RNA</p>
-                    <p class="ff-body c-black fs-s m-0">W000687347</p>
+                    <p class="ff-body c-black fs-s m-0">{{asso.rna}}</p>
                 </div>
                 <div class="mb-1c5">
                     <p class="ff-body c-black-60 fs-s fw-700 m-0">Date d’inscription</p>
-                    <p class="ff-body c-black fs-s m-0">12/06/22</p>
+                    <p class="ff-body c-black fs-s m-0">{{asso.lastUpdata|date("m/d/Y")}}</p>
                 </div>
             </div>
             <div class="ml-0c75 fb-50">
                 <p class="ff-body c-black fs-m fw-700 m-0 mb-1c5">Mission</p>
-                <p class="ff-body c-black fs-s m-0 mb-1 lh-24">L’objectif est de créer et maintenir un lien social avec des personnes exclues, isolées et en situation de grande précarité, afin d’encourager leur parcours de réinsertion   
-                Trois principales activités sont mises en œuvre : - Aller au-devant et accueillir chaque semaine ces publics sur plusieurs sites parisien - Réaliser une veille sociale en direction de personnes en situation de rue, en coordination avec les acteurs associatifs et institutionnels du territoir.</p>
-                <p class="ff-body c-black-40 fs-s m-0">Dernières mises à jour le 23 déc. 2021</p>
+                <p class="ff-body c-black fs-s m-0 mb-1 lh-24">{{asso.description}}</p>
+                <p class="ff-body c-black-40 fs-s m-0">Dernières mises à jour le {{asso.lastUpdata|date("m/F/Y")}}</p>
             </div>
         </div>
         <div class="d-f">
@@ -48,66 +47,67 @@
                 <p class="ff-body c-black fs-m fw-700 m-0 mb-2">Horaires</p>
                 <div class="mb-1c5 d-f">
                     <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Lundi</p>
-                    <p class="ff-body c-black-60 fs-s m-0">8h - 12h30 / 13h - 17h</p>
+
+                    <p class="ff-body c-black-60 fs-s m-0">{{asso.hoursId.0.monday}}</p>
                 </div>
                 <div class="mb-1c5 d-f">
                     <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Mardi</p>
-                    <p class="ff-body c-black-60 fs-s m-0">8h - 12h30 / 13h - 17h</p>
+                    <p class="ff-body c-black-60 fs-s m-0">{{asso.hoursId.0.tuesday}}</p>
                 </div>
                 <div class="mb-1c5 d-f">
                     <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Mercredi</p>
-                    <p class="ff-body c-black-60 fs-s m-0">8h - 12h30 / 13h - 17h</p>
+                    <p class="ff-body c-black-60 fs-s m-0">{{asso.hoursId.0.wednesday}}</p>
                 </div>
                 <div class="mb-1c5 d-f">
                     <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Jeudi</p>
-                    <p class="ff-body c-black-60 fs-s m-0">8h - 12h30 / 13h - 17h</p>
+                    <p class="ff-body c-black-60 fs-s m-0">{{asso.hoursId.0.thurday}}</p>
                 </div>
                 <div class="mb-1c5 d-f">
                     <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Vendredi</p>
-                    <p class="ff-body c-black-60 fs-s m-0">8h - 12h30 / 13h - 17h</p>
+                    <p class="ff-body c-black-60 fs-s m-0">{{asso.hoursId.0.friday}}</p>
                 </div>
                 <div class="mb-1c5 d-f">
                     <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Samedi</p>
-                    <p class="ff-body c-black-60 fs-s m-0">8h - 12h30 / 13h - 17h</p>
+                    <p class="ff-body c-black-60 fs-s m-0">{{asso.hoursId.0.saturday}}</p>
                 </div>
                 <div class="mb-1c5 d-f">
                     <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Dimanche</p>
-                    <p class="ff-body c-black-60 fs-s m-0">8h - 12h30 / 13h - 17h</p>
+                    <p class="ff-body c-black-60 fs-s m-0">{{asso.hoursId.0.sunday}}</p>
                 </div>
             </div>
             <div class="bgc-white bs-light br-15 p-2 mb-2 mr-0c75 fb-50">
                 <p class="ff-body c-black fs-m fw-700 m-0 mb-2">Informations</p>
                 <div class="mb-1c5 d-f ai-c">
                     <p class="ff-body c-black-60 fs-xs fw-700 m-0 fb-10 lh-0">{% include '@App/img/pictos/map.html.twig' %}</p>
-                    <p class="ff-body c-black-60 fs-xs m-0">20 rue Claude Bernard, 75002 PARIS</p>
+                    <p class="ff-body c-black-60 fs-xs m-0">{{asso.adress}}</p>
                 </div>
                <div class="mb-1c5 d-f ai-c">
                     <p class="ff-body c-black-60 fs-xs fw-700 m-0 fb-10 lh-0">{% include '@App/img/pictos/tel.html.twig' %}</p>
-                    <p class="ff-body c-black-60 fs-xs m-0">06 56 89 09 07</p>
+                    <p class="ff-body c-black-60 fs-xs m-0">{{asso.phoneNumber}}</p>
                 </div>
                 <div class="mb-1c5 d-f ai-c">
                     <p class="ff-body c-black-60 fs-xs fw-700 m-0 fb-10 lh-0">{% include '@App/img/pictos/link.html.twig' %}</p>
-                    <p class="ff-body c-black-60 fs-xs m-0">www.foyercoallia.com</p>
+                    <p class="ff-body c-black-60 fs-xs m-0">{{asso.website}}</p>
                 </div>
                 <div class="mb-1c5 d-f ai-c">
                     <p class="ff-body c-black-60 fs-xs fw-700 m-0 fb-10 lh-0">{% include '@App/img/pictos/langages.html.twig' %}</p>
-                    <p class="ff-body c-black-60 fs-xs m-0">Langues : Français, Anglais, Espagnol, Arabe</p>
+                    <p class="ff-body c-black-60 fs-xs m-0">{{asso.spokenLanguage}}</p>
                 </div>
                 <div class="mb-1c5 d-f ai-c">
                     <p class="ff-body c-black-60 fs-xs fw-700 m-0 fb-10 lh-0">{% include '@App/img/pictos/appointment.html.twig' %}</p>
-                    <p class="ff-body c-black-60 fs-xs m-0">Sur rendez-vous</p>
+                    <p class="ff-body c-black-60 fs-xs m-0">{{asso.byAppointment ? "Sur rendez-vous" : "Sans rendez-vous"}}</p>
                 </div>
             </div>
         </div>
         <div class="bgc-white br-15 bs-light p-2c5 mb-2">
             <p class="ff-body c-black fs-m fw-700 m-0 mb-2">Services proposés</p>
             <div class="d-f fw-w">
-                {% for service in services %}
+                 {% for service in asso.servicesId %}
                     <div class="mb-1c5 d-f ai-c fb-25">
-                        <p class="ff-body c-black-60 fs-xs fw-700 m-0 mr-1 lh-0">{% include '@App/img/services/' ~ service|lower|replace({' ' : '_', 'é' : 'e', 'è' : 'e', "'" : '', 'à' : 'a', 'ê' : 'e' }) ~ '.html.twig' %}</p>
-                        <p class="ff-body c-black-60 fs-xs m-0">{{service}}</p>
+                        <p class="ff-body c-black-60 fs-xs fw-700 m-0 mr-1 lh-0">{% include '@App/img/services/' ~ service.serviceName|lower|replace({' ' : '_', 'é' : 'e', 'è' : 'e', "'" : '', 'à' : 'a', 'ê' : 'e' }) ~ '.html.twig' %}</p>
+                        <p class="ff-body c-black-60 fs-xs m-0">{{service.serviceName}}</p>
                     </div>
-                {% endfor %}
+                {% endfor %} 
             </div>
         </div>
     </div>

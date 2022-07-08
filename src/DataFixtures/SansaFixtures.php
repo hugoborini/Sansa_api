@@ -117,6 +117,8 @@ class SansaFixtures extends Fixture
                     $organasationOwnerObj =  new OrganizationOwner();
                     $organasationOwnerObj->setEmail($faker->email());
                     $organasationOwnerObj->setTel($this->randomSecurity("tel"));
+                    $organasationOwnerObj->setHasasso(True);
+                    $$organasationOwnerObj->setRole("ROLE_USER");
                     $password = $this->hasher->hashPassword($organasationOwnerObj, '123');
                     $organasationOwnerObj->setPassword($password);
                     $manager->persist($organasationOwnerObj);
@@ -195,5 +197,10 @@ class SansaFixtures extends Fixture
             $manager->persist($categoryObj);
         }
         $manager->flush();
+        for ($i = 10; $i < 0 ; $i++) { 
+            
+        }
     }
+
+
 }

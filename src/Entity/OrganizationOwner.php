@@ -46,12 +46,18 @@ class OrganizationOwner implements UserInterface
      */
     private $tel;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $role;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $hasasso;
+
     public function eraseCredentials() {}
     public function getSalt(){}
-    public function getRoles(){
-        return ["ROLE_ADMIN"];
-    }
-    
     
     public function __construct()
     {
@@ -134,4 +140,33 @@ class OrganizationOwner implements UserInterface
 
         return $this;
     }
+
+    public function getRole(): ?string
+    {
+        return $this->role;
+    }
+
+    public function setRole(string $role): self
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    public function isHasasso(): ?bool
+    {
+        return $this->hasasso;
+    }
+
+    public function setHasasso(bool $hasasso): self
+    {
+        $this->hasasso = $hasasso;
+
+        return $this;
+    }
+
+    public function getRoles(){
+        return $this->getRole();
+    }
+    
 }
