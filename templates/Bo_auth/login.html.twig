@@ -11,6 +11,7 @@
 
 
 {% block body %}
+
 <section class="h-100v d-f ai-c">
     <div class="d-f jc-sa ai-fe w-100">
         <div class="fb-45">
@@ -32,7 +33,7 @@
 
                 <input class="bgc-blue br-xxl p-0c75 b-black-10 fs-sm c-white d-b mt-2 w-100" type="submit" value="Se connecter">
                 {% if error %}
-                    <div class="c-danger-text">cette user existe ap</div>
+                    <pre>{{error}}</pre>
                 {% endif %}
             </form>
             <a href="" class="ff-body c-blue fs-s fw-600 mt-1 pb-2c5 d-b td-n ta-c bb-black-10">Mot de passe oublié</a>
