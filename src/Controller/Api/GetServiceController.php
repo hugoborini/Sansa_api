@@ -40,7 +40,7 @@ class GetServiceController extends AbstractController
 
     /**
      * @Route("/api/getservice/count", name="app_get_service_number", methods="GET")
-     * @OA\Get(description="Récupère tous les services")
+     * @OA\Get(description="Récupère le nombre de service par nom de service")
      * @OA\Tag(name="Services")
      */
     public function getNumberOfService(NormalizerInterface $normalizer , ServicesRepository $serviceRepo): Response
