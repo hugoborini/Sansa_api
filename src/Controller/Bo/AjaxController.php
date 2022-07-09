@@ -5,6 +5,7 @@ namespace App\Controller\Bo;
 use App\Entity\Organization;
 use Geocoder\Query\GeocodeQuery;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Repository\OrganizationRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -15,7 +16,7 @@ class AjaxController extends AbstractController
     /**
      * @Route("/bo/ajax/addOrga", name="app_bo_ajax_add_orga", methods="POST")
      */
-    public function addOrgAjax(Request $request, EntityManagerInterface $manager): JsonResponse
+    public function addOrgAjax(Request $request, EntityManagerInterface $manager, OrganizationRepository $orgaRepo): JsonResponse
     {
         $httpClient = new \Http\Adapter\Guzzle6\Client();
         $provider = new \Geocoder\Provider\GoogleMaps\GoogleMaps($httpClient, null, 'AIzaSyBiG9V9KBLLv-TYeu8gcuc-yWmEG6jqVn8');
@@ -28,7 +29,8 @@ class AjaxController extends AbstractController
         $data = $request->request->all()["data"];
 
 
-        $organisationObj->setOrganizationOwner($this->getUser()->getId());
+
+        $organisationObj->setOrganizationOwner($orgaRepo->findById($this->getUser()->getId()));
         $organisationObj->setOrganizationName($data["association_name"]);
         $organisationObj->setAdress($data["address"]);
         $organisationObj->setDescription($data["mission"]);
