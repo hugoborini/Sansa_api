@@ -1,3 +1,5 @@
+import { data } from "./saveData";
+
 const FormSlider = {
     items: document.querySelectorAll(".slider-item"),
     num_items: document.querySelectorAll(".slider-item").length,
@@ -11,7 +13,6 @@ const FormSlider = {
 
     isValid: function() {
         let ctn = document.querySelector(`#step_${this.i}`);
-        console.log(ctn);
         let requiredInput = ctn.querySelectorAll('.dataToSave:required');
         let inputArray = Array.from(requiredInput);
 
@@ -19,7 +20,6 @@ const FormSlider = {
             e.addEventListener('input', () => {
                 const isRequired = (currentValue) => currentValue.value;
                 this.isFormValid =  inputArray.every(isRequired);
-                console.log(this.isFormValid);
                 this.injectStyle();
             });
         });
@@ -28,8 +28,10 @@ const FormSlider = {
     injectStyle: function() {
         if(this.isFormValid) {
             document.querySelector("button[value='Continuer']").classList.add('active');
+            document.querySelector("button[value='Valider']").classList.add('active');
         } else {
             document.querySelector("button[value='Continuer']").classList.remove('active');
+            document.querySelector("button[value='Valider']").classList.remove('active');
         }
     },
 
@@ -48,13 +50,24 @@ const FormSlider = {
            this.goBack()
         });
 	},
+
     gotoNext: function() {
 		// translate from 0 to -100% 
 		// we need transitionend to fire for this translation, so add transition CSS
 		document.querySelector("#slider__ctn").classList.add('slider-container-transition');
+       
         if(this.i < 8){
             document.querySelector("#slider__ctn").style.transform = `translateX(-${this.i}00%)`;
             document.querySelector('.progress-bar__current').style.width = `${this.i * 14.29}%`;
+
+            if(this.i === 6) {
+                document.querySelector("button[value='Continuer']").innerText = 'Valider l\'inscription';
+                document.querySelector("button[value='Continuer']").addEventListener('click', () => {
+                console.log('data is send');
+                this.exportData();
+                })
+            }
+
             if(this.i === 7) {
                 document.querySelector("button[value='Continuer']").classList.toggle('d-n');
                 document.querySelector(".final__button").classList.toggle('d-n');
@@ -64,16 +77,32 @@ const FormSlider = {
 	},
 
     goBack: function() {
-        console.log('okkk go back');
-        console.log(this.i);
 		document.querySelector("#slider__ctn").classList.add('slider-container-transition');
         document.querySelector("#slider__ctn").style.transform = `translateX(-${this.i-2}00%)`;
         document.querySelector('.progress-bar__current').style.width = `${(this.i - 2) * 14.29}%`;
+
+        if(this.i === 7) {
+            document.querySelector("button[value='Continuer']").innerText = 'Continuer';
+        }
+
         if(this.i === 8) {
             document.querySelector("button[value='Continuer']").classList.toggle('d-n');
+            document.querySelector("button[value='Continuer']").innerText = 'Valider l\'inscription';
             document.querySelector(".final__button").classList.toggle('d-n');
         }
         this.i--
+    },
+
+    exportData: function() {
+        $.ajax({     
+            type: "post",     
+            url: `/bo/ajax/addOrga`,     
+            data: {data},
+            dataType: "JSON",     
+            success:function(data){
+                console.log(data)
+            } 
+        });
     }
 }
 

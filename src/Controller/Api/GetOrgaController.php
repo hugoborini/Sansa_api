@@ -16,7 +16,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class GetOrgaController extends AbstractController
 {
 
-    private function reFactoService(Array $orgaNormalize) : Array{
+    private function reFactoService(Array $orgaNormalize) : array{
 
         for ($i=0; $i < count($orgaNormalize); $i++) {
             $serviceReFacto = [];
@@ -103,7 +103,7 @@ class GetOrgaController extends AbstractController
     /**
      * @Route("/api/getorgaNameAdress/{like}", name="app_get_orga_by_ran", methods="GET")
      * 
-     * @OA\Get(description="Recherche les associations par nom pour la barre de recherche")
+     * @OA\Get(description="Recherche les associations par adresse pour la barre de recherche")
      * required=true,
      * @OA\Tag(name="Association")
      */
@@ -119,13 +119,29 @@ class GetOrgaController extends AbstractController
     /**
      * @Route("/api/getorgaName/{like}", name="app_get_orga_by_id_es", methods="GET")
      * 
-     * @OA\Get(description="recupere le nom organisation par rapport au nom donner")
+     * @OA\Get(description="Cherche les associations par nom pour la barre de recherche")
      * @OA\Tag(name="Association")
      */
 
     public function getOrgaNameByNameLike(NormalizerInterface $normalizer, OrganizationRepository $orgaRepo, string $like): Response
     {
         $orga = $orgaRepo->FindOrgaNameLike($like);
+        $orgaNormalize = $normalizer->normalize($orga, null, ["groups" => "orga"]);
+
+        return $this->json($this->reFactoService($orgaNormalize));
+    }
+
+
+    /**
+     * @Route("/api/getfivebestorga", name="app_get_five_best_orga", methods="GET")
+     * 
+     * @OA\Get(description="Génére 5 associations aléatoirement")
+     * @OA\Tag(name="Association")
+     */
+
+    public function getFiveBestOrga(NormalizerInterface $normalizer, OrganizationRepository $orgaRepo): Response
+    {
+        $orga = $orgaRepo->findBy(array(), null, 5, null);
         $orgaNormalize = $normalizer->normalize($orga, null, ["groups" => "orga"]);
 
         return $this->json($this->reFactoService($orgaNormalize));

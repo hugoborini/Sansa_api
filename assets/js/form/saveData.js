@@ -36,13 +36,13 @@ const SaveData = {
         "site": '',
         "address": '',
         "schedules": {
-            "Lundi": '',
-            "Mardi": '',
-            "Mercredi": '',
-            "Jeudi": '',
-            "Vendredi": '',
-            "Samedi": '',
-            "Dimanche": '',
+            "Lundi": 'Fermé',
+            "Mardi": 'Fermé',
+            "Mercredi": 'Fermé',
+            "Jeudi": 'Fermé',
+            "Vendredi": 'Fermé',
+            "Samedi": 'Fermé',
+            "Dimanche": 'Fermé',
         },
         "langages": [],
         "accueil_type": '',
@@ -54,7 +54,11 @@ const SaveData = {
         this.categories.forEach(category => {
             this.initializeInput(category);
             this.saveIdentity(category);
-        })
+        });
+
+        // document.querySelector(("button[value='Continuer']".saveData)).addEventListener('click', () => {
+        //     this.exportData();
+        // });
 	},
 
     initializeInput: function(category) {
@@ -99,6 +103,7 @@ const SaveData = {
                         this.data[name] = choiceLangages;
                         this.writeInInput(e, choiceLangages, 3);
                     });
+                    console.log(this.data);
                     return;
                 }
 
@@ -116,10 +121,12 @@ const SaveData = {
                 if(category === 'appointement'){
                     let choice = document.querySelector('input[name="appointement"]:checked');
                     this.data[name] = choice.value;
+                    console.log(this.data);
                     return;
                 }
 
                 this.data[name] = e.target.value;
+                console.log(this.data);
             });
         });
     },
@@ -141,7 +148,9 @@ const SaveData = {
         });
 
         this.data.schedules[name] = e.target.checked;
-    }
+        console.log(this.data);
+    },
 }
 
 SaveData.init();
+export const data = SaveData.data;
