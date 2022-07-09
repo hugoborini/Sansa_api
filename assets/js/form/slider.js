@@ -28,8 +28,10 @@ const FormSlider = {
     injectStyle: function() {
         if(this.isFormValid) {
             document.querySelector("button[value='Continuer']").classList.add('active');
+            document.querySelector("button[value='Valider']").classList.add('active');
         } else {
             document.querySelector("button[value='Continuer']").classList.remove('active');
+            document.querySelector("button[value='Valider']").classList.remove('active');
         }
     },
 
@@ -48,15 +50,23 @@ const FormSlider = {
            this.goBack()
         });
 	},
+
     gotoNext: function() {
 		// translate from 0 to -100% 
 		// we need transitionend to fire for this translation, so add transition CSS
 		document.querySelector("#slider__ctn").classList.add('slider-container-transition');
-        this.exportData();
-
+       
         if(this.i < 8){
             document.querySelector("#slider__ctn").style.transform = `translateX(-${this.i}00%)`;
             document.querySelector('.progress-bar__current').style.width = `${this.i * 14.29}%`;
+
+            if(this.i === 6) {
+                document.querySelector("button[value='Continuer']").innerText = 'Valider l\'inscription';
+                document.querySelector("button[value='Continuer']").addEventListener('click', () => {
+                console.log('data is send');
+                this.exportData();
+                })
+            }
 
             if(this.i === 7) {
                 document.querySelector("button[value='Continuer']").classList.toggle('d-n');
@@ -70,8 +80,14 @@ const FormSlider = {
 		document.querySelector("#slider__ctn").classList.add('slider-container-transition');
         document.querySelector("#slider__ctn").style.transform = `translateX(-${this.i-2}00%)`;
         document.querySelector('.progress-bar__current').style.width = `${(this.i - 2) * 14.29}%`;
+
+        if(this.i === 7) {
+            document.querySelector("button[value='Continuer']").innerText = 'Continuer';
+        }
+
         if(this.i === 8) {
             document.querySelector("button[value='Continuer']").classList.toggle('d-n');
+            document.querySelector("button[value='Continuer']").innerText = 'Valider l\'inscription';
             document.querySelector(".final__button").classList.toggle('d-n');
         }
         this.i--

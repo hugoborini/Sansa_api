@@ -10,6 +10,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use DateTime;
+use App\Entity\PreferencialWelcome;
+use App\Entity\Hours;
 
 class AjaxController extends AbstractController
 {

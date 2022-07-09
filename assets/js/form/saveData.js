@@ -149,7 +149,6 @@ const SaveData = {
 
         this.data.schedules[name] = e.target.checked;
         console.log(this.data);
-
     },
 }
 
