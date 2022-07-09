@@ -3,6 +3,7 @@
 {% block javascripts %}
     {{ parent() }}
     {{ encore_entry_script_tags('form') }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 {% endblock %}
 
 {% block bodyStyle %}bgc-backo h-100v m-0{% endblock %}
@@ -409,6 +410,7 @@
                 </div>
             </div>
             <button type="button" class="bgc-black-10 br-xxl pt-1 pb-1 pl-2 pr-2 b-black-10 fs-s c-black-40 d-b mt-0c5 ml-2" value="Continuer">Continuer</button>
+            <button type="button" class="bgc-black-10 br-xxl pt-1 pb-1 pl-2 pr-2 b-black-10 fs-s c-black-40 mt-0c5 ml-2 d-n" value="Valider">Valider l'inscription</button>
             <button type="button" class="bgc-white br-xxl pt-1 pb-1 pl-2 pr-2 b-blue mt-0c5 d-n final__button ml-2" value="Retour à l’accueil"><a class="c-blue fs-s td-u" href="{{ path('app_index_bo')}}">Retour à l’accueil</a></button>
         </div>
     </div>

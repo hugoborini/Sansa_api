@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AjaxController extends AbstractController
 {
     /**
-     * @Route("/bo/ajax/addOrga", name="app_bo_ajax_add_orga")
+     * @Route("/bo/ajax/addOrga", name="app_bo_ajax_add_orga", methods="POST")
      */
     public function addOrgAjax(Request $request): JsonResponse
     {
