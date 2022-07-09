@@ -20,7 +20,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AjaxController extends AbstractController
 {
     /**
-     * @Route("/bo/ajax/addOrga", name="app_bo_ajax_add_orga", methods="get")
+     * @Route("/bo/ajax/addOrga", name="app_bo_ajax_add_orga", methods="POST")
      */
     public function addOrgAjax(Request $request, EntityManagerInterface $manager, OrganizationOwnerRepository $orgaOwnerRepo): JsonResponse
     {
