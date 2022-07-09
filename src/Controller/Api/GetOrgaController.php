@@ -16,7 +16,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class GetOrgaController extends AbstractController
 {
 
-    private function reFactoService(Array $orgaNormalize) : Array{
+    private function reFactoService(Array $orgaNormalize) : array{
 
         for ($i=0; $i < count($orgaNormalize); $i++) {
             $serviceReFacto = [];

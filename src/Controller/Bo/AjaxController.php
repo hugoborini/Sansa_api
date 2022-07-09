@@ -2,7 +2,9 @@
 
 namespace App\Controller\Bo;
 
+use App\Entity\Category;
 use App\Entity\OrganizationOwner;
+use App\Entity\Services;
 use DateTime;
 use App\Entity\Hours;
 use App\Entity\Organization;
@@ -31,15 +33,12 @@ class AjaxController extends AbstractController
         $geocoder = new \Geocoder\StatefulGeocoder($provider, 'en');
 
 
-
-        $organisationObj = new Organization();
-        
         $data = $request->request->all()["data"];
         $userObj = $orgaOwnerRepo->find($this->getUser()->getId());
         $orgaOwnerObj = $orgaOwnerRepo->find($this->getUser()->getId());
 
 
-
+        $organisationObj = new Organization();
         $organisationObj->setOrganizationOwner($userObj);
         $organisationObj->setOrganizationName($data["association_name"]);
         $organisationObj->setAdress($data["address"]);
@@ -74,6 +73,26 @@ class AjaxController extends AbstractController
         $hoursObj->setSaturday($data["schedules"]["Samedi"]);
         $hoursObj->setSunday($data["schedules"]["Dimanche"]);
         $manager->persist($hoursObj);
+
+
+        foreach($data["services"] as $service){
+            $categoryObj = new Category();
+            $categoryObj->setValue("category");
+            $manager->persist($categoryObj);
+
+
+            $servicesObj = new Services();
+            $servicesObj->setServiceName($service);
+            $servicesObj->setOrganizationId($organisationObj);
+            $servicesObj->setSubscribe(false);
+            $servicesObj->setByAppointement(false);
+            $servicesObj->setServiceDescription("lorem ispsum jizfgjizgjzeigfjzeikgvjherugvjjzefhrzejdfjzeokfgjezkofcjzeigvjziogjzo");
+            $servicesObj->setStateSaturation(0);
+            $servicesObj->setCategoryId($categoryObj);
+            $manager->persist($servicesObj);
+        }
+
+
 
         $orgaOwnerObj->setHasasso(True);
 
