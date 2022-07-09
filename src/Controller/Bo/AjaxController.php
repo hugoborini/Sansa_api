@@ -4,7 +4,7 @@ namespace App\Controller\Bo;
 
 use App\Entity\Organization;
 use Geocoder\Query\GeocodeQuery;
-use Doctrine\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -15,7 +15,7 @@ class AjaxController extends AbstractController
     /**
      * @Route("/bo/ajax/addOrga", name="app_bo_ajax_add_orga", methods="POST")
      */
-    public function addOrgAjax(Request $request, ObjectManager $manager): JsonResponse
+    public function addOrgAjax(Request $request, EntityManagerInterface $manager): JsonResponse
     {
         $httpClient = new \Http\Adapter\Guzzle6\Client();
         $provider = new \Geocoder\Provider\GoogleMaps\GoogleMaps($httpClient, null, 'AIzaSyBiG9V9KBLLv-TYeu8gcuc-yWmEG6jqVn8');
