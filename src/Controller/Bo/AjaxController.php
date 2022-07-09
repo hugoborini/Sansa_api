@@ -35,7 +35,7 @@ class AjaxController extends AbstractController
         $organisationObj = new Organization();
         
         $data = $request->request->all()["data"];
-        $userObj = $orgaOwnerRepo->findById($this->getUser()->getId());
+        $userObj = $orgaOwnerRepo->find($this->getUser()->getId());
         $orgaOwnerObj = $orgaOwnerRepo->find($this->getUser()->getId());
 
 
@@ -81,6 +81,6 @@ class AjaxController extends AbstractController
 
 
 
-        return $this->json(["orga add to bdd"]);
+        return $this->json(["orga ad bdd"]);
     }
 }
