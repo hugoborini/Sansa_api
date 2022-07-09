@@ -8,10 +8,11 @@ html {
     box-sizing: border-box;
 }
 
+
 *, *:before, *:after {
+
 box-sizing: inherit;
-padding: 0;
-margin: 0;
+
 }
 
 a:active { 
@@ -123,9 +124,35 @@ a:hover {
   transform: rotate(-405deg);
 }
 
-// MEDIA QUERY NAVBAR
+// FOOTER
+
+footer {
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-image: url('/templates/img/sansa_background_footer.svg');
+    background-position-x: left;
+    background-position-y: bottom;
+}
+
+.footer-wrapper {
+    flex-direction: row;
+    padding-bottom: 15rem;
+    padding-top: 2rem;
+}
+
+footer .text__disclaimer .disclaimer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    flex-direction: row-reverse;
+   
+  }
+
+
 
 @media (max-width: 1035px) {
+
+    // NAVBAR
     
     .divider {
         display: none;
@@ -183,35 +210,55 @@ a:hover {
         border-bottom: 1px solid #444;
     }
 
+    // FOOTER
+
+    footer .footer-wrapper p {
+        font-size: 14px;
+    }
+
+    footer .footer-wrapper ul {
+        font-size: 14px;
+    }
+
+    footer .discl span {
+        font-size: 9px;
+    }
+
+    .footer-wrapper  {
+        padding: 1.5rem 2rem;
+        margin-bottom: 12rem;
+   }
 }
 
-// FOOTER
+@media (max-width: 430px) {
 
-footer {
-    background-repeat: no-repeat;
-    background-image: url('/templates/img/sansa_background_footer.svg');
-    background-position: bottom;
-    padding-bottom: 12rem;
-}
+    footer .footer-wrapper p {
+        font-size: 14px;
+    }
 
+    footer .footer-wrapper ul {
+        font-size: 14px;
+    }
 
-// MEDIA QUERY FOOTER 
-@media only screen  and (max-width: 600px) and (min-width: 320px)   {
+    footer .discl span {
+        font-size: 9px;
+    }
+
+    // FOOTER
+   
+    footer {
+        background-size: 100%;
+        background-image: url('/templates/img/sansa_background_mobile_footer.svg');
+        background-position: bottom;
+    }
 
     .footer-wrapper  {
         flex-direction: column;
-    }
+        padding: 1.5rem 2rem;
+        margin-bottom: 10rem;
+   }
 
-    .footer-bg {
-        padding-bottom: 12rem !important;
-        background-size: 40rem;
-    }
-
-    footer ul {
-        font-size: 14px !important;
-    }
-
-    footer .disclaimer {
-        font-size: 10px !important ;
-    }
+   footer ul li {
+       font-size: 14px;
+   }
 }

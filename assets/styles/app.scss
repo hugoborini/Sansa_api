@@ -56,6 +56,10 @@ box-sizing: inherit;
     font-size: 12px;
 }
 
+.fs-xxxs {
+    font-size: 9px;
+}
+
 // COLOR
 
 .c-blue {
@@ -616,6 +620,10 @@ box-sizing: inherit;
     padding-top: 1rem
 }
 
+.pt-1c25 {
+    padding-top: 1.25rem
+}
+
 .pt-1c5 {
     padding-top: 1.5rem
 }
@@ -734,6 +742,10 @@ box-sizing: inherit;
 
 .pb-12 {
     padding-bottom: 12rem
+}
+
+.pb-16 {
+    padding-bottom: 16rem;
 }
 
 .pb-25 {
@@ -1984,3 +1996,5 @@ button.active {
         background-color: #E8E8E8;
     }
 }
+
+@import url('./componentsApp.scss');
