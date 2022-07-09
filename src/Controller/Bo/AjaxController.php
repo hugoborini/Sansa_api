@@ -30,7 +30,7 @@ class AjaxController extends AbstractController
 
 
 
-        $organisationObj->setOrganizationOwner($orgaRepo->findById($this->getUser()->getId()));
+        $organisationObj->setOrganizationOwner($orgaRepo->find($this->getUser()->getId()));
         $organisationObj->setOrganizationName($data["association_name"]);
         $organisationObj->setAdress($data["address"]);
         $organisationObj->setDescription($data["mission"]);
