@@ -30,6 +30,8 @@ Encore
     .addEntry('graph', './assets/js/graph.js')
     .addEntry('graph_asso', './assets/js/graph_asso.js')
     .addEntry('updateData', './assets/js/updateData.js')
+    .addEntry('changeTab', './assets/js/changeTab.js')
+    .addEntry('toggleForm', './assets/js/toggleForm.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
