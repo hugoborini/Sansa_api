@@ -1,0 +1,373 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UsersInfoController!{% endblock %}
+
+{% set langages = ['Francais', 'Espagnol', 'Anglais', 'Italien', 'Wolof', 'Bambara', 'Russe', 'Polonais', 'Ukrainien', 'Arabe', 'Portugais', 'Allemand'] %}
+
+{% set days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'] %}
+
+{% block body %}
+    <div class="d-f p-1 h-100">
+        {% include '@App/Components/navbar-admin.html.twig' with {'currentPage': currentPage, 'template': 'asso'} %} 
+        <div class="pt-1 fb-90 d-f fd-c">
+            <div class="d-f mb-1">
+                <div class="identity_cta tab active">
+                    <p class="active ff-body fs-s fw-700 pl-1 pt-0c5 pr-1 pb-0c5 m-0 bb-black-10-m c-black-60">Identité et coordonnées</p>
+                </div>
+                <div class="mission_cta tab">
+                    <p class="ff-body fs-s fw-700 pl-1 pt-0c5 pr-1 pb-0c5 m-0 bb-black-10-m c-black-60">Mission et accueil</p>
+                </div>
+                <div class="schedules_cta tab">
+                    <p class="ff-body fs-s fw-700 pl-1 pt-0c5 pr-1 pb-0c5 m-0 bb-black-10-m c-black-60">Horaires</p>
+                </div>
+            </div>
+            <div class="identity views active">
+                <div class="d-f mt-3 jc-sb">
+                    <div class="fb-60">
+                        <div class="bgc-white bs-light br-15 p-2 mr-0c75 fb-50">
+                            <div class="d-f jc-sb ai-c mb-2">
+                                <p class="ff-body c-black-10 fs-m fw-700 m-0">Vos coordonnées</p>
+                                <div class="editData c-p">
+                                    <p class="ff-body c-blue fs-s fw-700 m-0 d-f ai-c"><span class="mr-0c5 lh-0">{% include '@App/img/pictos/picto_edit.html.twig' %}</span>Éditer</p>
+                                </div>
+                            </div>
+                            <div class="data">
+                                <div class="mb-1c5">
+                                    <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Adresse e-mail</p>
+                                    <p class="ff-body c-black-60 lh-1c5 fs-s m-0">associationducoeur@gmail.com</p>
+                                </div>
+                                <div class="mb-1c5">
+                                    <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Téléphone</p>
+                                    <p class="ff-body c-black-60 lh-1c5 fs-s m-0">06 46 81 01 97</p>
+                                </div>
+                                <div class="mb-1c5">
+                                    <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Site internet</p>
+                                    <p class="ff-body c-black-60 lh-1c5 fs-s m-0">restaurantsducoeurs@gmail.com</p>
+                                </div>
+                                <div class="">
+                                    <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Adresse postale</p>
+                                    <p class="ff-body c-black-60 lh-1c5 fs-s m-0">17 rue François Mouthon</p>
+                                </div>
+                            </div>
+
+                            <div class="customForm d-n">
+                                <div class="mb-1c5">
+                                    <p class="ff-body c-black-40 lh-1c5 fs-s m-0">Adresse e-mail</p>
+                                    <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToUpdate" name="coordonnees" type="text" id="email"  placeholder="johndoe@gmail.com" required>
+                                </div>
+
+                                <div class="mb-1c5">
+                                    <p class="ff-body c-black-40 lh-1c5 fs-s m-0">Téléphone</p>
+                                    <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToUpdate" name="coordonnees" type="tel" id="telephone" placeholder="0786831179" required>
+                                </div>
+
+                                <div class="mb-1c5">
+                                    <p class="ff-body c-black-40 lh-1c5 fs-s m-0">Site internet</p>
+                                    <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToUpdate" name="coordonnees" type="text" id="site" placeholder="www.association.fr">
+                                </div>
+
+                                <div class="mb-1c5">
+                                    <p class="ff-body c-black-40 lh-1c5 fs-s m-0">Adresse postale</p>
+                                    <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToUpdate" name="coordonnees" type="text" id="address" placeholder="561 avenue des sablons">
+                                </div>
+
+                                <p id="submit" class="ff-body fw-700 c-white m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 bgc-blue mw-fc c-p td-n">Enregistrer les modifications</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="as-fs">
+                        <img src="{{ asset('build/images/edit_illu_identity.png') }}" alt="" width="630" class="w-100" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3 jc-sb mission views pb-3 o-s">
+                <div class="bgc-white bs-light br-15 p-2 mr-0c75 fb-50 mb-2c5">
+                    <div class="d-f jc-sb ai-c mb-2">
+                        <p class="ff-body c-black-10 fs-m fw-700 m-0">Votre mission</p>
+                        <div class="editData c-p">
+                            <p class="ff-body c-blue fs-s fw-700 m-0 d-f ai-c"><span class="mr-0c5 lh-0">{% include '@App/img/pictos/picto_edit.html.twig' %}</span>Éditer</p>
+                        </div>
+                    </div>
+                    <div class="data">
+                        <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Mission</p>
+                        <p class="ff-body c-black-60 lh-1c5 fs-s m-0">L’objectif est de créer et maintenir un lien social avec des personnes exclues, isolées et en situation de grande précarité, afin d’encourager leur parcours de réinsertion. Trois principales activités sont mises en œuvre :
+                            Aller au-devant et accueillir chaque semaine ces publics sur plusieurs sites parisien 
+                            Réaliser une veille sociale en direction de personnes en situation de rue, en coordination avec les acteurs associatifs et institutionnels du territoir  
+                            Informer les personnes en situation de précarité
+                        </p>
+                    </div>
+                    <div class="d-n customForm">
+                        <p class="ff-body c-black-40 lh-1c5 fs-s fw-400 m-0">Mission</p>
+                        <textarea rows="7" class="ff-body c-black-40 lh-1c5 fs-s m-0 w-100 br-15 b-black-20 mb-1c5 dataToUpdate" name="mission" type="">L’objectif est de créer et maintenir un lien social avec des personnes exclues, isolées et en situation de grande précarité, afin d’encourager leur parcours de réinsertion. Trois principales activités sont mises en œuvre :
+                            Aller au-devant et accueillir chaque semaine ces publics sur plusieurs sites parisien 
+                            Réaliser une veille sociale en direction de personnes en situation de rue, en coordination avec les acteurs associatifs et institutionnels du territoir  
+                            Informer les personnes en situation de précarité
+                        </textarea>
+                        <p id="submit" class="ff-body fw-700 c-white m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 bgc-blue mw-fc c-p td-n">Enregistrer les modifications</p>
+                    </div>
+                </div>
+                <div class="d-f">
+                    <div class="bgc-white bs-light br-15 p-2 mr-2 fb-50">
+                        <div class="d-f jc-sb ai-c mb-2">
+                            <p class="ff-body c-black-10 fs-m fw-700 m-0">Éditer votre accueil</p>
+                            <p class="ff-body c-blue fs-s fw-700 m-0 d-f ai-c editData c-p"><span class="mr-0c5 lh-0">{% include '@App/img/pictos/picto_edit.html.twig' %}</span>Éditer</p>
+                        </div>
+                        <div class="data">
+                            <div class="mb-1c5">
+                                <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Langues</p>
+                                <p class="ff-body c-black-60 lh-1c5 fs-s m-0">Francais, Anglais</p>
+                            </div>
+                            <div class="mb-1c5">
+                                <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Type d'accueil</p>
+                                <p class="ff-body c-black-60 lh-1c5 fs-s m-0">Accueil exclusif</p>
+                            </div>
+                            <div class="mb-1c5">
+                                <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Sur rendez-vous</p>
+                                <p class="ff-body c-black-60 lh-1c5 fs-s m-0">Oui</p>
+                            </div>
+                        </div>
+                        <div class="customForm d-n p-r">
+                            <p class="ff-body c-black-40 lh-1c5 fs-s m-0">Langues</p>
+                            <div class="p-r expandInput c-p">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                    <p class="langages"></p>
+                                    <p class="counter"></p>
+                                </div>
+                                <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
+                            </div>
+
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n expandList p-a">
+                                {% for langage in langages %}
+                                    <div class="mb-0c5">
+                                        <input class="mutliple-select dataToUpdate" type="checkbox" id="langages" name="accueil" value="{{langage}}" required>
+                                        <label class="ff-body fs-xs c-black fw-400">{{langage}}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+
+                            <div class="mt-1c5">
+                                <p class="ff-body c-black-40 lh-1c5 fs-s m-0">Type d'accueil</p>
+                                <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToUpdate" name="accueil" type="text" id="accueil_type" placeholder="Adultes, enfants, animaux..." required>
+                            </div>
+
+
+                            <p class="ff-body c-black-40 lh-1c5 fs-s m-0 mt-1c5">Sur rendez-vous :</p>
+                            <div class="d-f ai-c mb-1c5">
+                                <div class="d-f jc-sb fb-15 mr-1c5">
+                                    <input class="br-15 p-0c75 b-black-10 c-black-10 dataToUpdate" name="accueil" type="radio" id="appointement" value="true" required>
+                                    <label for="true" class="ff-body fs-s c-black fw-400">Oui</label>
+                                </div>
+                                <div class="d-f jc-sb fb-15">
+                                    <input class="br-15 p-0c75 b-black-10 c-black-10 dataToUpdate" name="accueil" type="radio" id="appointement" value="false" required>
+                                    <label for="false" class="ff-body fs-s c-black fw-400">Non</label>
+                                </div>
+                            </div>
+
+                            <p id="submit" class="ff-body fw-700 c-white m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 bgc-blue mw-fc c-p td-n">Enregistrer les modifications</p>
+                        </div>
+                    </div>
+                    <div class="as-fs">
+                        <img src="{{ asset('build/images/edit_illu_mission.png') }}" alt="" width="630" class="w-100" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3 jc-sb schedules views">
+                <div class="bgc-white bs-light br-15 p-2 mr-0c75 fb-50 mb-2c5">
+                    <div class="d-f jc-sb ai-c mb-2">
+                        <p class="ff-body c-black-10 fs-m fw-700 m-0">Vos horaires</p>
+                        <p class="ff-body c-blue fs-s fw-700 m-0 d-f ai-c editData"><span class="mr-0c5 lh-0">{% include '@App/img/pictos/picto_edit.html.twig' %}</span>Éditer</p>
+                    </div>
+                    <div class="data">
+                        <div class="mb-1c5 d-f">
+                            <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Lundi</p>
+                            <p class="ff-body c-black-60 fs-s m-0">8h30 - 12h30 / 14h - 17h30</p>
+                        </div>
+                        <div class="mb-1c5 d-f">
+                            <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Mardi</p>
+                            <p class="ff-body c-black-60 fs-s m-0">8h30 - 12h30 / 14h - 17h30</p>
+                        </div>
+                        <div class="mb-1c5 d-f">
+                            <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Mercredi</p>
+                            <p class="ff-body c-black-60 fs-s m-0">8h30 - 12h30 / 14h - 17h30</p>
+                        </div>
+                        <div class="mb-1c5 d-f">
+                            <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Jeudi</p>
+                            <p class="ff-body c-black-60 fs-s m-0">8h30 - 12h30 / 14h - 17h30</p>
+                        </div>
+                        <div class="mb-1c5 d-f">
+                            <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Vendredi</p>
+                            <p class="ff-body c-black-60 fs-s m-0">8h30 - 12h30 / 14h - 17h30</p>
+                        </div>
+                        <div class="mb-1c5 d-f">
+                            <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Samedi</p>
+                            <p class="ff-body c-black-60 fs-s m-0">8h30 - 12h30 / 14h - 17h30</p>
+                        </div>
+                        <div class="d-f">
+                            <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Dimanche</p>
+                            <p class="ff-body c-black-60 fs-s m-0">Fermé</p>
+                        </div>
+                    </div>
+                    <div class="customForm d-n">
+                        <div class="d-f fd-c">
+                            {% for day in days %}
+                                <div class="d-f fd-c">
+                                    <div class="d-f mb-2">
+                                        <p class="ff-body fs-s c-black fw-600 m-0 lh-1 fb-30">{{day}}</p>
+                                        <div class="switchSlider d-f ai-c">
+                                            <label class="ff-body fs-s c-black fw-600 d-f">
+                                                <input type="checkbox" name="schedules" id="{{day}}" data-day="{{day}}" class="dataToUpdate" required>
+                                                <span class="switch slider round p-r"></span>
+                                            </label>
+                                            <p class="ff-body fs-s c-black fw-400 m-0 lh-1 ml-1 col-50 toggleOpening">Fermé</p>
+                                        </div>
+                                    </div>
+                                    <div class="selectSchedule w-70 d-n fd-c">
+                                        <div class="d-f jc-sb ai-c">
+                                            <div class="fb-30">
+                                                <label for="schedules-select-open" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Ouverture</label>
+
+                                                <select name="scheduleOpen" id="schedules-select-open" class="br-15 p-0c75 b-black-10 w-100 c-black-10 mb-1">
+                                                    <option value="">8h30</option>
+                                                    {% set scheduleHour = 0 %}
+                                                    {% set scheduleMinute = 0 %}
+                                                    {% for i in 1..48 %}
+                                                        {% if loop.index is even %}{% set scheduleHour = scheduleHour + 1 %}{% endif %}
+                                                        {% set scheduleMinute = scheduleMinute + 30 %}
+                                                        {% if scheduleMinute >= 60 %}{% set scheduleMinute = 0 ~ '0' %}{% endif %}
+                                                        <option class="dataToSave" value="{{scheduleHour}}h{{scheduleMinute}}">{{scheduleHour}}h{{scheduleMinute}}</option>
+                                                    {% endfor %}>
+                                                </select>
+                                            </div>
+                                            <div class="fb-30">
+                                                <label for="schedules-select-close" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Fermeture</label>
+
+                                                <select name="scheduleClose" id="schedules-select-close" class="br-15 p-0c75 b-black-10 w-100 c-black-10 mb-1">
+                                                    <option class="ff-body fs-s c-black-40 fw-400 mb-0c5 d-b" value="17h30">17h30</option>
+                                                    {% set scheduleHour = 0 %}
+                                                    {% set scheduleMinute = 0 %}
+                                                    {% for i in 1..48 %}
+                                                        {% if loop.index is even %}{% set scheduleHour = scheduleHour + 1 %}{% endif %}
+                                                        {% set scheduleMinute = scheduleMinute + 30 %}
+                                                        {% if scheduleMinute >= 60 %}{% set scheduleMinute = 0 ~ '0' %}{% endif %}
+                                                        <option class="dataToSave" value="{{scheduleHour}}h{{scheduleMinute}}">{{scheduleHour}}h{{scheduleMinute}}</option>
+                                                    {% endfor %}>
+                                                </select>
+                                            </div>
+                                            <div class="pl-0c75 closeCross">
+                                                {% include '@App/img/close_cross.html.twig' %}
+                                            </div>
+                                        </div>
+
+                                        <div class="selectSchedule2 d-n jc-sb ai-c">
+                                            <div class="fb-30">
+                                                <label for="schedules-select-open2" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Ouverture</label>
+
+                                                <select name="scheduleOpen" id="schedules-select-open2" class="br-15 p-0c75 b-black-10 w-100 c-black-10 mb-1">
+                                                    <option value="">8h30</option>
+                                                    {% set scheduleHour = 0 %}
+                                                    {% set scheduleMinute = 0 %}
+                                                    {% for i in 1..48 %}
+                                                        {% if loop.index is even %}{% set scheduleHour = scheduleHour + 1 %}{% endif %}
+                                                        {% set scheduleMinute = scheduleMinute + 30 %}
+                                                        {% if scheduleMinute >= 60 %}{% set scheduleMinute = 0 ~ '0' %}{% endif %}
+                                                        <option value="{{scheduleHour}}h{{scheduleMinute}}">{{scheduleHour}}h{{scheduleMinute}}</option>
+                                                    {% endfor %}>
+                                                </select>
+                                            </div>
+                                            <div class="fb-30">
+                                                <label for="schedules-select-close2" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Fermeture</label>
+
+                                                <select name="scheduleClose" id="schedules-select-close2" class="br-15 p-0c75 b-black-10 w-100 c-black-10 mb-1">
+                                                    <option class="ff-body fs-s c-black-40 fw-400 mb-0c5 d-b" value="17h30">17h30</option>
+                                                    {% set scheduleHour = 0 %}
+                                                    {% set scheduleMinute = 0 %}
+                                                    {% for i in 1..48 %}
+                                                        {% if loop.index is even %}{% set scheduleHour = scheduleHour + 1 %}{% endif %}
+                                                        {% set scheduleMinute = scheduleMinute + 30 %}
+                                                        {% if scheduleMinute >= 60 %}{% set scheduleMinute = 0 ~ '0' %}{% endif %}
+                                                        <option value="{{scheduleHour}}h{{scheduleMinute}}">{{scheduleHour}}h{{scheduleMinute}}</option>
+                                                    {% endfor %}>
+                                                </select>
+                                            </div>
+                                            <div class="pl-0c75 closeCross2">
+                                                {% include '@App/img/close_cross.html.twig' %}
+                                            </div>
+                                        </div>
+
+                                        <p class="addSchedule ff-body fs-s c-blue fw-600 mb-0c25 mt-0 c-p mb-2">Ajouter un horaire</p>
+                                    </div>
+                                </div>
+
+                            {% endfor %}
+                        </div>
+                        <p id="submit" class="ff-body fw-700 c-white m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 bgc-blue mw-fc c-p td-n">Enregistrer les modifications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <script>
+        'use strict';
+
+        class changeTab {
+            constructor(triggerElem, index) {
+                this.views = document.querySelectorAll('.views');
+                this.tabs = document.querySelectorAll('.tab');
+                this.change(triggerElem, index);
+            }
+
+            change(triggerElem, index){
+                triggerElem.addEventListener('click', () => {
+                    this.views[index].classList.add('active');
+                    triggerElem.classList.add('active');
+                    this.closeAll(index, triggerElem);
+                });
+            }
+
+            closeAll(index, triggerElem){
+                this.views.forEach((view, i) => {
+                    if(index !== i) {
+                        view.classList.remove('active');
+                    }
+                });
+                this.tabs.forEach((tab,i) => {
+                     if(index !== i) {
+                        tab.classList.remove('active');
+                    }
+                })
+            }
+        }
+
+        document.querySelectorAll('.tab').forEach((el, index) => {
+            el = new changeTab(el, index)
+        });
+
+
+        class changeForm {
+            constructor(el) {
+                this.form = el.parentNode.parentNode.querySelector('.customForm');
+                this.data = el.parentNode.parentNode.querySelector('.data');
+                this.toggleForm()
+            }
+
+            toggleForm() {
+                this.form.classList.toggle('d-n');
+                this.data.classList.toggle('d-n');
+            }
+        }
+
+        document.querySelectorAll('.editData').forEach((el, index) => {
+            el.addEventListener('click', () => {
+                new changeForm(el)
+            })
+        });
+
+    </script>
+{{ encore_entry_script_tags('updateData') }}
+{{ encore_entry_script_tags('expandList') }}
+{{ encore_entry_script_tags('toggleSchedules') }}
+{% endblock %}
+
+

@@ -30,6 +30,7 @@ class AdminAssoController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("bo/admin/users/delete/{idAsso}", name="app_asso_delete")
      */
@@ -97,4 +98,5 @@ class AdminAssoController extends AbstractController
 
         return $this->redirect($this->generateUrl('app_admin_asso'));
     }
+
 }

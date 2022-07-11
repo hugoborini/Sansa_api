@@ -16,14 +16,14 @@
 
 {% set langages = ['Francais', 'Espagnol', 'Anglais', 'Italien', 'Wolof', 'Bambara', 'Russe', 'Polonais', 'Ukrainien', 'Arabe', 'Portugais', 'Allemand'] %}
 
-{% set acceuil = ['Accueil de jour', 'Hebergement d’urgence', 'Herbergement long', 'Halte de nuit', 'Espace de repos', 'Bagagerie'] %}
-{% set alimentation = ['Distribution de repas', 'Restaurant assise', 'Colis alimentaire', 'Épicerie solidaire', 'Fontaine à eau'] %}
-{% set sante = ['Addiction', 'Depistage', 'Soins enfants', 'Vaccination', 'Suivi grossesse', 'Medecin généraliste', 'Infirmière'] %}
-{% set medecine = ['Allergologie', 'Cardiologie', 'Radiologie', 'Gynécologie', 'Pneumologue', 'Nutrition', 'Dermathologue'] %}
-{% set hygiene = ['Douches', 'Toilettes', 'Protection périodique', 'Fontaine à eau', 'Bien-être'] %}
-{% set conseil = ['Permanence juridique', 'Conseil logement', 'Domiciliation', 'Conseil handicap'] %}
-{% set activity = ['Activités sportives', 'Musée', 'Bibliothéque'] %}
-{% set technologie = ['Ordinateur', 'Wifi', 'Prise', 'Téléphone'] %}
+{% set acceuil = ['Espace de repos', 'Halte de nuit', 'Domiciliation', 'Accueil de jour', 'Vêtements', 'Téléphone', 'Boutique solidaire', 'Bagagerie'] %}
+{% set alimentation = ['Épicerie Sociale et Solidaire', 'Colis Alimentaire', 'Restauration assise', 'Distribution de repas'] %}
+{% set sante = ['Médecin généraliste', 'Soins enfants', 'Dépistage', 'Suivi grossesse', 'Infirmière'] %}
+{% set medecine = ['Dermatologie', 'Addiction', 'Psychologie', 'Pédicure', 'Dentaire', 'Vétérinaire'] %}
+{% set hygiene = ['Douche', 'Toilettes', 'Protections périodiques', 'Fontaine à eau', 'Laverie', 'Bien-être'] %}
+{% set conseil = ['Permanence juridique', 'Accompagnement à l\'emploi', 'Conseil administratif', 'Conseil logement', 'Accompagnement social'] %}
+{% set activity = ['Activités sportives', 'Musée', 'Bibliothèque'] %}
+{% set technologie = ['Ordinateur', 'Wifi', 'Prise', 'Atelier numérique', 'Cours de français', 'Soutien scolaire'] %}
 
 <section class="h-100v d-f ai-c">
     <div class="d-f jc-sa ai-c w-100">
@@ -37,7 +37,7 @@
                     <div class="progress-bar__current"></div>
                 </div>
             </div>
-            <div class="d-f w-100" id="slider__ctn">
+            <div class="d-f w-100 mh-600" id="slider__ctn">
                 <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_1">
                     <h2 class="ff-body fs-xl fw-600 c-black pb-1">Quel est l’identité de votre association ?</h2>
                     <form class="p-r w-70" method="" action="">
@@ -97,8 +97,8 @@
                 </div>
 
                 <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_5">
-                    <h2 class="ff-body fs-xl fw-600 c-black pb-1">Ajoutez vos horaires</h2>
-                    <form class="p-r w-70" method="" action="">
+                    <h2 class="ff-body fs-xl fw-600 c-black">Ajoutez vos horaires</h2>
+                    <form class="p-r w-100 pr-2 o-s" method="" action="">
                         <div class="d-f fd-c">
 
                             {% for day in days %}
@@ -208,7 +208,7 @@
                             <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
                         </div>
 
-                        <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n expandList">
+                        <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n expandList p-a">
                             {% for langage in langages %}
                                 <div class="mb-0c5">
                                     <input class="mutliple-select dataToSave" type="checkbox" id="langages" name="langages" value="{{langage}}" required>

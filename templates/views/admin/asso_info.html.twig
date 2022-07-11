@@ -2,8 +2,6 @@
 
 {% block title %}Hello AssoInfoController!{% endblock %}
 
-{% set services = ['Espace de repos', 'Halte de nuit', 'Soins enfants', 'Dépistage', 'Fontaine à eau',  'Prise',  'Laverie', 'Bien-être', 'Téléphone', 'Boutique solidaire', 'Bagagerie',  'Psychologie',  'Conseil logement', 'Accompagnement social', 'Colis Alimentaire', 'Restauration assise'] %}
-
 {% block body %}
 <div class="d-f p-1 mh-95v">
     {% include '@App/Components/navbar-admin.html.twig' with {'currentPage': currentPage} %}
@@ -17,7 +15,9 @@
            </div>
            <div class="d-f ai-c">
                 <p class="ff-body fw-700 c-blue m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 mw-fc mr-1 openModal c-p">Refusée</p>
+
                 <a  href="{{path("app_asso_valide", {idAsso: asso.id})}}" class="ff-body fw-700 c-white m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 bgc-blue mw-fc c-p td-n">Validée</a>
+
            </div>
         </div>
         <div class="d-f">
@@ -47,7 +47,6 @@
                 <p class="ff-body c-black fs-m fw-700 m-0 mb-2">Horaires</p>
                 <div class="mb-1c5 d-f">
                     <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Lundi</p>
-
                     <p class="ff-body c-black-60 fs-s m-0">{{asso.hoursId.0.monday}}</p>
                 </div>
                 <div class="mb-1c5 d-f">
@@ -114,17 +113,12 @@
         </div>
     </div>
 </div>
- <div class="p-a t-0 l-0 bgc-black-5-60 p-r h-100 w-100 d-n modal">
-    <div class="bgc-white bs-light p-2c5 pt-1 pr-1 d-f jc-c ai-c fd-c br-15 p-a t-50 l-50 ttxy-n50">
-        <span class="as-fe closeModal">{% include '@App/img/close_cross.html.twig' %}</span>
-        <img src="{{ asset('build/images/spotlight.png') }}" width="294" alt="spotlight" />
-        <p class="ff-body fs-l c-black fw-700 ta-c mb-0c5">Êtes-vous sûr de vouloir supprimer cet utilisateur ?</p>
-        <p class="ff-body fs-s c-black-20 ta-c mb-2 m-0">Êtes-vous sûr de vouloir supprimer cet utilisateur ? </p>
-        <div class="d-f ai-c">
-            <p class="ff-body fw-700 c-blue m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 mw-fc mr-1">Annuler</p>
-            <a href="{{path("app_asso_delete", {idAsso: asso.id})}}" class="td-n c-black"><p class="ff-body fw-700 c-white m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 bgc-blue mw-fc">Supprimer</p></a>
-        </div>
-    </div>
-</div>
+{% include '@App/Components/modal.html.twig' with 
+    {'title': 'Êtes-vous sûr de vouloir refuser cette association ? ',
+    'subtitle': 'Vous ne pourrez plus revenir en arrière, il sera supprimé',
+    'path': 'app_asso_delete',
+    'id': asso.id
+    } 
+%}
 {{ encore_entry_script_tags('openModal') }}
 {% endblock %}
