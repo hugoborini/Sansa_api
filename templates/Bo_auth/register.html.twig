@@ -38,6 +38,8 @@
                     </div>
         
                     <input class="bgc-blue br-xxl p-0c75 b-black-10 fs-sm c-white d-b w-100" type="submit" value="S'inscrire">
+                    <input type="hidden" name="token" value="{{ csrf_token('registration_orga') }}"/>
+
                 </form>
                 <p class="ff-body fs-xs fw-400 c-black-20 mt-1 ta-c">Vous avez déjà un compte ? <a href="" class="c-blue fw-600 td-u">Se connecter</a></p>
             </div>

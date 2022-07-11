@@ -1,10 +1,26 @@
 <div class="bgc-blue-xdark pt-2 pb-2 pl-1 pr-1 fb-20 br-xxl h-95v d-f fd-c jc-sb mr-1c5 mw-245">
     <div>
-        <div class="d-f ai-c jc-fs mb-3 pl-1">
+        <div class="d-f ai-c jc-fs mb-3 pl-1 p-r">
             {% include '@App/img/sansa_logo-white.html.twig' %}
             <p class="ff-body fs-xs c-white fw-700 ml-0c75">SANSA</p>
+            {% if template is defined and template == 'asso' %}
+                <a href="{{path('app_asso')}}" class="link-action"></a>
+            {% else  %}
+                <a href="{{path('app_asso')}}" class="link-action"></a>
+            {% endif %}
         </div>
         <div>
+        {% if template is defined and template == 'asso' %}
+            <div class="{{currentPage == 'dashboard' ? 'bgc-blue-dark br-m' : '' }} p-0c75">
+                <a href="{{path('app_asso')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/pictos_home.html.twig' %}</span>Dashboard</a>
+            </div>
+            <div class="{{currentPage == 'informations' ? 'bgc-blue-dark br-m' : '' }} p-0c75">
+                <a href="{{path('app_users_info')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/mes-informations.html.twig' %}</span>Mes informations</a>
+            </div>
+            <div class="{{currentPage == 'services' ? 'bgc-blue-dark br-m' : '' }} p-0c75">
+                <a  href="{{path('app_users')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/mes-services.html.twig' %}</span>Mes services</a>
+            </div>
+        {% else %}
             <div class="{{currentPage == 'dashboard' ? 'bgc-blue-dark br-m' : '' }} p-0c75">
                 <a href="{{path('app_admin')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/pictos_home.html.twig' %}</span>Dashboard</a>
             </div>
@@ -14,6 +30,7 @@
             <div class="{{currentPage == 'users' ? 'bgc-blue-dark br-m' : '' }} p-0c75">
                 <a  href="{{path('app_users')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/pictos_user.html.twig' %}</span>Utilisateurs</a>
             </div>
+        {% endif %}
         </div>
     </div>
     <div class="">

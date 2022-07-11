@@ -2,6 +2,7 @@ import "./images/designer.png";
 import "./images/note_taking.png";
 import "./images/final_step.png";
 import "./images/spotlight.png";
+
 import "./images/account-validated.png";
 import "./images/aurore.png";
 import "./images/create-account.png";
@@ -15,3 +16,7 @@ import "./images/tablet-location.png";
 import "./images/validation-account.png";
 import "./images/world-connection.svg";
 import "./images/Map.png";
+
+import "./images/edit_illu_identity.png";
+import "./images/edit_illu_mission.png";
+
