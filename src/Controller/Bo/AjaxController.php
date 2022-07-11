@@ -15,6 +15,8 @@ use App\Repository\OrganizationRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
 use App\Repository\OrganizationOwnerRepository;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -24,7 +26,7 @@ class AjaxController extends AbstractController
     /**
      * @Route("/bo/ajax/addOrga", name="app_bo_ajax_add_orga", methods="POST")
      */
-    public function addOrgAjax(Request $request, EntityManagerInterface $manager, OrganizationOwnerRepository $orgaOwnerRepo): JsonResponse
+    public function addOrgAjax(Request $request, EntityManagerInterface $manager, OrganizationOwnerRepository $orgaOwnerRepo, MailerInterface $mailer): JsonResponse
     {
 
 
@@ -65,6 +67,9 @@ class AjaxController extends AbstractController
 
         $hoursObj = new Hours();
         $hoursObj->setOrganizationId($organisationObj);
+
+        
+
         $hoursObj->setMonday($data["schedules"]["Lundi"]);
         $hoursObj->setTuesday($data["schedules"]["Mardi"]);
         $hoursObj->setWednesday($data["schedules"]["Mercredi"]);
@@ -98,6 +103,15 @@ class AjaxController extends AbstractController
 
         $manager->flush();
 
+
+        $email = (new Email())
+            ->from('solution.sansa@gmail.com')
+            ->to($data["email"])
+            ->subject('Time for Symfony Mailer!')
+            ->text('Sending emails is fun again!')
+            ->html(fopen(dirname(__DIR__, 3) . "/templates/email/emailAsso.html.twig", "r"));
+
+        $mailer->send($email);
 
 
         return $this->json(["orga ad bdd"]);
