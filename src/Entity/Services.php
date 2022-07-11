@@ -56,7 +56,7 @@ class Services
 
     /**
      * @ORM\ManyToOne(targetEntity=Organization::class, inversedBy="services_id")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=True)
      * @Groups("orgaByService")
      */
     private $organization_id;
