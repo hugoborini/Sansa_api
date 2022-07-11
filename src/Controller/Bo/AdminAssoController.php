@@ -24,17 +24,17 @@ class AdminAssoController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("bo/admin/users/delete/{idAsso}", name="app_asso_delete")
-     */
-    public function deleteUser(OrganizationRepository $assoRepo, int $idAsso): Response
-    {
-        $asso = $assoRepo->find($idAsso);
+    // /**
+    //  * @Route("bo/admin/users/delete/{id}", name="app_asso_delete")
+    //  */
+    // public function deleteUser(OrganizationRepository $assoRepo, int $id): Response
+    // {
+    //     $asso = $assoRepo->find($id);
 
-        $manager = $this->getDoctrine()->getManager();
-        $manager->remove($asso);
-        $manager->flush();
+    //     $manager = $this->getDoctrine()->getManager();
+    //     $manager->remove($asso);
+    //     $manager->flush();
 
-        return $this->redirect($this->generateUrl('app_admin_asso'));
-    }
+    //     return $this->redirect($this->generateUrl('app_admin_asso'));
+    // }
 }

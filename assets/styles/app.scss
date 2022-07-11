@@ -314,12 +314,12 @@ box-sizing: inherit;
     display: block;
 }
 
-.d-n {
-    display: none
-}
-
 .d-f {
     display: flex
+}
+
+.d-n {
+    display: none
 }
 
 .d-if {
@@ -1629,6 +1629,9 @@ box-sizing: inherit;
 .mh-95v {
     min-height: 100vh
 }
+.mh-600 {
+    max-height: 600px;
+}
 
 // TEXT-TRANSFORM
 
@@ -1975,7 +1978,7 @@ button.active {
     }
 }
 
-.asking-asso_cta.active, .asso_cta.active {
+.tab.active {
     background-color: #E3EAF2;
     p {
         border-bottom: 2px solid #305677;
@@ -1989,12 +1992,21 @@ button.active {
     height: 100%;
     position: absolute;
     top: 0;
+    left: 0;
 }
 
 .popup {
     p:hover {
         background-color: #E8E8E8;
     }
+}
+
+.views {
+    display: none;
+}
+
+.views.active {
+    display: block;
 }
 
 @import url('./componentsApp.scss');

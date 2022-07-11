@@ -26,11 +26,11 @@ class UsersController extends AbstractController
     }
 
     /**
-     * @Route("bo/admin/users/delete/{idUser}", name="app_users_delete")
+     * @Route("bo/admin/users/delete/{id}", name="app_users_delete")
      */
-    public function deleteUser(FinalUserRepository $userRepo, int $idUser): Response
+    public function deleteUser(FinalUserRepository $userRepo, int $id): Response
     {
-        $user = $userRepo->find($idUser);
+        $user = $userRepo->find($id);
 
         $manager = $this->getDoctrine()->getManager();
         $manager->remove($user);

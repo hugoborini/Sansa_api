@@ -4,7 +4,7 @@ const SaveData = {
     categories: ["identity", "mission", "coordonnees", "address", "schedules", "langages", "accueil_type", "appointement", "services"],
     
     services: {
-        acceuil: ['Espace de repos', 'Halte de nuit', 'Domiciliation' , 'Accueil de jour', 'Vêtements', 'Téléphone', 'Boutique solidaire', 'Bagagerie'],
+        acceuil: ['Espace de repos', 'Halte de nuit', 'Domiciliation', 'Accueil de jour', 'Vêtements', 'Téléphone', 'Boutique solidaire', 'Bagagerie'],
         alimentation: ['Épicerie Sociale et Solidaire', 'Colis Alimentaire', 'Restauration assise', 'Distribution de repas'],
         sante: ['Médecin généraliste', 'Soins enfants', 'Dépistage', 'Suivi grossesse', 'Infirmière'],
         medecine: ['Dermatologie', 'Addiction', 'Psychologie', 'Pédicure', 'Dentaire', 'Vétérinaire'],
@@ -55,10 +55,6 @@ const SaveData = {
             this.initializeInput(category);
             this.saveIdentity(category);
         });
-
-        // document.querySelector(("button[value='Continuer']".saveData)).addEventListener('click', () => {
-        //     this.exportData();
-        // });
 	},
 
     initializeInput: function(category) {
