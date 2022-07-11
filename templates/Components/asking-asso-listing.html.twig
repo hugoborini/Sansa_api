@@ -16,7 +16,7 @@
             <td class="fs-xs pt-1 pb-1">{{orga.rna}}</td>
             <td class="fs-xs pt-1 pb-1 mw-fc" width="12%">
                 {{orga.phoneNumber is defined and orga.phoneNumber is not empty ? orga.phoneNumber|replace({' ' : ''}) : '-'  }}<br/>
-                <span class="fs-xxs c-black-40 mw-fc">{{orga.organizationOwner.email}}</span>
+                <span class="fs-xxs c-black-40 mw-fc">{{orga.organizationOwner.email is defined and orga.organizationOwner.email is not empty ? orga.organizationOwner.email : '-'}}</span>
             </td>
             <td class="pt-1 pb-1" width="11%">
                 <p class="c-blue-xdark m-0 b-blue br-xxxl pl-1 pt-0c5 pr-1 pb-0c5 bgc-black-3 mw-fc">En attente</p>

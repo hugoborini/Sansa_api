@@ -3,22 +3,22 @@
 {% block title %}Hello AdminAssoController!{% endblock %}
 
 {% block body %}
-    <div class="d-f p-1 mh-95v">
+    <div class="d-f p-1 h-100v">
         {% include '@App/Components/navbar-admin.html.twig' with {'currentPage': currentPage} %}
-        <div class="pt-1 fb-90">
+        <div class="pt-1 fb-90 d-f fd-c">
             <h1 class="ff-body fs-xl c-black-60 fw-700 mb-2 mt-0">{{title}}</h1>
             <div class="d-f mb-1">
-                <div class="asking-asso_cta active">
-                    <p class="active ff-body fs-sm fw-700 pl-1 pt-0c5 pr-1 pb-0c5 m-0 bb-black-10-m c-black-60">Demande d’association</p>
+                <div class="asking-asso_cta tab active">
+                    <p class="active ff-body fs-s fw-700 pl-1 pt-0c5 pr-1 pb-0c5 m-0 bb-black-10-m c-black-60">Demande d’association</p>
                 </div>
-                <div class="asso_cta">
-                    <p class="ff-body fs-sm fw-700 pl-1 pt-0c5 pr-1 pb-0c5 m-0 bb-black-10-m c-black-60">Nos associations</p>
+                <div class="asso_cta tab">
+                    <p class="ff-body fs-s fw-700 pl-1 pt-0c5 pr-1 pb-0c5 m-0 bb-black-10-m c-black-60">Nos associations</p>
                 </div>
             </div>
-           <section class="asking-asso bgc-white pt-1 pb-1 pl-2 pr-2 br-15">
+           <section class="asking-asso bgc-white pt-1 pb-1 pl-2 pr-2 br-15 o-s">
                 {% include '@App/Components/asking-asso-listing.html.twig' %}
             </section>
-            <section class="asso bgc-white pt-1 pb-1 pl-2 pr-2 br-15 d-n">
+            <section class="asso bgc-white pt-1 pb-1 pl-2 pr-2 br-15 d-n o-s">
                 {% include '@App/Components/asso_listing.html.twig' %}
             </section>
         </div>
