@@ -4,10 +4,19 @@
     url("../fonts/Helvetica_Neue.ttf") format("ttf");
 }
 
+$navbarHeight: 82px;
+
 html {
+    height: 100%;
     box-sizing: border-box;
 }
 
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
 *, *:before, *:after {
 
@@ -20,7 +29,7 @@ a:active {
     color: #002D4B;
 } 
 
-a:hover {
+a:hover,li:hover {
     cursor: pointer;
 }
 
@@ -31,8 +40,8 @@ a:hover {
     justify-content: space-between;
     color: #FFF;
     width: 100%;
-    height: 50px;
-    margin: 1em;
+    height: $navbarHeight;
+    padding: 16px;
 }
 
 .menu {
@@ -52,7 +61,25 @@ a:hover {
     color: #305677; 
 }
 
-.menu .authItem:hover {
+.header__right .authItemLogin:hover {
+    background-color: #ffffff;
+    border-bottom: 1px solid #305677;
+    color: #305677;
+}
+
+.header__right .authItemLogin:active {
+    background-color: #ffffff;
+    border-bottom: 1px solid #002D4B;;
+    color: #002D4B;
+}
+
+.header__right .authItem:hover {
+    color: #305677; 
+    cursor: pointer;
+}
+
+.header__right .authItem:active {
+    color: #002D4B;
     cursor: pointer;
 }
 
@@ -83,6 +110,7 @@ a:hover {
 
 // MENU BURGER BEFOR/AFTER
 
+
 #menu-toggle {
   display: none;
 }
@@ -95,7 +123,6 @@ a:hover {
   position: absolute;
   height: 4px;
   width: 30px;
-  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
   border-radius: 2px;
   cursor: pointer;
 }
@@ -108,6 +135,10 @@ a:hover {
 .menu-button::after {
   content: '';
   margin-top: 8px;
+}
+
+#menu-toggle:checked {
+    min-height: 100%;
 }
 
 #menu-toggle:checked + .menu-button-container .menu-button::before {
@@ -162,6 +193,10 @@ footer .text__disclaimer .disclaimer {
             display: none; 
     }
 
+    .header__right {
+        display: none;
+    }
+
     .menu-button-container {
         display: flex;
         justify-content: flex-end;
@@ -170,13 +205,15 @@ footer .text__disclaimer .disclaimer {
 
     .menu {
         position: absolute;
-        top: 3%;
-        margin-top: 50px;
+        top: calc($navbarHeight);
         left: 0;
         flex-direction: column;
         width: 100%;
-        justify-content: center;
-        align-items: center;
+    }
+
+    #menu-toggle:checked ~ .menu li {
+        padding-bottom: 3rem;
+        background-color: white;
     }
 
     .menu > li {
@@ -205,6 +242,15 @@ footer .text__disclaimer .disclaimer {
         padding: 1.5rem 0 1rem 1.5rem;
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
+
+    #menu-toggle:checked ~ .menu {
+        height: calc(100vh - $navbarHeight);
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+
+    }
     
     .menu > li:not(:last-child) {
         border-bottom: 1px solid #444;
@@ -230,7 +276,7 @@ footer .text__disclaimer .disclaimer {
    }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 600px) {
 
     footer .footer-wrapper p {
         font-size: 14px;
