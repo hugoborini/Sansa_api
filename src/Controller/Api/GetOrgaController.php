@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use \Statickidz\GoogleTranslate;
 
 
 class GetOrgaController extends AbstractController
@@ -84,15 +85,22 @@ class GetOrgaController extends AbstractController
     }
 
     /**
-     * @Route("/api/getorgabyid/{id_orga}", name="app_get_orga_by_id", methods="GET")
+     * @Route("/api/getorgabyid/{id_orga}/{language}", name="app_get_orga_by_id", methods="GET")
      * 
      * @OA\Get(description="Récupère une association avec son ID")
      * required=true,
      * @OA\Tag(name="Association")
      */
     
-    public function getOrgaById(NormalizerInterface $normalizer, OrganizationRepository $orgaRepo, int $id_orga): Response
+    public function getOrgaById(NormalizerInterface $normalizer, OrganizationRepository $orgaRepo, int $id_orga, string $language = null): Response
     {
+        $source = 'fr';
+        $target = 'en';
+        $text = '9h30 à 16h00"';
+
+        $trans = new GoogleTranslate();
+        $result = $trans->translate($source, $target, $text);
+
         $orga = $orgaRepo->findById($id_orga);
         $orgaNormalize = $normalizer->normalize($orga, null, ["groups" => "orga"]);
         

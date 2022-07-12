@@ -11,6 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use \Statickidz\GoogleTranslate;
 
 
 class TestController extends AbstractController
@@ -21,18 +22,15 @@ class TestController extends AbstractController
     public function index(MailerInterface $mailer): JsonResponse
     {
 
-        $email = (new Email())
-            ->from('solution.sansa@gmail.com')
-            ->to('hugo.borini@hetic.net')
-            ->subject('Time for Symfony Mailer!')
-            ->text('Sending emails is fun again!')
-            ->html(fopen(dirname(__DIR__, 3) . "/templates/email/emailIncription.html.twig", "r"));
+        $source = 'fr';
+        $target = 'en';
+        $text = '9h30 à 16h00"';
 
-        $mailer->send($email);
+        $trans = new GoogleTranslate();
+        $result = $trans->translate($source, $target, $text);
 
         return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/TestController.php',
+            'message' => $result,
         ]);
     }
 }
