@@ -18,7 +18,7 @@
                 <a href="{{path('app_users_info')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/mes-informations.html.twig' %}</span>Mes informations</a>
             </div>
             <div class="{{currentPage == 'services' ? 'bgc-blue-dark br-m' : '' }} p-0c75">
-                <a  href="{{path('app_users')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/mes-services.html.twig' %}</span>Mes services</a>
+                <a  href="{{path('app_users_services')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/mes-services.html.twig' %}</span>Mes services</a>
             </div>
         {% else %}
             <div class="{{currentPage == 'dashboard' ? 'bgc-blue-dark br-m' : '' }} p-0c75">
