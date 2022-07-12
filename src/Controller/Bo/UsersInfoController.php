@@ -33,7 +33,7 @@ class UsersInfoController extends AbstractController
             "services" => $orgaRepo->findByid($this->getUser())[0]
                                 ->getOraganization()
                                 ->getValues()[0]->getServicesId()
-                                ->getValues()[0]
+                                ->getValues()
 
         ]);
     }
