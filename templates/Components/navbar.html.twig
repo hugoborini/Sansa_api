@@ -1,11 +1,11 @@
 <nav>
   <section class="top-nav">
-    <div class="header__left w-100">
+    <div class="d-f w-100">
       <div class="logo-container d-f ai-c">
-        <a class="pl-0c25" href="/">
+        <a class="pl-0c25 c-p" href="/">
           {% include '@App/img/sansa_logo.html.twig' %}
         </a>
-        <a class="ff-body lh-29 td-n c-blue-dark fs-l fw-700 bgc-white m-1"
+        <a class="ff-body lh-29 td-n c-blue-dark fs-l fw-700 bgc-white m-1 c-p"
           href="/">
           SANSA
         </a>
@@ -14,24 +14,25 @@
 
       <div class="w-100 fs-s jc-e d-f ai-c">
         <input id="menu-toggle" type="checkbox" />
-        <label class="jc-l menu-button-container" for="menu-toggle">
+        <label class="menu-button-container d-n fd-c jc-l c-p col-30"
+          for="menu-toggle">
           <div class="menu-button"></div>
         </label>
-        <ul class="menu lh-24">
-          <li class="ff-body jc-l jc-sa menu-item fw-700 td-n c-blue p-1 m-0c5"
+        <ul class="menu lh-24 list-n">
+          <li class="ff-body jc-l jc-sa menu-item fw-700 td-n c-blue p-1 m-0c5 o-h c-p"
             href="/"
             role="button">
             Nos valeurs
           </li>
 
           <li href="/"
-            class="ff-body jc-sa menu-item fw-700 td-n c-blue p-1 m-0c5"
+            class="ff-body jc-sa menu-item fw-700 td-n c-blue p-1 m-0c5 c-p"
             role="button">
             Notre solution
           </li>
 
           <li href="/"
-            class="ff-body jc-sa menu-item fw-700 td-n c-blue p-1 m-0c5"
+            class="ff-body jc-sa menu-item fw-700 td-n c-blue p-1 m-0c5 c-p"
             role="button">
             Nous contacter
           </li>
@@ -43,15 +44,15 @@
       <ul class="d-f lh-24 mr-1">
         {% if app.user %}
           <li href="/logout"
-            class="ff-body fw-700 authItem td-n c-blue br-xxxl b-blue pt-1 pr-2c5 pb-1 pl-2c5">
+            class="d-f ff-body fw-700 td-n c-blue br-xxxl b-blue pt-1 pr-2c5 pb-1 pl-2c5 c-p">
             Déconnexion
           </li>
         {% else %}
-          <li class="ff-body fw-700 authItem c-blue br-xxxl b-blue pt-1 pr-2c5 pb-1 pl-2c5 m-1 td-n"
+          <li class="d-f ff-body fw-700 auth-item-register c-blue br-xxxl b-blue pt-1 pr-2c5 pb-1 pl-2c5 m-1 td-n c-p"
             href="/register">
             Inscription
           </li>
-          <li class="ff-body fw-700 authItemLogin authItem b-blue br-xxxl c-white bgc-blue pt-1 pr-2c5 pb-1 pl-2c5 m-1 td-n"
+          <li class="d-f ff-body fw-700 c-white auth-item-login b-blue br-xxxl bgc-blue pt-1 pr-2c5 pb-1 pl-2c5 m-1 td-n c-p"
             href="/login">
             Connexion
           </li>
