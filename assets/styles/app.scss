@@ -1438,6 +1438,10 @@ body {
 
 // WIDTH
 
+.col-24 {
+  width: 24px;
+}
+
 .col-30 {
   width: 30px;
 }
@@ -2053,4 +2057,8 @@ button.active {
 
 .views.active {
     display: block;
+}
+
+.service_list input:checked {
+    accent-color: #55789B;
 }
