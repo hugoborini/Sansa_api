@@ -20,3 +20,4 @@ import "./images/Map.png";
 import "./images/edit_illu_identity.png";
 import "./images/edit_illu_mission.png";
 
+import "./images/Couverture.svg";
