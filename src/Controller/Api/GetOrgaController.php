@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use \Statickidz\GoogleTranslate;
 
 
 class GetOrgaController extends AbstractController
@@ -84,18 +85,66 @@ class GetOrgaController extends AbstractController
     }
 
     /**
-     * @Route("/api/getorgabyid/{id_orga}", name="app_get_orga_by_id", methods="GET")
+     * @Route("/api/getorgabyid/{id_orga}/{language}", name="app_get_orga_by_id", methods="GET")
      * 
      * @OA\Get(description="Récupère une association avec son ID")
      * required=true,
      * @OA\Tag(name="Association")
      */
     
-    public function getOrgaById(NormalizerInterface $normalizer, OrganizationRepository $orgaRepo, int $id_orga): Response
+    public function getOrgaById(NormalizerInterface $normalizer, OrganizationRepository $orgaRepo, int $id_orga, string $language = null): Response
     {
+
+        $trans = new GoogleTranslate();
         $orga = $orgaRepo->findById($id_orga);
+        if($language){
+            $orga[0]->setDescription($trans->translate(
+                "fr", $language, $orga[0]->getDescription()));
+
+            $orga[0]->getPreferencialWelcomes()->getValues()[0]->setValue(
+                $trans->translate("fr", $language, $orga[0]->getPreferencialWelcomes()->getValues()[0]->getValue())
+            );
+
+            ($orga[0]->getHoursId()->getValues()[0]->setMonday(
+                $trans->translate("fr", $language, $orga[0]->getHoursId()->getValues()[0]->getMonday())
+            ));
+
+            ($orga[0]->getHoursId()->getValues()[0]->setThurday(
+                $trans->translate("fr", $language, $orga[0]->getHoursId()->getValues()[0]->getThurday())
+            ));
+
+            ($orga[0]->getHoursId()->getValues()[0]->setWednesday(
+                $trans->translate("fr", $language, $orga[0]->getHoursId()->getValues()[0]->getWednesday())
+            ));
+
+            ($orga[0]->getHoursId()->getValues()[0]->setTuesday(
+                $trans->translate("fr", $language, $orga[0]->getHoursId()->getValues()[0]->getTuesday())
+            ));
+
+            ($orga[0]->getHoursId()->getValues()[0]->setFriday(
+                $trans->translate("fr", $language, $orga[0]->getHoursId()->getValues()[0]->getFriday())
+            ));
+
+            ($orga[0]->getHoursId()->getValues()[0]->setSaturday(
+                $trans->translate("fr", $language, $orga[0]->getHoursId()->getValues()[0]->getSaturday())
+            ));
+
+            ($orga[0]->getHoursId()->getValues()[0]->setSunday(
+                $trans->translate("fr", $language, $orga[0]->getHoursId()->getValues()[0]->getSunday())
+            ));
+
+            $orga[0]->setSpokenLanguage(
+                $trans->translate("fr", $language, $orga[0]->getSpokenLanguage())
+
+            );
+        }
+
+
         $orgaNormalize = $normalizer->normalize($orga, null, ["groups" => "orga"]);
-        
+        $source = 'fr';
+        $target = 'en';
+        $text = '9h30 à 16h00"';
+
         return $this->json($this->reFactoService($orgaNormalize));
     }
 
