@@ -141,9 +141,7 @@ class GetOrgaController extends AbstractController
 
 
         $orgaNormalize = $normalizer->normalize($orga, null, ["groups" => "orga"]);
-        $source = 'fr';
-        $target = 'en';
-        $text = '9h30 à 16h00"';
+
 
         return $this->json($this->reFactoService($orgaNormalize));
     }
