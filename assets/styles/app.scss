@@ -1135,6 +1135,10 @@ body {
   line-height: 29.3px;
 }
 
+.lh-29 {
+    line-height: 29px;
+}
+
 .bs-0 {
   box-shadow: 0 0 0;
 }
@@ -1435,6 +1439,10 @@ body {
 }
 
 // WIDTH
+
+.col-24 {
+  width: 24px;
+}
 
 .col-30 {
   width: 30px;
@@ -2049,5 +2057,14 @@ button.active {
 }
 
 .views.active {
+
   display: block;
 }
+
+    display: block;
+}
+
+.service_list input:checked {
+    accent-color: #55789B;
+}
+

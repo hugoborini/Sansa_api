@@ -47,6 +47,7 @@ const updateData = {
         this.updateMission();
         this.updateAcceuil();
         this.updateSchedules();
+        this.updateServices();
         console.log((this.categoryInput));
 	},
 
@@ -146,6 +147,22 @@ const updateData = {
             })
         })
     },
+
+
+    updateServices: function() {
+        this.categoryInput['services'].forEach(el => {
+            el.addEventListener('change', (e) => {
+                let choiceServices = [];
+                let choices = document.querySelectorAll('input[id="services"]:checked');                    
+                choices.forEach(choice => {
+                    choiceServices.push(choice.value);
+                    this.data['services'] = choiceServices;
+                });
+                console.log(this.data);
+                return;
+            })
+        })
+    }
 
     // exportData: function() {
     //     $.ajax({     
