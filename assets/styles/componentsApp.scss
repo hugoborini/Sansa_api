@@ -30,14 +30,7 @@ box-sizing: inherit;
 }
 
 .top-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    color: #FFF;
-    width: 100%;
     height: $navbarHeight;
-    padding: 16px;
 }
 
 .menu {
