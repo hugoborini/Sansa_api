@@ -27,13 +27,23 @@ class UsersInfoController extends AbstractController
      */
     public function service(OrganizationOwnerRepository $orgaRepo): Response
     {
+
+        $arrayService = [];
+        $allService = $orgaRepo->findByid($this->getUser())[0]
+            ->getOraganization()
+            ->getValues()[0]->getServicesId()
+            ->getValues();
+
+        foreach ($allService as $service){
+           array_push($arrayService, $service->getServiceName());
+        }
+
+
         return $this->render('views/users/services.html.twig', [
             'controller_name' => 'UsersServicesController',
             'currentPage' => 'services',
-            "services" => $orgaRepo->findByid($this->getUser())[0]
-                                ->getOraganization()
-                                ->getValues()[0]->getServicesId()
-                                ->getValues()
+            'services' => $arrayService
+
 
         ]);
     }
