@@ -14,7 +14,6 @@ class UsersInfoController extends AbstractController
      */
     public function index(OrganizationOwnerRepository $orgaRepo): Response
     {
-
         return $this->render('views/users/user_info.html.twig', [
             'controller_name' => 'UsersInfoController',
             'currentPage' => 'informations',
@@ -37,14 +36,11 @@ class UsersInfoController extends AbstractController
         foreach ($allService as $service){
            array_push($arrayService, $service->getServiceName());
         }
-
-
+        
         return $this->render('views/users/services.html.twig', [
             'controller_name' => 'UsersServicesController',
             'currentPage' => 'services',
-            'services' => $arrayService
-
-
+            'userServices' => $arrayService
         ]);
     }
 

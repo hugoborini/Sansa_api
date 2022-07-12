@@ -72,7 +72,7 @@ class BoAuthController extends AbstractController
                 return $this->redirectToRoute("app_admin");
             } elseif ($this->getUser()->getRoles()[0] == "ROLE_USER") {
                 if($this->getUser()->isHasasso()){
-                    dd("redirect to user dashboard");
+                    return  $this->redirectToRoute("app_asso");
                 } else{
                     return $this->redirectToRoute("app_register_step");
 
