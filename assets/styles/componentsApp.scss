@@ -4,56 +4,53 @@
     url("../fonts/Helvetica_Neue.ttf") format("ttf");
 }
 
+$navbarHeight: 82px;
+
 html {
+    height: 100%;
     box-sizing: border-box;
 }
 
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
 *, *:before, *:after {
-
 box-sizing: inherit;
 
 }
 
-a:active { 
-    cursor: pointer;
-    color: #002D4B;
-} 
-
-a:hover {
-    cursor: pointer;
+.logo-container {
+    a:active { 
+        color: #002D4B;
+    } 
 }
 
 .top-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    color: #FFF;
-    width: 100%;
-    height: 50px;
-    margin: 1em;
+    height: $navbarHeight;
 }
 
 .menu {
-    display: flex;
-    cursor: pointer;
-    width: 100%;
-    padding:0%
+    & .menu-item:active {
+        color: #002D4B; 
+    }
+    & .menu-item:hover {
+        color: #305677; 
+    }
 }
 
-.menu .menu-item:active {
-    cursor: pointer;
-    color:#002D4B; 
+.header__right {
+    .auth-item-login:hover, .auth-item-login:active {
+        background-color: #002D4B;
+        border-bottom: 1px solid #002D4B;
+    }
 } 
 
-.menu .menu-item:hover {
-    cursor: pointer;
+.header__right .auth-item-register:hover {
     color: #305677; 
-}
-
-.menu .authItem:hover {
-    cursor: pointer;
 }
 
 .divider {
@@ -61,31 +58,7 @@ a:hover {
     border-left: 1px solid #E8E8E8;
 }
 
-.header__left {
-    display: flex;
-}
-
-.header__right ul li {
-    display: flex;
-}
-
-.menu > li {
-  overflow: hidden;
-}
-
-.menu-button-container {
-  display: none;
-  width: 30px;
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: left;
-}
-
 // MENU BURGER BEFOR/AFTER
-
-#menu-toggle {
-  display: none;
-}
 
 .menu-button,
 .menu-button::before,
@@ -95,9 +68,7 @@ a:hover {
   position: absolute;
   height: 4px;
   width: 30px;
-  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
   border-radius: 2px;
-  cursor: pointer;
 }
 
 .menu-button::before {
@@ -110,23 +81,27 @@ a:hover {
   margin-top: 8px;
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button::before {
-  margin-top: 0px;
-  transform: rotate(405deg);
+#menu-toggle:checked {
+    min-height: 100%;
+
+    &+ .menu-button-container .menu-button {
+        background: rgba(255, 255, 255, 0);
+
+        &::before {
+            margin-top: 0px;
+            transform: rotate(405deg);
+        }
+        &::after {
+            margin-top: 0px;
+            transform: rotate(-405deg);
+        }
+    }
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button {
-  background: rgba(255, 255, 255, 0);
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button::after {
-  margin-top: 0px;
-  transform: rotate(-405deg);
-}
 
 // FOOTER
 
-footer {
+.footer__container {
     background-repeat: no-repeat;
     background-size: 80%;
     background-image: url('/templates/img/sansa_background_footer.svg');
@@ -135,31 +110,18 @@ footer {
 }
 
 .footer-wrapper {
-    flex-direction: row;
     padding-bottom: 15rem;
-    padding-top: 2rem;
 }
 
-footer .text__disclaimer .disclaimer {
-    display: flex;
-    align-items: flex-end;
-    justify-content: end;
-    flex-direction: row-reverse;
-   
-  }
-
-
-
 @media (max-width: 1035px) {
-
     // NAVBAR
     
     .divider {
         display: none;
     }
 
-    .top-nav .authItem {
-            display: none; 
+    .header__right {
+        display: none;
     }
 
     .menu-button-container {
@@ -170,24 +132,20 @@ footer .text__disclaimer .disclaimer {
 
     .menu {
         position: absolute;
-        top: 3%;
-        margin-top: 50px;
+        top: calc($navbarHeight);
         left: 0;
         flex-direction: column;
         width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .menu > li {
-        display: flex;
-        justify-content: left;
-        margin: 0;
-        padding-left: 2rem;
-        padding: 0.5rem 0;
-        width: 100%;
-        color: #55789b;
-        background-color: #FFF;
+        & li {
+            display: flex;
+            justify-content: left;
+            margin: 0;
+            padding-left: 2rem;
+            padding: 0.5rem 0;
+            width: 100%;
+            color: #55789b;
+            background-color: #FFF;
+        }
     }
 
     #menu-toggle ~ .menu li {
@@ -198,12 +156,19 @@ footer .text__disclaimer .disclaimer {
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
 
-    #menu-toggle:checked ~ .menu li {
-        font-weight: 600;
-        border: .25px solid #E8E8E8;
-        height: 4rem;
-        padding: 1.5rem 0 1rem 1.5rem;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    #menu-toggle:checked ~ .menu {
+        height: calc(100vh - $navbarHeight);
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        & li {
+            font-weight: 600;
+            border-top: .25px solid #E8E8E8;
+            height: 4rem;
+            padding: 1.5rem 0 1.5rem 1.5rem;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
     }
     
     .menu > li:not(:last-child) {
@@ -212,53 +177,34 @@ footer .text__disclaimer .disclaimer {
 
     // FOOTER
 
-    footer .footer-wrapper p {
-        font-size: 14px;
-    }
-
-    footer .footer-wrapper ul {
-        font-size: 14px;
-    }
-
-    footer .discl span {
-        font-size: 9px;
-    }
-
-    .footer-wrapper  {
+    .footer-wrapper {
         padding: 1.5rem 2rem;
         margin-bottom: 12rem;
-   }
+        p,ul {
+            font-size: 14px;
+        }
+
+    }
 }
 
-@media (max-width: 430px) {
-
-    footer .footer-wrapper p {
-        font-size: 14px;
-    }
-
-    footer .footer-wrapper ul {
-        font-size: 14px;
-    }
-
-    footer .discl span {
-        font-size: 9px;
-    }
+@media (max-width: 600px) {
 
     // FOOTER
-   
-    footer {
+    .footer__container {
         background-size: 100%;
         background-image: url('/templates/img/sansa_background_mobile_footer.svg');
         background-position: bottom;
+        & p, ul li {
+            font-size: 14px;
+        }
+        & .disclaimer {
+            font-size: 9px;
+        }
     }
 
     .footer-wrapper  {
         flex-direction: column;
         padding: 1.5rem 2rem;
         margin-bottom: 10rem;
-   }
-
-   footer ul li {
-       font-size: 14px;
    }
 }
