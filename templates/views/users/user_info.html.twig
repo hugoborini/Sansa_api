@@ -12,13 +12,13 @@
         <div class="pt-1 fb-90 d-f fd-c">
             <div class="d-f">
                 <div class="identity_cta tab active">
-                    <p class="active ff-body fs-s fw-700 pl-1 pt-0c5 pr-1 pb-0c5 m-0 bb-black-10-m c-black-60">Identité et coordonnées</p>
+                    <p class="active ff-body fs-s fw-700 pl-1 pt-0c5 pr-1 pb-0c5 m-0 bb-black-10-m c-black-60 c-p">Identité et coordonnées</p>
                 </div>
                 <div class="mission_cta tab">
-                    <p class="ff-body fs-s fw-700 pl-1 pt-0c5 pr-1 pb-0c5 m-0 bb-black-10-m c-black-60">Mission et accueil</p>
+                    <p class="ff-body fs-s fw-700 pl-1 pt-0c5 pr-1 pb-0c5 m-0 bb-black-10-m c-black-60 c-p">Mission et accueil</p>
                 </div>
                 <div class="schedules_cta tab">
-                    <p class="ff-body fs-s fw-700 pl-1 pt-0c5 pr-1 pb-0c5 m-0 bb-black-10-m c-black-60">Horaires</p>
+                    <p class="ff-body fs-s fw-700 pl-1 pt-0c5 pr-1 pb-0c5 m-0 bb-black-10-m c-black-60 c-p">Horaires</p>
                 </div>
             </div>
             <div class="identity views active">
@@ -34,41 +34,41 @@
                             <div class="data">
                                 <div class="mb-1c5">
                                     <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Adresse e-mail</p>
-                                    <p class="ff-body c-black-60 lh-1c5 fs-s m-0">associationducoeur@gmail.com</p>
+                                    <p class="ff-body c-black-60 lh-1c5 fs-s m-0">{{orgaUser.organizationOwner.email}}</p>
                                 </div>
                                 <div class="mb-1c5">
                                     <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Téléphone</p>
-                                    <p class="ff-body c-black-60 lh-1c5 fs-s m-0">06 46 81 01 97</p>
+                                    <p class="ff-body c-black-60 lh-1c5 fs-s m-0">{{orgaUser.phoneNumber}}</p>
                                 </div>
                                 <div class="mb-1c5">
                                     <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Site internet</p>
-                                    <p class="ff-body c-black-60 lh-1c5 fs-s m-0">restaurantsducoeurs@gmail.com</p>
+                                    <p class="ff-body c-black-60 lh-1c5 fs-s m-0">{% if orgaUser.website is defined and orgaUser.website is not empty %}<a href="{{orgaUser.website}}" target="_blank" class="td-n c-black-60">{{orgaUser.website}}{% else %}-{% endif %}</a></p>
                                 </div>
                                 <div class="">
                                     <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Adresse postale</p>
-                                    <p class="ff-body c-black-60 lh-1c5 fs-s m-0">17 rue François Mouthon</p>
+                                    <p class="ff-body c-black-60 lh-1c5 fs-s m-0">{{orgaUser.adress}}</p>
                                 </div>
                             </div>
 
                             <div class="customForm d-n">
                                 <div class="mb-1c5">
                                     <p class="ff-body c-black-40 lh-1c5 fs-s m-0">Adresse e-mail</p>
-                                    <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToUpdate" name="coordonnees" type="text" id="email"  placeholder="johndoe@gmail.com" required>
+                                    <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToUpdate" name="coordonnees" type="text" id="email"  placeholder="{{orgaUser.organizationOwner.email}}">
                                 </div>
 
                                 <div class="mb-1c5">
                                     <p class="ff-body c-black-40 lh-1c5 fs-s m-0">Téléphone</p>
-                                    <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToUpdate" name="coordonnees" type="tel" id="telephone" placeholder="0786831179" required>
+                                    <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToUpdate" name="coordonnees" type="tel" id="telephone" placeholder="{{orgaUser.phoneNumber}}">
                                 </div>
 
                                 <div class="mb-1c5">
                                     <p class="ff-body c-black-40 lh-1c5 fs-s m-0">Site internet</p>
-                                    <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToUpdate" name="coordonnees" type="text" id="site" placeholder="www.association.fr">
+                                    <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToUpdate" name="coordonnees" type="text" id="site" placeholder="{{orgaUser.website}}">
                                 </div>
 
                                 <div class="mb-1c5">
                                     <p class="ff-body c-black-40 lh-1c5 fs-s m-0">Adresse postale</p>
-                                    <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToUpdate" name="coordonnees" type="text" id="address" placeholder="561 avenue des sablons">
+                                    <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToUpdate" name="coordonnees" type="text" id="address" placeholder="{{orgaUser.adress}}">
                                 </div>
 
                                 <p id="submit" class="ff-body fw-700 c-white m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 bgc-blue mw-fc c-p td-n">Enregistrer les modifications</p>
@@ -91,18 +91,12 @@
                     </div>
                     <div class="data">
                         <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Mission</p>
-                        <p class="ff-body c-black-60 lh-1c5 fs-s m-0">L’objectif est de créer et maintenir un lien social avec des personnes exclues, isolées et en situation de grande précarité, afin d’encourager leur parcours de réinsertion. Trois principales activités sont mises en œuvre :
-                            Aller au-devant et accueillir chaque semaine ces publics sur plusieurs sites parisien 
-                            Réaliser une veille sociale en direction de personnes en situation de rue, en coordination avec les acteurs associatifs et institutionnels du territoir  
-                            Informer les personnes en situation de précarité
-                        </p>
+                        <p class="ff-body c-black-60 lh-1c5 fs-s m-0">{{orgaUser.description}}</p>
                     </div>
                     <div class="d-n customForm">
                         <p class="ff-body c-black-40 lh-1c5 fs-s fw-400 m-0">Mission</p>
-                        <textarea rows="7" class="ff-body c-black-40 lh-1c5 fs-s m-0 w-100 br-15 b-black-20 mb-1c5 dataToUpdate" name="mission" type="">L’objectif est de créer et maintenir un lien social avec des personnes exclues, isolées et en situation de grande précarité, afin d’encourager leur parcours de réinsertion. Trois principales activités sont mises en œuvre :
-                            Aller au-devant et accueillir chaque semaine ces publics sur plusieurs sites parisien 
-                            Réaliser une veille sociale en direction de personnes en situation de rue, en coordination avec les acteurs associatifs et institutionnels du territoir  
-                            Informer les personnes en situation de précarité
+                        <textarea rows="7" class="ff-body c-black-40 lh-1c5 fs-s m-0 w-100 br-15 b-black-20 mb-1c5 dataToUpdate" name="mission" type="">
+                            {{orgaUser.description}}
                         </textarea>
                         <p id="submit" class="ff-body fw-700 c-white m-0 b-blue br-xxxl pl-2 pt-1 pr-2 pb-1 bgc-blue mw-fc c-p td-n">Enregistrer les modifications</p>
                     </div>
@@ -116,15 +110,15 @@
                         <div class="data">
                             <div class="mb-1c5">
                                 <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Langues</p>
-                                <p class="ff-body c-black-60 lh-1c5 fs-s m-0">Francais, Anglais</p>
+                                <p class="ff-body c-black-60 lh-1c5 fs-s m-0">{{orgaUser.spokenLanguage}}</p>
                             </div>
                             <div class="mb-1c5">
                                 <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Type d'accueil</p>
-                                <p class="ff-body c-black-60 lh-1c5 fs-s m-0">Accueil exclusif</p>
+                                <p class="ff-body c-black-60 lh-1c5 fs-s m-0">{{orgaUser.preferencialWelcomes.values.0.value}}</p>
                             </div>
                             <div class="mb-1c5">
                                 <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Sur rendez-vous</p>
-                                <p class="ff-body c-black-60 lh-1c5 fs-s m-0">Oui</p>
+                                <p class="ff-body c-black-60 lh-1c5 fs-s m-0">{{orgaUser.byAppointment ? "Oui" : "Non"}}</p>
                             </div>
                         </div>
                         <div class="customForm d-n p-r">
@@ -182,31 +176,31 @@
                     <div class="data">
                         <div class="mb-1c5 d-f">
                             <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Lundi</p>
-                            <p class="ff-body c-black-60 fs-s m-0">8h30 - 12h30 / 14h - 17h30</p>
+                            <p class="ff-body c-black-60 fs-s m-0">{{orgaUser.hoursId.0.monday ? orgaUser.hoursId.0.monday : 'Férmé'}}</p>
                         </div>
                         <div class="mb-1c5 d-f">
                             <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Mardi</p>
-                            <p class="ff-body c-black-60 fs-s m-0">8h30 - 12h30 / 14h - 17h30</p>
+                            <p class="ff-body c-black-60 fs-s m-0">{{orgaUser.hoursId.0.tuesday ? orgaUser.hoursId.0.tuesday : 'Férmé'}}</p>
                         </div>
                         <div class="mb-1c5 d-f">
                             <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Mercredi</p>
-                            <p class="ff-body c-black-60 fs-s m-0">8h30 - 12h30 / 14h - 17h30</p>
+                            <p class="ff-body c-black-60 fs-s m-0">{{orgaUser.hoursId.0.wednesday ? orgaUser.hoursId.0.wednesday : 'Férmé'}}</p>
                         </div>
                         <div class="mb-1c5 d-f">
                             <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Jeudi</p>
-                            <p class="ff-body c-black-60 fs-s m-0">8h30 - 12h30 / 14h - 17h30</p>
+                            <p class="ff-body c-black-60 fs-s m-0">{{orgaUser.hoursId.0.thurday ? orgaUser.hoursId.0.thurday : 'Férmé'}}</p>
                         </div>
                         <div class="mb-1c5 d-f">
                             <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Vendredi</p>
-                            <p class="ff-body c-black-60 fs-s m-0">8h30 - 12h30 / 14h - 17h30</p>
+                            <p class="ff-body c-black-60 fs-s m-0">{{orgaUser.hoursId.0.friday ? orgaUser.hoursId.0.friday : 'Férmé'}}</p>
                         </div>
                         <div class="mb-1c5 d-f">
                             <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Samedi</p>
-                            <p class="ff-body c-black-60 fs-s m-0">8h30 - 12h30 / 14h - 17h30</p>
+                            <p class="ff-body c-black-60 fs-s m-0">{{orgaUser.hoursId.0.saturday ? orgaUser.hoursId.0.saturday : 'Férmé'}}</p>
                         </div>
                         <div class="d-f">
                             <p class="ff-body c-black-60 fs-s fw-700 m-0 fb-30">Dimanche</p>
-                            <p class="ff-body c-black-60 fs-s m-0">Fermé</p>
+                            <p class="ff-body c-black-60 fs-s m-0">{{orgaUser.hoursId.0.sunday ? orgaUser.hoursId.0.sunday : 'Férmé'}}</p>
                         </div>
                     </div>
                     <div class="customForm d-n">
