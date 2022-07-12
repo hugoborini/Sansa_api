@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 echo "install depency"
 composer install
 sleep 1

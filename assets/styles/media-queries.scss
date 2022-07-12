@@ -1,0 +1,131 @@
+@media only screen and (min-width: 900px) {
+  .hero-page-img {
+    display: none;
+  }
+  .hero-page-container {
+    background-image: url("../../assets/images/Couverture.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: auto;
+    padding-left: 58px;
+
+    .sub-text-hero {
+      line-height: 24px;
+    }
+  }
+
+  .hero-page-button {
+    display: none;
+  }
+
+  .text-hero-page {
+    text-align: left;
+    align-content: left;
+    width: 28%;
+
+    h1 {
+      line-height: 61px;
+      font-size: 50px;
+      padding-top: 40%;
+    }
+
+    p {
+      font-size: 16px;
+      text-align: left;
+      align-content: left;
+      padding-bottom: 20%;
+    }
+  }
+
+  .hero-page {
+    h2 {
+      font-size: 32px;
+      line-height: 39px;
+    }
+    h3 {
+      font-size: 20px;
+      line-height: 25px;
+    }
+    .app-sansa {
+      padding-top: 2rem;
+    }
+    .text-app-sansa {
+      display: flex;
+    }
+    .title-desktop {
+      display: block;
+    }
+    .text-app-sansa-desktop {
+      text-align: left;
+      align-content: left;
+      margin: 0 60px 0 44px;
+      width: 40%;
+    }
+    .title-desktop {
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 700;
+      padding-bottom: 1rem;
+    }
+    .discover-sansa {
+      margin: 0 88px 0 88px;
+      border-radius: 32px;
+    }
+    .button-discover-sansa {
+      justify-content: flex-start;
+      margin: 20px 0 0 40px;
+    }
+    .tablet-location {
+      font-size: 32px;
+      line-height: 39px;
+    }
+    .map-hero-page-desktop {
+      margin-top: 2rem;
+      display: block;
+      width: 90%;
+    }
+    .map-hero-mobile {
+      display: none;
+    }
+    .tablet-adress {
+      margin: 0 88px 0 88px;
+      border-radius: 32px;
+    }
+    .tablet-adress-img {
+      display: block;
+      padding-top: 0px;
+    }
+    .title-tablet-adress {
+      text-align: left;
+      align-content: left;
+    }
+    .homepage-img {
+      width: 60%;
+      margin: 0px;
+      img {
+        width: 100%;
+      }
+    }
+    .sansa-assos {
+      font-size: 32px;
+      line-height: 39px;
+    }
+    .sansa-assos-text {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    .list-adress {
+      margin-left: 2rem;
+      justify-content: space-between;
+    }
+    .login-assos {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+  .partner {
+    margin: 0 88px 30px 88px;
+    border-radius: 32px;
+    padding-bottom: 1rem;
+  }
+}

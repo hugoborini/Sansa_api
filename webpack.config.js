@@ -1,9 +1,9 @@
-const Encore = require('@symfony/webpack-encore');
+const Encore = require("@symfony/webpack-encore");
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
 if (!Encore.isRuntimeEnvironmentConfigured()) {
-    Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');
+  Encore.configureRuntimeEnvironment(process.env.NODE_ENV || "dev");
 }
 
 Encore
@@ -23,9 +23,16 @@ Encore
     .addEntry('app', './assets/app.js')
     .addEntry('tooglePassword', './assets/js/togglePassword.js')
     .addEntry('form', './assets/js/form.js')
+    .addEntry('expandList', './assets/js/form/expandList.js')
+    .addEntry('toggleSchedules', './assets/js/form/toggleSchedules.js')
     .addEntry('openPopup', './assets/js/openPopup.js')
     .addEntry('openModal', './assets/js/openModal.js')
     .addEntry('graph', './assets/js/graph.js')
+    .addEntry('graph_asso', './assets/js/graph_asso.js')
+    .addEntry('updateData', './assets/js/updateData.js')
+    .addEntry('changeTab', './assets/js/changeTab.js')
+    .addEntry('toggleForm', './assets/js/toggleForm.js')
+    .addEntry('manageService', './assets/js/manageService.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
@@ -78,5 +85,6 @@ Encore
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
 ;
+
 
 module.exports = Encore.getWebpackConfig();

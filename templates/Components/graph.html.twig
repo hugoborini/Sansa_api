@@ -1,3 +1,6 @@
 <canvas id="myChart"></canvas>
-
+{% if template is defined and template == 'asso' %}
+{{ encore_entry_script_tags('graph_asso') }}
+{% else %}
 {{ encore_entry_script_tags('graph') }}
+{% endif %}
