@@ -36,7 +36,7 @@ class UsersInfoController extends AbstractController
         foreach ($allService as $service){
            array_push($arrayService, $service->getServiceName());
         }
-
+        
         return $this->render('views/users/services.html.twig', [
             'controller_name' => 'UsersServicesController',
             'currentPage' => 'services',
