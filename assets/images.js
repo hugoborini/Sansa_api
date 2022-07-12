@@ -21,3 +21,14 @@ import "./images/edit_illu_identity.png";
 import "./images/edit_illu_mission.png";
 
 import "./images/Couverture.svg";
+
+import "./images/edit_accueil.png";
+import "./images/edit_activites.png";
+import "./images/edit_alimentation.png";
+import "./images/edit_conseil.png";
+import "./images/edit_hygiene.png";
+import "./images/edit_medecine.png";
+import "./images/edit_sante.png";
+import "./images/edit_technologie.png";
+
+
