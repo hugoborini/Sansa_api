@@ -132,17 +132,7 @@ class FinalUser implements UserInterface
         return $this;
     }
 
-    public function getSecretQuestion(): ?SecretQuestion
-    {
-        return $this->secret_question;
-    }
 
-    public function setSecretQuestion(?SecretQuestion $secret_question): self
-    {
-        $this->secret_question = $secret_question;
-
-        return $this;
-    }
 
     public function getTel(): ?string
     {
