@@ -18,10 +18,6 @@ body {
     overflow-x: hidden;
 }
 
-*, *:before, *:after {
-box-sizing: inherit;
-
-}
 
 .logo-container {
     a:active { 
@@ -98,6 +94,19 @@ box-sizing: inherit;
     }
 }
 
+// 404 page 
+
+.page_notfound_container {
+
+
+    .text1 {
+        color: #545454;
+    }
+
+    .text2 {
+        color: #808080;
+    }
+}
 
 // FOOTER
 
@@ -112,6 +121,7 @@ box-sizing: inherit;
 .footer-wrapper {
     padding-bottom: 15rem;
 }
+
 
 @media (max-width: 1035px) {
     // NAVBAR
@@ -174,6 +184,19 @@ box-sizing: inherit;
     .menu > li:not(:last-child) {
         border-bottom: 1px solid #444;
     }
+    // 404 PAGE
+
+    .page_notfound_container {  
+
+        .text1 {
+            font-size: 20px;
+            line-height: 24.42px;
+        }
+
+        .text2 {
+            font-size: 16px;
+        }
+    } 
 
     // FOOTER
 
@@ -186,6 +209,7 @@ box-sizing: inherit;
 
     }
 }
+
 
 @media (max-width: 600px) {
 
