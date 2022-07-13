@@ -5,6 +5,9 @@ namespace App\Controller\Bo;
 use App\Entity\Category;
 use App\Entity\OrganizationOwner;
 use App\Entity\Services;
+use App\Repository\HoursRepository;
+use App\Repository\PreferencialWelcomeRepository;
+use App\Repository\ServicesRepository;
 use DateTime;
 use App\Entity\Hours;
 use App\Entity\Organization;
@@ -26,7 +29,10 @@ class AjaxController extends AbstractController
     /**
      * @Route("/bo/ajax/addOrga", name="app_bo_ajax_add_orga", methods="POST")
      */
-    public function addOrgAjax(Request $request, EntityManagerInterface $manager, OrganizationOwnerRepository $orgaOwnerRepo, MailerInterface $mailer): JsonResponse
+    public function addOrgAjax(Request $request,
+                               EntityManagerInterface $manager,
+                               OrganizationOwnerRepository $orgaOwnerRepo,
+                               MailerInterface $mailer): JsonResponse
     {
 
 
@@ -114,6 +120,101 @@ class AjaxController extends AbstractController
         $mailer->send($email);
 
 
+        return $this->json(["orga ad bdd"]);
+    }
+
+    /**
+     * @Route("/bo/ajax/updateOrga", name="app_bo_ajax_update_orga", methods="POST")
+     */
+    public function editOrgAjax(Request $request,
+                                EntityManagerInterface $manager,
+                                OrganizationOwnerRepository $orgaOwnerRepo,
+                                OrganizationRepository $orga,
+                                PreferencialWelcomeRepository $preferencialWelcomeRepository,
+                                HoursRepository $hoursRepository,
+                                ServicesRepository $servicesRepository): JsonResponse {
+
+        $data = $request->request->all();
+
+
+        $idOrga = $orgaOwnerRepo->find($this->getUser()->getId())->getOraganization()->getValues()[0]->getId();
+        $userOrga = $orga->find($idOrga);
+        $preferencialWelcomeUser = $preferencialWelcomeRepository->findBy(["organisation_id" => $idOrga]);
+        $preferencialWelcomeUser[0]->getValue();
+
+        if(isset($data["telephone"])){
+            $userOrga->setPhoneNumber($data["telephone"]);
+            $manager->persist($userOrga);
+        }
+        if (isset($data["site"])){
+            $userOrga->setWebsite($data["site"]);
+            $manager->persist($userOrga);
+        }
+        if (isset($data["address"])){
+            $userOrga->setAdress($data["address"]);
+            $manager->persist($userOrga);
+        }
+        if (isset($data["mission"])){
+            $userOrga->setDescription($data["mission"]);
+            $manager->persist($userOrga);
+        }
+        if (isset($data["langages"])){
+           $userOrga->setSpokenLanguage(trim(implode(", ", $data["langages"]), ", "));
+            $manager->persist($userOrga);
+        }
+        if (isset($data["accueil_type"])){
+            $preferencialWelcomeUser[0]->setValue($data["accueil_type"]);
+            $manager->persist($preferencialWelcomeUser[0]);
+        }
+        if(isset($data["appointement"])){
+            if($data["appointement"] == "false"){
+                $userOrga->setByAppointment(false);
+            } elseif($data["appointement"] == "true"){
+                $userOrga->setByAppointment(true);
+            }
+            $manager->persist($userOrga);
+        }
+        if(isset($data["schedules"])){
+            $hoursRepository->findOneBy(["organization_id" => $idOrga])->setMonday($data["schedules"]["Lundi"]);
+            $hoursRepository->findOneBy(["organization_id" => $idOrga])->setTuesday($data["schedules"]["Mardi"]);
+            $hoursRepository->findOneBy(["organization_id" => $idOrga])->setWednesday($data["schedules"]["Mercredi"]);
+            $hoursRepository->findOneBy(["organization_id" => $idOrga])->setThurday($data["schedules"]["Jeudi"]);
+            $hoursRepository->findOneBy(["organization_id" => $idOrga])->setFriday($data["schedules"]["Vendredi"]);
+            $hoursRepository->findOneBy(["organization_id" => $idOrga])->setSaturday($data["schedules"]["Samedi"]);
+            $hoursRepository->findOneBy(["organization_id" => $idOrga])->setSunday($data["schedules"]["Dimanche"]);
+        }
+        if(isset($data["services"])){
+            $serviceIdArray =[];
+
+            foreach ($orga->find($idOrga)->getServicesId()->getValues() as $service){
+                array_push($serviceIdArray, $service->getId());
+            }
+
+            $allServiceByOrga = $servicesRepository->findBy(["id" => $serviceIdArray]);
+            foreach ($allServiceByOrga as $services){
+                $manager->remove($services);
+            }
+
+            foreach ($data["services"] as $serviceRequest){
+                $categoryObj = new Category();
+                $categoryObj->setValue("category");
+                $manager->persist($categoryObj);
+
+
+                $servicesObj = new Services();
+                $servicesObj->setServiceName($serviceRequest);
+                $servicesObj->setOrganizationId($orga->find($idOrga));
+                $servicesObj->setSubscribe(false);
+                $servicesObj->setByAppointement(false);
+                $servicesObj->setServiceDescription("lorem ispsum jizfgjizgjzeigfjzeikgvjherugvjjzefhrzejdfjzeokfgjezkofcjzeigvjziogjzo");
+                $servicesObj->setStateSaturation(0);
+                $servicesObj->setCategoryId($categoryObj);
+                $manager->persist($servicesObj);
+
+            }
+        }
+
+        $manager->flush();
         return $this->json(["orga ad bdd"]);
     }
 }
