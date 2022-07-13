@@ -30,7 +30,7 @@
         <div class="fb-33c3">
             <img src="{{ asset('build/images/note_taking.png') }}" alt="" class="w-100" />
         </div>
-        <div class="fb-45 o-a">
+        <div class="fb-45 o-h">
             <div class="d-f ai-c jc-c p-r">
                 <div class="d-f ai-c pr-0c5 goBack">{% include '@App/img/left_arrow.html.twig' %}</div>
                 <div class="progress-bar">
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="d-f w-100 mh-600" id="slider__ctn">
-                {# <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_1">
+                <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_1">
                     <h2 class="ff-body fs-xl fw-600 c-black pb-1">Quel est l’identité de votre association ?</h2>
                     <form class="p-r w-70" method="" action="">
                         <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="association_name">Nom de l’association</label></h3>
@@ -237,7 +237,7 @@
 
 
                     </form>
-                </div> #}
+                </div>
 
                 <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_7">
                     <h2 class="ff-body fs-xl fw-600 c-black pb-1">Ajoutez vos services</h2>
@@ -252,7 +252,7 @@
                                 <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
                             </div>
 
-                            <div class="bgc-white w-100 br-15 b-black-10 p-1 p-a d-n zi-9 expandList">
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 p-a d-n zi-9 expandList multiple">
                                 {% for item in acceuil %}
                                     <div class="mb-0c5">
                                         <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="accueil" name="services" value="{{item}}" required>
@@ -272,7 +272,7 @@
                                 <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
                             </div>
 
-                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList multiple">
                                 {% for item in alimentation %}
                                     <div class="mb-0c5">
                                         <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="alimentation" name="services" value="{{item}}" required>
@@ -292,7 +292,7 @@
                                 <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
                             </div>
 
-                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList multiple">
                                 {% for item in sante %}
                                     <div class="mb-0c5">
                                         <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="sante" name="services" value="{{item}}" required>
@@ -312,7 +312,7 @@
                                 <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
                             </div>
 
-                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList multiple">
                                 {% for item in medecine %}
                                     <div class="mb-0c5">
                                         <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="medecine" name="services" value="{{item}}" required>
@@ -332,7 +332,7 @@
                                 <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
                             </div>
 
-                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList multiple">
                                 {% for item in hygiene %}
                                     <div class="mb-0c5">
                                         <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="hygiene" name="services" value="{{item}}" required>
@@ -352,7 +352,7 @@
                                 <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
                             </div>
 
-                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList multiple">
                                 {% for item in conseil %}
                                     <div class="mb-0c5">
                                         <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="conseil" name="services" value="{{item}}" required>
@@ -372,7 +372,7 @@
                                 <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
                             </div>
 
-                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList multiple">
                                 {% for item in activity %}
                                     <div class="mb-0c5">
                                         <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="activites" name="services" value="{{item}}" required>
@@ -392,7 +392,7 @@
                                 <span class="p-a t-50 tty-n50 r-0 pr-0c5">{% include '@App/img/expand_arrow.html.twig' %}</span>
                             </div>
 
-                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList">
+                            <div class="bgc-white w-100 br-15 b-black-10 p-1 d-n p-a zi-9 expandList multiple">
                                 {% for item in technologie %}
                                     <div class="mb-0c5">
                                         <input class="mutliple-select dataToSave" id="services" type="checkbox" data-category="technologie" name="services" value="{{item}}" required>
