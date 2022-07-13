@@ -30,25 +30,33 @@ const updateData = {
     },
 
     schedules: {
-        "Lundi": "",
-        "Mardi": "",
-        "Mercredi": "",
-        "Jeudi": "",
-        "Vendredi": "",
-        "Samedi": "",
-        "Dimanche": "",
+        "Lundi": "Fermé",
+        "Mardi": "Fermé",
+        "Mercredi": "Fermé",
+        "Jeudi": "Fermé",
+        "Vendredi": "Fermé",
+        "Samedi": "Fermé",
+        "Dimanche": "Fermé",
     },
+
+    submitButton: document.querySelectorAll(".updateData"),
 
     init: function() {
         this.categories.forEach(category => {
             this.initializeInput(category);
         });
+
         this.updateCoordonnees();
         this.updateMission();
         this.updateAcceuil();
         this.updateSchedules();
         this.updateServices();
-        console.log((this.categoryInput));
+
+        this.submitButton.forEach(button => {
+            button.addEventListener('click', () => {
+                this.exportData();
+            });
+        });
 	},
 
     initializeInput: function(category) {
@@ -162,68 +170,19 @@ const updateData = {
                 return;
             })
         })
-    }
+    },
 
     // exportData: function() {
     //     $.ajax({     
     //         type: "post",     
-    //         url: `/bo/ajax/addOrga`,
-    //         data: {data},
+    //         url: `/bo/ajax/updateOrga`,
+    //         data: this.data,
     //         dataType: "JSON",     
     //         success:function(data){
     //             console.log(data)
     //         } 
     //     });
     // }
-
-    // saveIdentity: function(category) {
-    //     this.categoryInput[category].forEach(el => {
-    //         el.addEventListener('change', (e) => {
-    //             let name =  e.target.getAttribute('id');
-    //             let choiceLangages = [];
-    //             let choiceServices = [];
-    //             let service = {}
-    //             if(category === 'schedules'){
-    //                 this.saveSchedules(e, name);
-    //                 return;
-    //             }
-
-    //             if(category === 'langages'){
-    //                 let choices = document.querySelectorAll('input[name="langages"]:checked');
-    //                 choices.forEach(choice => {
-    //                     choiceLangages.push(choice.value);
-    //                     this.data[name] = choiceLangages;
-    //                     this.writeInInput(e, choiceLangages, 3);
-    //                 });
-    //                 console.log(this.data);
-    //                 return;
-    //             }
-
-    //             if(category === 'services'){
-    //                 let choices = document.querySelectorAll('input[id="services"]:checked');                    
-    //                 choices.forEach(choice => {
-    //                     choiceServices.push(choice.value);
-    //                     this.data[name] = choiceServices;
-    //                 });
-    //                 console.log(this.data);
-    //                 return;
-    //             }
-
-
-    //             if(category === 'appointement'){
-    //                 let choice = document.querySelector('input[name="appointement"]:checked');
-    //                 this.data[name] = choice.value;
-    //                 console.log(this.data);
-    //                 return;
-    //             }
-
-    //             this.data[name] = e.target.value;
-    //             console.log(this.data);
-    //         });
-    //     });
-    // },
-
-    
 }
 
 updateData.init();

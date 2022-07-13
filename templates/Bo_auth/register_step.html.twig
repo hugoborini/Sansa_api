@@ -38,21 +38,21 @@
                 </div>
             </div>
             <div class="d-f w-100 mh-600" id="slider__ctn">
-                <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_1">
+                {# <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_1">
                     <h2 class="ff-body fs-xl fw-600 c-black pb-1">Quel est l’identité de votre association ?</h2>
                     <form class="p-r w-70" method="" action="">
                         <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="association_name">Nom de l’association</label></h3>
-                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="identity" type="text" id="association_name" placeholder="Les restos du coeur" required>
+                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-60 dataToSave" name="identity" type="text" id="association_name" placeholder="Les restos du coeur" required>
 
                         <div class="d-f jc-sb">
                             <div class="fb-45">
                                 <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="siret">SIRET</label></h3>
-                                <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="identity" type="number" id="siret" placeholder="76354000981233" required>
+                                <input class="br-15 p-0c75 b-black-10 w-100 c-black-60 dataToSave" name="identity" type="number" id="siret" placeholder="76354000981233" required>
                             </div>
                             
                             <div class="fb-45">
                                 <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="rna_number">N° RNA</label></h3>
-                                <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="identity" type="text" id="rna_number" placeholder="W000687347" required>
+                                <input class="br-15 p-0c75 b-black-10 w-100 c-black-60 dataToSave" name="identity" type="text" id="rna_number" placeholder="W000687347" required>
                             </div>
                         </div>
 
@@ -71,13 +71,13 @@
                     <h2 class="ff-body fs-xl fw-600 c-black pb-1">Ajoutez vos coordonnées</h2>
                     <form class="p-r w-70" method="" action="">
                         <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="email">Adresse e-mail</label></h3>
-                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="coordonnees" type="text" id="email"  placeholder="johndoe@gmail.com" required>
+                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-60 dataToSave" name="coordonnees" type="text" id="email"  placeholder="johndoe@gmail.com" required>
 
                         <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="telephone">Téléphone</label></h3>
-                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="coordonnees" type="tel" id="telephone"  placeholder="0786831179" required>
+                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-60 dataToSave" name="coordonnees" type="tel" id="telephone"  placeholder="0786831179" required>
 
                         <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="siteName">Site internet</label></h3>
-                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="coordonnees" type="text" id="siteName"  placeholder="www.association.fr">
+                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-60 dataToSave" name="coordonnees" type="text" id="siteName"  placeholder="www.association.fr">
 
                         <div class="d-f ai-c">
                             <input name="site" id="site" type="checkbox">
@@ -91,7 +91,7 @@
                     <h2 class="ff-body fs-xl fw-600 c-black pb-1">Quelle est votre adresse ?</h2>
                     <form class="p-r w-70" method="" action="">
                         <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="address">Adresse</label></h3>
-                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="address" type="text" id="address"  placeholder="18 Rue Jacques Prevert, 75015 PARIS" required>
+                        <input class="br-15 p-0c75 b-black-10 w-100 c-black-60 dataToSave" name="address" type="text" id="address"  placeholder="18 Rue Jacques Prevert, 75015 PARIS" required>
 
                     </form>
                 </div>
@@ -118,7 +118,7 @@
                                             <div class="fb-40">
                                                 <label for="schedules-select-open" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Ouverture</label>
 
-                                                <select name="scheduleOpen" id="schedules-select-open" class="br-15 p-0c75 b-black-10 w-100 c-black-10 mb-1">
+                                                <select name="scheduleOpen" id="schedules-select-open" class="br-15 p-0c75 b-black-10 w-100 c-black-60 mb-1">
                                                     <option value="">8h30</option>
                                                     {% set scheduleHour = 0 %}
                                                     {% set scheduleMinute = 0 %}
@@ -133,7 +133,7 @@
                                             <div class="fb-40">
                                                 <label for="schedules-select-close" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Fermeture</label>
 
-                                                <select name="scheduleClose" id="schedules-select-close" class="br-15 p-0c75 b-black-10 w-100 c-black-10 mb-1">
+                                                <select name="scheduleClose" id="schedules-select-close" class="br-15 p-0c75 b-black-10 w-100 c-black-60 mb-1">
                                                     <option class="ff-body fs-s c-black-40 fw-400 mb-0c5 d-b" value="17h30">17h30</option>
                                                     {% set scheduleHour = 0 %}
                                                     {% set scheduleMinute = 0 %}
@@ -154,7 +154,7 @@
                                             <div class="fb-40">
                                                 <label for="schedules-select-open2" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Ouverture</label>
 
-                                                <select name="scheduleOpen" id="schedules-select-open2" class="br-15 p-0c75 b-black-10 w-100 c-black-10 mb-1">
+                                                <select name="scheduleOpen" id="schedules-select-open2" class="br-15 p-0c75 b-black-10 w-100 c-black-60 mb-1">
                                                     <option value="">8h30</option>
                                                     {% set scheduleHour = 0 %}
                                                     {% set scheduleMinute = 0 %}
@@ -169,7 +169,7 @@
                                             <div class="fb-40">
                                                 <label for="schedules-select-close2" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Fermeture</label>
 
-                                                <select name="scheduleClose" id="schedules-select-close2" class="br-15 p-0c75 b-black-10 w-100 c-black-10 mb-1">
+                                                <select name="scheduleClose" id="schedules-select-close2" class="br-15 p-0c75 b-black-10 w-100 c-black-60 mb-1">
                                                     <option class="ff-body fs-s c-black-40 fw-400 mb-0c5 d-b" value="17h30">17h30</option>
                                                     {% set scheduleHour = 0 %}
                                                     {% set scheduleMinute = 0 %}
@@ -201,7 +201,7 @@
                     <form class="p-r w-90 langages" method="" action="">
                         <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Langu(e)s</label>
                         <div class="p-r expandInput c-p">
-                            <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                            <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-60 mb-0c25 p-r bgc-white h-50 d-f ai-c">
                                 <p class="langages"></p>
                                 <p class="counter"></p>
                             </div>
@@ -219,25 +219,25 @@
 
                         <div class="mt-1c5">
                             <label class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b" for="accueil_type">Type d’accueil</label>
-                            <input class="br-15 p-0c75 b-black-10 w-100 c-black-10 dataToSave" name="accueil_type" type="text" id="accueil_type" placeholder="Adultes, enfants, animaux..." required>
+                            <input class="br-15 p-0c75 b-black-10 w-100 c-black-60 dataToSave" name="accueil_type" type="text" id="accueil_type" placeholder="Adultes, enfants, animaux..." required>
                         </div>
 
 
                         <h3 class="ff-body fs-s c-black fw-400 mb-0c5 mt-2" for="true">L’accueil se fait-il sur rendez vous ?</h3>
                         <div class="d-f ai-c">
                             <div class="d-f jc-sb fb-15 mr-1c5">
-                                <input class="br-15 p-0c75 b-black-10 c-black-10 dataToSave" name="appointement" type="radio" id="appointement" value="true" required>
+                                <input class="br-15 p-0c75 b-black-10 c-black-60 dataToSave" name="appointement" type="radio" id="appointement" value="true" required>
                                 <label for="true" class="ff-body fs-s c-black fw-400">Oui</label>
                             </div>
                             <div class="d-f jc-sb fb-15">
-                                <input class="br-15 p-0c75 b-black-10 c-black-10 dataToSave" name="appointement" type="radio" id="appointement" value="false" required>
+                                <input class="br-15 p-0c75 b-black-10 c-black-60 dataToSave" name="appointement" type="radio" id="appointement" value="false" required>
                                 <label for="false" class="ff-body fs-s c-black fw-400">Non</label>
                             </div>
                         </div>
 
 
                     </form>
-                </div>
+                </div> #}
 
                 <div class="fs-0 fg-0 fb-100 slider-item d-f fd-c jc-c w-100 pl-2" id="step_7">
                     <h2 class="ff-body fs-xl fw-600 c-black pb-1">Ajoutez vos services</h2>
@@ -245,7 +245,7 @@
                         <div class="fb-45 mb-1c5 p-r">
                             <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Accueil</label>
                             <div class="p-r  expandInput expandInput--services zi-1 c-p">
-                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-60 mb-0c25 p-r bgc-white h-50 d-f ai-c">
                                     <p class="langages accueil"></p>
                                     <p class="counter accueil"></p>
                                 </div>
@@ -265,7 +265,7 @@
                         <div class="fb-45 mb-1c5 p-r">
                             <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Alimentation</label>
                             <div class="p-r  expandInput expandInput--services zi-1 c-p">
-                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-60 mb-0c25 p-r bgc-white h-50 d-f ai-c">
                                     <p class="langages alimentation"></p>
                                     <p class="counter alimentation"></p>
                                 </div>
@@ -285,7 +285,7 @@
                         <div class="fb-45 mb-1c5 p-r">
                             <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Santé</label>
                             <div class="p-r  expandInput expandInput--services zi-1 c-p">
-                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-60 mb-0c25 p-r bgc-white h-50 d-f ai-c">
                                     <p class="langages sante"></p>
                                     <p class="counter sante"></p>
                                 </div>
@@ -305,7 +305,7 @@
                         <div class="fb-45 mb-1c5 p-r">
                             <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Médecine</label>
                             <div class="p-r  expandInput expandInput--services zi-1 c-p">
-                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-60 mb-0c25 p-r bgc-white h-50 d-f ai-c">
                                     <p class="langages medecine"></p>
                                     <p class="counter medecine"></p>
                                 </div>
@@ -325,7 +325,7 @@
                         <div class="fb-45 mb-1c5 p-r">
                             <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Hygiène</label>
                             <div class="p-r  expandInput expandInput--services zi-1 c-p">
-                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-60 mb-0c25 p-r bgc-white h-50 d-f ai-c">
                                     <p class="langages hygiene"></p>
                                     <p class="counter hygiene"></p>
                                 </div>
@@ -345,7 +345,7 @@
                         <div class="fb-45 mb-1c5 p-r">
                             <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Conseil</label>
                             <div class="p-r  expandInput expandInput--services zi-1 c-p">
-                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-60 mb-0c25 p-r bgc-white h-50 d-f ai-c">
                                     <p class="langages conseil"></p>
                                     <p class="counter conseil"></p>
                                 </div>
@@ -365,7 +365,7 @@
                         <div class="fb-45 mb-1c5 p-r">
                             <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Activités</label>
                             <div class="p-r  expandInput expandInput--services zi-1 c-p">
-                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-60 mb-0c25 p-r bgc-white h-50 d-f ai-c">
                                     <p class="langages activites"></p>
                                     <p class="counter activites"></p>
                                 </div>
@@ -385,7 +385,7 @@
                         <div class="fb-45 mb-1c5 p-r">
                             <label for="langages" class="ff-body fs-s c-black-40 fw-400 mb-0c25 d-b">Technologie</label>
                             <div class="p-r  expandInput expandInput--services zi-1 c-p">
-                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-10 mb-0c25 p-r bgc-white h-50 d-f ai-c">
+                                <div class="d-f ai-c pl-1 br-15 b-black-10 w-100 c-black-60 mb-0c25 p-r bgc-white h-50 d-f ai-c">
                                     <p class="langages technologie"></p>
                                     <p class="counter technologie"></p>
                                 </div>
