@@ -30,13 +30,13 @@ const updateData = {
     },
 
     schedules: {
-        "Lundi": "",
-        "Mardi": "",
-        "Mercredi": "",
-        "Jeudi": "",
-        "Vendredi": "",
-        "Samedi": "",
-        "Dimanche": "",
+        "Lundi": "Fermé",
+        "Mardi": "Fermé",
+        "Mercredi": "Fermé",
+        "Jeudi": "Fermé",
+        "Vendredi": "Fermé",
+        "Samedi": "Fermé",
+        "Dimanche": "Fermé",
     },
 
     submitButton: document.querySelectorAll(".updateData"),
