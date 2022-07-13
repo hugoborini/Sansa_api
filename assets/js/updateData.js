@@ -172,6 +172,7 @@ const updateData = {
     },
 
     exportData: function() {
+
          $.ajax({
              type: "post",
              url: `/bo/ajax/updateOrga`,
@@ -181,6 +182,7 @@ const updateData = {
                  console.log(data)
              }
          });
+
     }
 }
 

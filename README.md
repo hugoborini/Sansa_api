@@ -1,12 +1,28 @@
-## documentation
+# Documentation
 
 
-# Sansa_api
-pour init la bdd la remplire et lancer le serveur
+## Sansa_api
+
+Pour lancer l'api en local, initier la base de données, lancer docker et le serveur. 
 
     ./script/start.sh
 
-pour lancer juste le serveur
+Ensuite faire un : 
 
     symfony serve:start
+
+Lien pour avoir la documentation de l'api après avoir lancé le serveur : 
+
+http://127.0.0.1:8000/api/qZ2jFqj=/doc
+
+Lien pour accèder au Back Office : 
+
+https://sansah.vhswebs.com/bo
+
+
+
+
+
+
+
 
