@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UsersAccountController!{% endblock %}
+
+{% block body %}
+<div class="d-f p-1 mh-95v">
+    {% include '@App/Components/navbar-admin.html.twig' with {'currentPage': currentPage, 'template': 'asso'} %}
+    <div class="pt-1 fb-90">
+        <h1 class="ff-body fs-xl c-black-60 fw-700 mb-2 mt-0">Vos informations personnelles</h1>
+        <div class="d-f">
+            <div class="bgc-white bs-light br-15 p-2 mr-0c75 fb-50">
+                <div class="d-f jc-sb ai-c mb-2">
+                    <p class="ff-body c-black-10 fs-m fw-700 m-0">Votre identité</p>
+                </div>
+                <div class="data">
+                    <div class="mb-1c5">
+                        <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Nom de l’association</p>
+                        <p class="ff-body c-black-60 lh-1c5 fs-s m-0">orgaUser.organizationOwner.email</p>
+                    </div>
+                    <div class="mb-1c5 d-f">
+                        <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0 fb-30">N° SIRET</p>
+                        <p class="ff-body c-black-60 lh-1c5 fs-s m-0">76354000981233</p>
+                    </div>
+                    <div class="mb-1c5 d-f">
+                        <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0 fb-30">N° RNA</p>
+                        <p class="ff-body c-black-60 lh-1c5 fs-s m-0">W000687347</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bgc-white bs-light br-15 p-2 mr-0c75 fb-50">
+                <div class="d-f jc-sb ai-c mb-2">
+                    <p class="ff-body c-black-10 fs-m fw-700 m-0">Votre mot de passe SANSA</p>
+                </div>
+                <div class="data">
+                    <div class="mb-1c5">
+                        <p class="ff-body c-black-60 lh-1c5 fs-s fw-700 m-0">Mot de passe du compte</p>
+                        <p class="ff-body c-black-60 lh-1c5 fs-s m-0">***************</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-f jc-fe">
+            <img src="{{ asset('build/images/edit_illu_mission.png') }}" alt="" width="630" class="w-33c3 p-a b-0 r-0" />
+        </div>
+    </div>
+</div>
+{% endblock %}
