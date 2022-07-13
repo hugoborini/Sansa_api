@@ -9,7 +9,7 @@ class expandListToggle {
 
     toggle(triggerElem) {
         triggerElem.addEventListener('click', () => {
-            document.querySelector('.active')?.classList.remove('active');
+            document.querySelector('.expandList.multiple.active')?.classList.remove('active');
             this.expandList.classList.toggle('active');
         });
     };
