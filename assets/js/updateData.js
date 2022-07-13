@@ -167,22 +167,21 @@ const updateData = {
                     this.data['services'] = choiceServices;
                 });
                 console.log(this.data);
-                return;
             })
         })
     },
 
-    // exportData: function() {
-    //     $.ajax({     
-    //         type: "post",     
-    //         url: `/bo/ajax/updateOrga`,
-    //         data: this.data,
-    //         dataType: "JSON",     
-    //         success:function(data){
-    //             console.log(data)
-    //         } 
-    //     });
-    // }
+    exportData: function() {
+         $.ajax({
+             type: "post",
+             url: `/bo/ajax/updateOrga`,
+             data: this.data,
+             dataType: "JSON",
+             success:function(data){
+                 console.log(data)
+             }
+         });
+    }
 }
 
 updateData.init();
