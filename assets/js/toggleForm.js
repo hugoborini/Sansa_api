@@ -18,3 +18,9 @@ document.querySelectorAll('.editData').forEach((el, index) => {
         new changeForm(el)
     })
 });
+
+document.querySelectorAll('.updateData').forEach((el, index) => {
+    el.addEventListener('click', () => {
+        new changeForm(el)
+    })
+});

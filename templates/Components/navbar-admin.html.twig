@@ -28,15 +28,17 @@
                 <a href="{{path('app_admin_asso')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/pictos_assos.html.twig' %}</span>Associations</a>
             </div>
             <div class="{{currentPage == 'users' ? 'bgc-blue-dark br-m' : '' }} p-0c75">
-                <a  href="{{path('app_users')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/pictos_user.html.twig' %}</span>Utilisateurs</a>
+                <a href="{{path('app_users')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/pictos_user.html.twig' %}</span>Utilisateurs</a>
             </div>
         {% endif %}
         </div>
     </div>
     <div class="">
-        <div class="p-0c75">
-            <p class="d-f ai-c ff-body fs-xs c-white m-0"><span class="pr-1 lh-0">{% include '@App/img/pictos/pictos_user.html.twig' %}</span>Mon compte</p>
-        </div>
+        {% if template is defined and template == 'asso' %}
+            <div class="{{currentPage == 'account' ? 'bgc-blue-dark br-m' : '' }} p-0c75">
+                <a href="{{path('app_users_account')}}" class="d-f ai-c ff-body fs-xs c-white td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/pictos_user.html.twig' %}</span>Mon compte</a>
+            </div>
+        {% endif %}
         <div class="p-0c75">
             <a href="{{path('app_bo_auth_logout')}}" class="d-f ai-c ff-body fs-xs c-white m-0 td-n"><span class="pr-1 lh-0">{% include '@App/img/pictos/picto_logout.html.twig' %}</span>Se déconnecter</a>
         </div>
