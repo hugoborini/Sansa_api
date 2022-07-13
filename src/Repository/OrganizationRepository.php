@@ -87,15 +87,15 @@ class OrganizationRepository extends ServiceEntityRepository
         
         foreach ($serviceTab as $service) {
             if(++$i === $numItems) {
-                $sqlString = $sqlString . "s.service_name = '{$service}';";
+                $sqlString = $sqlString . 's.service_name = ' . '"'. $service .'"';;
             }else{
                 
-                $sqlString = $sqlString . "s.service_name = '{$service}' OR ";
+                $sqlString = $sqlString . 's.service_name = ' . '"' . $service . '"' . " OR ";
             }
         }
         
         $conn = $this->getEntityManager()->getConnection();
-        
+
         $sql = '
             SELECT DISTINCT organization.id 
             from organization JOIN services 
