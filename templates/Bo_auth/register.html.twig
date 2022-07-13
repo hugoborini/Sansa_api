@@ -20,15 +20,15 @@
                 <h2 class="ff-body fs-xl fw-600 c-black-60 pb-1 bb-black-10">S'inscrire</h2>
                 <form class="p-r w-90" method="post" action="{{ path("app_bo_auth_login") }}">
                     <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="loginName">Adresse e-mail</label></h3>
-                    {{form_row(form.email, {'attr': {"placeholder" : "johndoe@gmail.com", "class":"br-15 p-0c75 b-black-10 w-100 c-black-10"}})}}
+                    {{form_row(form.email, {'attr': {"placeholder" : "johndoe@gmail.com", "class":"br-15 p-0c75 b-black-10 w-100 c-black-60"}})}}
 
                     <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="telephone">Téléphone</label></h3>
-                    {{form_row(form.tel, {'attr': {"placeholder" : "0612345678", "class":"br-15 p-0c75 b-black-10 w-100 c-black-10"}})}}
+                    {{form_row(form.tel, {'attr': {"placeholder" : "0612345678", "class":"br-15 p-0c75 b-black-10 w-100 c-black-60"}})}}
 
                     <h3 class="ff-body fs-s c-black-40 fw-400 mb-0c5"><label for="password">Mot de passe*</label></h3>
                     <div class="p-r">
                         <span class="p-a t-50 tty-n50 r-0 pr-0c5 tooglePassword">{% include '@App/img/password_eye.html.twig' %}</span>
-                        {{form_row(form.password, {'attr': {"placeholder" : "*******", "class":"br-15 p-0c75 b-black-10 w-100 c-black-10"}})}}
+                        {{form_row(form.password, {'attr': {"placeholder" : "*******", "class":"br-15 p-0c75 b-black-10 w-100 c-black-60"}})}}
                     </div>
                     <p class="ff-body fs-xxs c-black-20 mt-0c25">Doit contenir 8 caractères avec une majuscule et un chiffre.</p>
 
