@@ -43,18 +43,15 @@
     <div class="header__right d-f fs-s">
       <ul class="d-f lh-24 mr-1">
         {% if app.user %}
-          <li href="/logout"
-            class="d-f ff-body fw-700 td-n c-blue br-xxxl b-blue pt-1 pr-2c5 pb-1 pl-2c5 c-p">
-            Déconnexion
+          <li class="d-f br-xxxl b-blue pt-1 pr-2c5 pb-1 pl-2c5 c-p p-r">
+              <a  href="{{path('app_bo_auth_logout')}}" class="link-action ff-body fw-700 td-n c-blue">Déconnexion</a>
           </li>
         {% else %}
-          <li class="d-f ff-body fw-700 auth-item-register c-blue br-xxxl b-blue pt-1 pr-2c5 pb-1 pl-2c5 m-1 td-n c-p"
-            href="/register">
-            Inscription
+          <li class="d-f auth-item-register br-xxxl b-blue pt-1 pr-2c5 pb-1 pl-2c5 m-1 td-n c-p p-r">
+            <a  href="{{path('app_bo_auth_register')}}" class="link-action td-n ff-body fw-700 td-n c-blue">Inscription</a>
           </li>
-          <li class="d-f ff-body fw-700 c-white auth-item-login b-blue br-xxxl bgc-blue pt-1 pr-2c5 pb-1 pl-2c5 m-1 td-n c-p"
-            href="/login">
-            Connexion
+          <li class="d-f auth-item-login b-blue br-xxxl bgc-blue pt-1 pr-2c5 pb-1 pl-2c5 m-1 td-n c-p p-r">
+            <a  href="{{path('app_bo_auth_login')}}" class="link-action td-n ff-body fw-700 td-n c-white">Connexion</a>
           </li>
         {% endif %}
       </ul>
