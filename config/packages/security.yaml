@@ -62,6 +62,7 @@ security:
     access_control:
         - { path: ^/bo/admin, roles: ROLE_ADMIN }
         - { path: ^/bo/asso, roles: ROLE_USER }
+        - { path: ^/bo/register/step, roles: ROLE_USER }
 
 when@test:
     security:
