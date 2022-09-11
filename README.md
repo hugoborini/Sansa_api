@@ -13,7 +13,7 @@ Ensuite faire un :
 
 Lien pour avoir la documentation de l'api après avoir lancé le serveur : 
 
-https://127.0.0.1:8000/api/qZ2jFqj=/doc
+https://sansah.vhswebs.com/api/qZ2jFqj=/doc
 
 Lien pour accèder au Back Office : 
 
