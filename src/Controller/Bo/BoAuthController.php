@@ -48,7 +48,7 @@ class BoAuthController extends AbstractController
                 ->to($orgaOwner->getEmail())
                 ->subject('Time for Symfony Mailer!')
                 ->text('Sending emails is fun again!')
-                ->html(fopen(dirname(__DIR__, 3) . "/templates/email/email_valid_login.twig", "r"));
+                ->html(fopen(dirname(__DIR__, 3) . "/templates/email/email_valid_login.html.twig", "r"));
 
             $mailer->send($email);
 
