@@ -78,7 +78,7 @@ class SansaFixtures extends Fixture
         $faker = \Faker\Factory::create();
         $questionJson = json_decode(file_get_contents('public/data/question.json'));
         $httpClient = new \Http\Adapter\Guzzle6\Client();
-        $provider = new \Geocoder\Provider\GoogleMaps\GoogleMaps($httpClient, null, 'AIzaSyBiG9V9KBLLv-TYeu8gcuc-yWmEG6jqVn8');
+        $provider = new \Geocoder\Provider\GoogleMaps\GoogleMaps($httpClient, null, 'AIzaSyCqDu0h5CotPtZ5Am0tUtXfOQ-F7yiKkUY');
         $geocoder = new \Geocoder\StatefulGeocoder($provider, 'en');
         
         
