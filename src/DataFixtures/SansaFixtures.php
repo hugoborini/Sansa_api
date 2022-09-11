@@ -104,6 +104,7 @@ class SansaFixtures extends Fixture
         }
 
         $json = json_decode(file_get_contents('public/data/data.json'));
+        $altNum = 0;
 
         foreach($json as $categorys){
             foreach($categorys as $key => $category){
@@ -112,10 +113,15 @@ class SansaFixtures extends Fixture
 
                 foreach($category as $org){
 
- 
+                    $altNum++;
 
                     $organasationOwnerObj =  new OrganizationOwner();
-                    $organasationOwnerObj->setEmail($faker->email());
+                    if ($altNum == 1){
+                        $organasationOwnerObj->setEmail("asso" . $altNum . "@hetic.net");
+                    } else{
+                        $organasationOwnerObj->setEmail($faker->email());
+                    }
+
                     $organasationOwnerObj->setTel($this->randomSecurity("tel"));
                     $organasationOwnerObj->setHasasso(True);
                     $organasationOwnerObj->setRole("ROLE_USER");
